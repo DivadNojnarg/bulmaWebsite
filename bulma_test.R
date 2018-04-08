@@ -2,6 +2,11 @@ library(shiny)
 library(shinybulma)
 library(shinyWidgets)
 
+source("bulmaDivider.R")
+source("bulmaBadge.R")
+source("bulmaSteps.R")
+source("bulmaTimeline.R")
+
 ui <- bulmaPage(
   
   tags$head(
@@ -73,14 +78,9 @@ ui <- bulmaPage(
       )
     ),
     
-    HTML(
-      paste0('<div class="columns">
-              <div class="column"></div>
-             <div class="is-divider-vertical" data-content="OR"></div>
-             <div class="column"></div>
-             </div>
-             ')
-    ),
+    
+    
+    bulmaDivider(content = "***", vertical = TRUE),
     
     bulmaColumn(
       width = 6,
@@ -103,47 +103,32 @@ ui <- bulmaPage(
     
   ), 
   
-  HTML(
-    paste0('<div class="timeline is-centered">
-           <header class="timeline-header">
-           <span class="tag is-medium is-primary">Start</span>
-           </header>
-           <div class="timeline-item is-primary">
-           <div class="timeline-marker is-primary"></div>
-           <div class="timeline-content">
-           <p class="heading">January 2016</p>
-           <p>Timeline content - Can include any HTML element</p>
-           </div>
-           </div>
-           <div class="timeline-item is-warning">
-           <div class="timeline-marker is-warning is-image is-32x32">
-           <img src="http://bulma.io/images/placeholders/32x32.png">
-           </div>
-           <div class="timeline-content">
-           <p class="heading">February 2016</p>
-           <p>Timeline content - Can include any HTML element</p>
-           </div>
-           </div>
-           <header class="timeline-header">
-           <span class="tag is-primary">2017</span>
-           </header>
-           <div class="timeline-item is-danger">
-           <div class="timeline-marker is-danger is-icon">
-           <i class="fa fa-flag"></i>
-           </div>
-           <div class="timeline-content">
-           <p class="heading">March 2017</p>
-           <p>Timeline content - Can include any HTML element</p>
-           </div>
-           </div>
-           <header class="timeline-header">
-           <span class="tag is-medium is-primary">End</span>
-           </header>
-           </div>
-           ')
+  bulmaTimeline(centered = TRUE,
+    bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
+    bulmaTimelineItem(
+      color = "primary", marker_color = "primary",
+      marker_image = FALSE, marker_icon = FALSE,
+      content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
     ),
+    bulmaTimelineItem(
+      color = "warning", marker_color = "warning",
+      marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
+      content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
+      tags$img(src="http://bulma.io/images/placeholders/32x32.png")
+    ),
+    bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
+    bulmaTimelineItem(
+      color = "danger", marker_color = "danger",
+      marker_image = FALSE, marker_icon = TRUE,
+      content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
+      tags$i(class = "fa fa-flag")
+    ),
+    bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
+  ),
   
-  HTML(paste0('<div class="is-divider" data-content="OR"></div>')),
+  br(),
+  
+  bulmaDivider(content = "***", vertical = FALSE),
   
   HTML(
     paste0('
@@ -202,7 +187,7 @@ ui <- bulmaPage(
     
   ),
   
-  HTML(paste0('<div class="is-divider" data-content="OR"></div>')),
+  bulmaDivider(content = "***", vertical = FALSE),
   
   HTML(
     paste0('
@@ -268,51 +253,40 @@ ui <- bulmaPage(
     
   ),
   
-  HTML(paste0('<div class="is-divider" data-content="OR"></div>')),
+  bulmaDivider(content = "***", vertical = FALSE),
   
-  HTML(
-    paste0('<ul class="steps">
-            <li class="step-item is-completed is-success">
-           <div class="step-marker">
-           <span class="icon">
-           <i class="fa fa-check"></i>
-           </span>
-           </div>
-           <div class="step-details is-primary is-completed">
-           <p class="step-title">Step 1</p>
-           <p>This is the first step of the process.</p>
-           </div>
-           </li>
-           <li class="step-item is-info is-completed">
-           <div class="step-marker"></div>
-           <div class="step-details">
-           <p class="step-title">Step 2</p>
-           <p>This is the second step. You get here once you have completed the first step.</p>
-           </div>
-           </li>
-           <li class="step-item is-warning is-completed">
-           <div class="step-marker">3</div>
-           <div class="step-details">
-           <p class="step-title">Step 3</p>
-           <p>This is the third step. One more step before the end.</p>
-           </div>
-           </li>
-           <li class="step-item is-danger is-active">
-           <div class="step-marker">
-           <span class="icon">
-           <i class="fa fa-flag"></i>
-           </span>
-           </div>
-           <div class="step-details">
-           <p class="step-title">Step 4</p>
-           <p>Final step. You have completed all the previous steps and end the process.</p>
-           </div>
-           </li>
-           </ul>
-           ')
+  bulmaSteps(size = NULL,
+    bulmaStepItem(
+      color = "success", completed = TRUE, active = FALSE, 
+      bulmaStepDetail(
+        color = "primary", completed = TRUE, title = "Step 1", marker = 1,
+        "This is the first step of the process."
+      )
+    ),
+    bulmaStepItem(
+      color = "info", completed = TRUE, active = FALSE, 
+      bulmaStepDetail(
+        color = NULL, completed = FALSE, title = "Step 2", marker = NULL,
+        "This is the second step. You get here once you have completed the first step."
+      )
+    ),
+    bulmaStepItem(
+      color = "warning", completed = TRUE, active = FALSE, 
+      bulmaStepDetail(
+        color = NULL, completed = FALSE, title = "Step 3", marker = 3,
+        "This is the third step. One more step before the end."
+      )
+    ),
+    bulmaStepItem(
+      color = "danger", completed = FALSE, active = TRUE, 
+      bulmaStepDetail(
+        color = NULL, completed = FALSE, title = "Step 4", marker = NULL,
+        "Final step. You have completed all the previous steps and end the process."
+      )
+    )
   ),
   
-  HTML(paste0('<div class="is-divider" data-content="OR"></div>')),
+  bulmaDivider(content = "***", vertical = FALSE),
   
   HTML(
     paste0('<div class="carousel carousel-animated carousel-animate-slide">
@@ -345,6 +319,20 @@ ui <- bulmaPage(
            </div>
            ')
   ),
+  
+  bulmaDivider(content = "***", vertical = FALSE),
+  
+  br(),
+  
+  bulmaBadge(
+    "test",
+    position = "",
+    size = "small",
+    style = "outlined",
+    color = "danger",
+    badge_text = "23"
+  ),
+  
   
   bulmaNav(
     "Item 1"
