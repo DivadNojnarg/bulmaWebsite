@@ -6,6 +6,7 @@ source("bulmaDivider.R")
 source("bulmaBadge.R")
 source("bulmaSteps.R")
 source("bulmaTimeline.R")
+source("bulmaCarousel.R")
 
 ui <- bulmaPage(
   
@@ -288,37 +289,64 @@ ui <- bulmaPage(
   
   bulmaDivider(content = "***", vertical = FALSE),
   
-  HTML(
-    paste0('<div class="carousel carousel-animated carousel-animate-slide">
-            <div class="carousel-container">
-           <div class="carousel-item has-background is-active">
-           <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" width="640" height="310" />
-           <div class="title">Merry Christmas</div>
-           </div>
-           <div class="carousel-item has-background">
-           <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" width="640" height="310" />
-           <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La Song Box</a></div>
-           </div>
-           <div class="carousel-item has-background">
-           <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" width="640" height="310" />
-           <div class="title">Sushi time</div>
-           </div>
-           <div class="carousel-item has-background">
-           <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" width="640" height="310" />
-           <div class="title">Life</div>
-           </div>
-           </div>
-           <div class="carousel-navigation is-overlay">
-           <div class="carousel-nav-left">
-           <i class="fa fa-chevron-left" aria-hidden="true"></i>
-           </div>
-           <div class="carousel-nav-right">
-           <i class="fa fa-chevron-right" aria-hidden="true"></i>
-           </div>
-           </div>
-           </div>
-           ')
+  bulmaCarousel(
+    autoplay = TRUE, navigation = "overlay",
+    
+    bulmaCarouselItem(
+      background = TRUE, active = TRUE, 
+      src = "https://wikiki.github.io/images/merry-christmas.jpg",
+      title = "Merry Christmas", url = NULL, url_text = NULL
+    ),
+    bulmaCarouselItem(
+      background = TRUE, active = FALSE, 
+      src = "https://wikiki.github.io/images/singer.jpg",
+      title = "Original Gift: Offer a song with", 
+      url = "https://lasongbox.com", url_text = "La Song Box"
+    ),
+    bulmaCarouselItem(
+      background = TRUE, active = FALSE, 
+      src = "https://wikiki.github.io/images/sushi.jpg",
+      title = "Sushi time", url = NULL, url_text = NULL
+    ),
+    bulmaCarouselItem(
+      background = TRUE, active = FALSE, 
+      src = "https://wikiki.github.io/images/life.jpg",
+      title = "Life", url = NULL, url_text = NULL
+    )
+    
   ),
+  
+  # HTML(
+  #   paste0('<div class="carousel carousel-animated carousel-animate-slide">
+  #           <div class="carousel-container">
+  #          <div class="carousel-item has-background is-active">
+  #          <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" width="640" height="310" />
+  #          <div class="title">Merry Christmas</div>
+  #          </div>
+  #          <div class="carousel-item has-background">
+  #          <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" width="640" height="310" />
+  #          <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La Song Box</a></div>
+  #          </div>
+  #          <div class="carousel-item has-background">
+  #          <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" width="640" height="310" />
+  #          <div class="title">Sushi time</div>
+  #          </div>
+  #          <div class="carousel-item has-background">
+  #          <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" width="640" height="310" />
+  #          <div class="title">Life</div>
+  #          </div>
+  #          </div>
+  #          <div class="carousel-navigation is-overlay">
+  #          <div class="carousel-nav-left">
+  #          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+  #          </div>
+  #          <div class="carousel-nav-right">
+  #          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+  #          </div>
+  #          </div>
+  #          </div>
+  #          ')
+  # ),
   
   bulmaDivider(content = "***", vertical = FALSE),
   
