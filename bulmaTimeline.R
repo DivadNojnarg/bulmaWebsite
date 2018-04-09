@@ -1,3 +1,4 @@
+# know problem: when centered is true, lines cannot be colored
 bulmaTimeline <- function(..., centered = FALSE, rtl = FALSE) {
   
   cl <- "timeline"

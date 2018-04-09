@@ -11,22 +11,13 @@ source("bulmaPricingtable.R")
 source("bulmaButtonBadge.R")
 source("bulmaPageLoader.R")
 source("bulmaTags.R")
+source("bulmaBox.R")
+source("bulmaNotifications.R")
 
 ui <- bulmaNavbarPage(
   
   tags$head(
-    tags$style(
-      HTML('@-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.timeline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.timeline .timeline-header{width:4em;min-width:4em;max-width:8em;word-wrap:normal;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.timeline .timeline-item{display:-webkit-box;display:flex;display:-ms-flexbox;display:-webkit-flex;position:relative;margin-left:2em;padding-bottom:2em}.timeline .timeline-item::before{content:"";background-color:#dbdbdb;display:block;width:.1em;height:100%;position:absolute;left:0;top:0}.timeline .timeline-item .timeline-marker{position:absolute;background:#dbdbdb;border:.1em solid #dbdbdb;border-radius:100%;content:"";display:block;height:.8em;left:-.35em;top:1.2rem;width:.8em}.timeline .timeline-item .timeline-marker.is-image{background:#dbdbdb;border:.1em solid #dbdbdb;border-radius:100%;display:block;overflow:hidden}.timeline .timeline-item .timeline-marker.is-image.is-16x16{height:16px;width:16px;left:-8px}.timeline .timeline-item .timeline-marker.is-image.is-24x24{height:24px;width:24px;left:-12px}.timeline .timeline-item .timeline-marker.is-image.is-32x32{height:32px;width:32px;left:-16px}.timeline .timeline-item .timeline-marker.is-image.is-48x48{height:48px;width:48px;left:-24px}.timeline .timeline-item .timeline-marker.is-image.is-64x64{height:64px;width:64px;left:-32px}.timeline .timeline-item .timeline-marker.is-image.is-96x96{height:96px;width:96px;left:-48px}.timeline .timeline-item .timeline-marker.is-image.is-128x128{height:128px;width:128px;left:-64px}.timeline .timeline-item .timeline-marker.is-icon{height:1.5em;width:1.5em;left:-.7em;line-height:.75rem;padding:.25rem;background:#dbdbdb;border:.1em solid #dbdbdb;border-radius:100%}.timeline .timeline-item .timeline-marker.is-icon>i{color:#fff;font-size:.75rem!important}.timeline .timeline-item .timeline-marker.is-outlined .image{background:#fff}.timeline .timeline-item .timeline-marker.is-outlined.is-icon{background:#fff}.timeline .timeline-item .timeline-marker.is-outlined.is-icon>i{color:#dbdbdb}.timeline .timeline-item .timeline-marker.is-white{background-color:#fff!important;border-color:#fff!important}.timeline .timeline-item .timeline-marker.is-white .image{border-color:#fff!important}.timeline .timeline-item .timeline-marker.is-white.is-icon{background-color:#fff!important;border-color:#fff!important}.timeline .timeline-item .timeline-marker.is-white.is-icon>i{color:#0a0a0a!important}.timeline .timeline-item .timeline-marker.is-white.is-outlined{background-color:#fff!important;border-color:#fff!important}.timeline .timeline-item .timeline-marker.is-white.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-white.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-white.is-outlined.is-icon>i{color:#fff!important}.timeline .timeline-item .timeline-marker.is-black{background-color:#0a0a0a!important;border-color:#0a0a0a!important}.timeline .timeline-item .timeline-marker.is-black .image{border-color:#0a0a0a!important}.timeline .timeline-item .timeline-marker.is-black.is-icon{background-color:#0a0a0a!important;border-color:#0a0a0a!important}.timeline .timeline-item .timeline-marker.is-black.is-icon>i{color:#fff!important}.timeline .timeline-item .timeline-marker.is-black.is-outlined{background-color:#fff!important;border-color:#0a0a0a!important}.timeline .timeline-item .timeline-marker.is-black.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-black.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-black.is-outlined.is-icon>i{color:#0a0a0a!important}.timeline .timeline-item .timeline-marker.is-light{background-color:#f5f5f5!important;border-color:#f5f5f5!important}.timeline .timeline-item .timeline-marker.is-light .image{border-color:#f5f5f5!important}.timeline .timeline-item .timeline-marker.is-light.is-icon{background-color:#f5f5f5!important;border-color:#f5f5f5!important}.timeline .timeline-item .timeline-marker.is-light.is-icon>i{color:#363636!important}.timeline .timeline-item .timeline-marker.is-light.is-outlined{background-color:#fff!important;border-color:#f5f5f5!important}.timeline .timeline-item .timeline-marker.is-light.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-light.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-light.is-outlined.is-icon>i{color:#f5f5f5!important}.timeline .timeline-item .timeline-marker.is-dark{background-color:#363636!important;border-color:#363636!important}.timeline .timeline-item .timeline-marker.is-dark .image{border-color:#363636!important}.timeline .timeline-item .timeline-marker.is-dark.is-icon{background-color:#363636!important;border-color:#363636!important}.timeline .timeline-item .timeline-marker.is-dark.is-icon>i{color:#f5f5f5!important}.timeline .timeline-item .timeline-marker.is-dark.is-outlined{background-color:#fff!important;border-color:#363636!important}.timeline .timeline-item .timeline-marker.is-dark.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-dark.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-dark.is-outlined.is-icon>i{color:#363636!important}.timeline .timeline-item .timeline-marker.is-primary{background-color:#00d1b2!important;border-color:#00d1b2!important}.timeline .timeline-item .timeline-marker.is-primary .image{border-color:#00d1b2!important}.timeline .timeline-item .timeline-marker.is-primary.is-icon{background-color:#00d1b2!important;border-color:#00d1b2!important}.timeline .timeline-item .timeline-marker.is-primary.is-icon>i{color:#fff!important}.timeline .timeline-item .timeline-marker.is-primary.is-outlined{background-color:#fff!important;border-color:#00d1b2!important}.timeline .timeline-item .timeline-marker.is-primary.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-primary.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-primary.is-outlined.is-icon>i{color:#00d1b2!important}.timeline .timeline-item .timeline-marker.is-link{background-color:#3273dc!important;border-color:#3273dc!important}.timeline .timeline-item .timeline-marker.is-link .image{border-color:#3273dc!important}.timeline .timeline-item .timeline-marker.is-link.is-icon{background-color:#3273dc!important;border-color:#3273dc!important}.timeline .timeline-item .timeline-marker.is-link.is-icon>i{color:#fff!important}.timeline .timeline-item .timeline-marker.is-link.is-outlined{background-color:#fff!important;border-color:#3273dc!important}.timeline .timeline-item .timeline-marker.is-link.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-link.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-link.is-outlined.is-icon>i{color:#3273dc!important}.timeline .timeline-item .timeline-marker.is-info{background-color:#209cee!important;border-color:#209cee!important}.timeline .timeline-item .timeline-marker.is-info .image{border-color:#209cee!important}.timeline .timeline-item .timeline-marker.is-info.is-icon{background-color:#209cee!important;border-color:#209cee!important}.timeline .timeline-item .timeline-marker.is-info.is-icon>i{color:#fff!important}.timeline .timeline-item .timeline-marker.is-info.is-outlined{background-color:#fff!important;border-color:#209cee!important}.timeline .timeline-item .timeline-marker.is-info.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-info.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-info.is-outlined.is-icon>i{color:#209cee!important}.timeline .timeline-item .timeline-marker.is-success{background-color:#23d160!important;border-color:#23d160!important}.timeline .timeline-item .timeline-marker.is-success .image{border-color:#23d160!important}.timeline .timeline-item .timeline-marker.is-success.is-icon{background-color:#23d160!important;border-color:#23d160!important}.timeline .timeline-item .timeline-marker.is-success.is-icon>i{color:#fff!important}.timeline .timeline-item .timeline-marker.is-success.is-outlined{background-color:#fff!important;border-color:#23d160!important}.timeline .timeline-item .timeline-marker.is-success.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-success.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-success.is-outlined.is-icon>i{color:#23d160!important}.timeline .timeline-item .timeline-marker.is-warning{background-color:#ffdd57!important;border-color:#ffdd57!important}.timeline .timeline-item .timeline-marker.is-warning .image{border-color:#ffdd57!important}.timeline .timeline-item .timeline-marker.is-warning.is-icon{background-color:#ffdd57!important;border-color:#ffdd57!important}.timeline .timeline-item .timeline-marker.is-warning.is-icon>i{color:rgba(0,0,0,.7)!important}.timeline .timeline-item .timeline-marker.is-warning.is-outlined{background-color:#fff!important;border-color:#ffdd57!important}.timeline .timeline-item .timeline-marker.is-warning.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-warning.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-warning.is-outlined.is-icon>i{color:#ffdd57!important}.timeline .timeline-item .timeline-marker.is-danger{background-color:#ff3860!important;border-color:#ff3860!important}.timeline .timeline-item .timeline-marker.is-danger .image{border-color:#ff3860!important}.timeline .timeline-item .timeline-marker.is-danger.is-icon{background-color:#ff3860!important;border-color:#ff3860!important}.timeline .timeline-item .timeline-marker.is-danger.is-icon>i{color:#fff!important}.timeline .timeline-item .timeline-marker.is-danger.is-outlined{background-color:#fff!important;border-color:#ff3860!important}.timeline .timeline-item .timeline-marker.is-danger.is-outlined .image{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-danger.is-outlined.is-icon{background-color:#fff!important}.timeline .timeline-item .timeline-marker.is-danger.is-outlined.is-icon>i{color:#ff3860!important}.timeline .timeline-item .timeline-content{padding:1em 0 0 .5em;padding:1em 0 0 2em}.timeline .timeline-item .timeline-content .heading{font-weight:600}.timeline .timeline-item.is-white::before{background-color:#fff}.timeline .timeline-item.is-black::before{background-color:#0a0a0a}.timeline .timeline-item.is-light::before{background-color:#f5f5f5}.timeline .timeline-item.is-dark::before{background-color:#363636}.timeline .timeline-item.is-primary::before{background-color:#00d1b2}.timeline .timeline-item.is-link::before{background-color:#3273dc}.timeline .timeline-item.is-info::before{background-color:#209cee}.timeline .timeline-item.is-success::before{background-color:#23d160}.timeline .timeline-item.is-warning::before{background-color:#ffdd57}.timeline .timeline-item.is-danger::before{background-color:#ff3860}.timeline.is-centered .timeline-header{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-ms-flex-item-align:center;align-self:center}.timeline.is-centered .timeline-item{width:50%;-ms-flex-item-align:end;align-self:flex-end}.timeline.is-centered .timeline-item:nth-of-type(2n){-ms-flex-item-align:start;align-self:flex-start;margin-left:0;margin-right:2em}.timeline.is-centered .timeline-item:nth-of-type(2n)::before{right:-.1em;left:auto}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker{left:auto;right:-.45em}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-image.is-16x16{left:auto;right:-8px}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-image.is-24x24{left:auto;right:-12px}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-image.is-32x32{left:auto;right:-16px}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-image.is-48x48{left:auto;right:-24px}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-image.is-64x64{left:auto;right:-32px}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-image.is-96x96{left:auto;right:-48px}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-image.is-128x128{left:auto;right:-64px}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-icon{left:auto;right:-.8em}.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-content{padding:1em 2em 0 0;text-align:right;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-ms-flex-preferred-size:100%;flex-basis:100%}.timeline.is-centered .timeline-item:nth-of-type(2n+1)::before{content:"";background-color:#dbdbdb;display:block;width:.1em;height:100%;position:absolute;top:0}.timeline.is-rtl{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.timeline.is-rtl .timeline-item{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;border-left:none;margin-left:0;margin-right:2em}.timeline.is-rtl .timeline-item::before{right:0;left:auto}.timeline.is-rtl .timeline-item .timeline-marker{left:auto;right:-.35em}.timeline.is-rtl .timeline-item .timeline-marker.is-image.is-16x16{left:auto;right:-8px}.timeline.is-rtl .timeline-item .timeline-marker.is-image.is-24x24{left:auto;right:-12px}.timeline.is-rtl .timeline-item .timeline-marker.is-image.is-32x32{left:auto;right:-16px}.timeline.is-rtl .timeline-item .timeline-marker.is-image.is-48x48{left:auto;right:-24px}.timeline.is-rtl .timeline-item .timeline-marker.is-image.is-64x64{left:auto;right:-32px}.timeline.is-rtl .timeline-item .timeline-marker.is-image.is-96x96{left:auto;right:-48px}.timeline.is-rtl .timeline-item .timeline-marker.is-image.is-128x128{left:auto;right:-64px}.timeline.is-rtl .timeline-item .timeline-marker.is-icon{left:auto;right:-.7em}.timeline.is-rtl .timeline-item .timeline-content{padding:1em 2em 0 0;text-align:right}
-           @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.pricing-table{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.pricing-table.is-comparative .pricing-plan{margin:0}.pricing-table.is-comparative .pricing-plan:not(:last-child){border-right:none}.pricing-table .pricing-plan{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;background-color:#fff;border:.1rem solid #f5f5f5;border-radius:3px;list-style-type:none;-webkit-transition:.25s;transition:.25s;margin:.5em}.pricing-table .pricing-plan .plan-header{border-top-left-radius:3px;border-top-right-radius:3px;background-color:#fff;font-size:1.25rem;font-weight:600;padding:.75em;-ms-flex-line-pack:center;align-content:center;text-align:center}.pricing-table .pricing-plan .plan-item{background:#f5f5f5;border-bottom:.1rem solid #fff;padding:.75em;-ms-flex-line-pack:center;align-content:center;text-align:center;font-size:.9em;color:#7a7a7a}.pricing-table .pricing-plan .plan-price{background-color:#fff;font-size:.75rem;font-weight:400;padding:.75em;-ms-flex-line-pack:center;align-content:center;text-align:center}.pricing-table .pricing-plan .plan-price .plan-price-amount{font-size:2.5rem;font-weight:700}.pricing-table .pricing-plan .plan-price .plan-price-amount .plan-price-currency{vertical-align:super;font-size:1rem!important;font-weight:400!important;color:#4a4a4a;margin-right:.25rem}.pricing-table .pricing-plan .plan-footer{border-bottom-left-radius:3px;border-bottom-right-radius:3px;padding:.75em;-ms-flex-line-pack:center;align-content:center;text-align:center;margin-top:auto}.pricing-table .pricing-plan.is-active{-webkit-box-shadow:0 8px 12px 0 rgba(122,122,122,.2);box-shadow:0 8px 12px 0 rgba(122,122,122,.2);-webkit-transform:scale(1.05);transform:scale(1.05)}.pricing-table .pricing-plan.is-active .plan-price .plan-price-amount{color:#00d1b2}.pricing-table .pricing-plan.is-active .plan-footer .button{background-color:#00d1b2;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-active .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-active .plan-footer .button:hover{background-color:#00c4a7;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-active .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-active .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(0,209,178,.25);box-shadow:0 0 .5em rgba(0,209,178,.25);color:#fff}.pricing-table .pricing-plan.is-active .plan-footer .button.is-active,.pricing-table .pricing-plan.is-active .plan-footer .button:active{background-color:#00b89c;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-active .plan-footer .button[disabled]{background-color:#00d1b2;border-color:transparent}.pricing-table .pricing-plan.is-white .plan-price .plan-price-amount{color:#fff}.pricing-table .pricing-plan.is-white .plan-footer .button{background-color:#fff;border-color:transparent;color:#0a0a0a}.pricing-table .pricing-plan.is-white .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-white .plan-footer .button:hover{background-color:#f9f9f9;border-color:transparent;color:#0a0a0a}.pricing-table .pricing-plan.is-white .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-white .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(255,255,255,.25);box-shadow:0 0 .5em rgba(255,255,255,.25);color:#0a0a0a}.pricing-table .pricing-plan.is-white .plan-footer .button.is-active,.pricing-table .pricing-plan.is-white .plan-footer .button:active{background-color:#f2f2f2;border-color:transparent;color:#0a0a0a}.pricing-table .pricing-plan.is-white .plan-footer .button[disabled]{background-color:#fff;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-black .plan-price .plan-price-amount{color:#0a0a0a}.pricing-table .pricing-plan.is-black .plan-footer .button{background-color:#0a0a0a;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-black .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-black .plan-footer .button:hover{background-color:#040404;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-black .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-black .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(10,10,10,.25);box-shadow:0 0 .5em rgba(10,10,10,.25);color:#fff}.pricing-table .pricing-plan.is-black .plan-footer .button.is-active,.pricing-table .pricing-plan.is-black .plan-footer .button:active{background-color:#000;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-black .plan-footer .button[disabled]{background-color:#0a0a0a;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-light .plan-price .plan-price-amount{color:#f5f5f5}.pricing-table .pricing-plan.is-light .plan-footer .button{background-color:#f5f5f5;border-color:transparent;color:#363636}.pricing-table .pricing-plan.is-light .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-light .plan-footer .button:hover{background-color:#eee;border-color:transparent;color:#363636}.pricing-table .pricing-plan.is-light .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-light .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(245,245,245,.25);box-shadow:0 0 .5em rgba(245,245,245,.25);color:#363636}.pricing-table .pricing-plan.is-light .plan-footer .button.is-active,.pricing-table .pricing-plan.is-light .plan-footer .button:active{background-color:#e8e8e8;border-color:transparent;color:#363636}.pricing-table .pricing-plan.is-light .plan-footer .button[disabled]{background-color:#f5f5f5;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-dark .plan-price .plan-price-amount{color:#363636}.pricing-table .pricing-plan.is-dark .plan-footer .button{background-color:#363636;border-color:transparent;color:#f5f5f5}.pricing-table .pricing-plan.is-dark .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-dark .plan-footer .button:hover{background-color:#2f2f2f;border-color:transparent;color:#f5f5f5}.pricing-table .pricing-plan.is-dark .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-dark .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(54,54,54,.25);box-shadow:0 0 .5em rgba(54,54,54,.25);color:#f5f5f5}.pricing-table .pricing-plan.is-dark .plan-footer .button.is-active,.pricing-table .pricing-plan.is-dark .plan-footer .button:active{background-color:#292929;border-color:transparent;color:#f5f5f5}.pricing-table .pricing-plan.is-dark .plan-footer .button[disabled]{background-color:#363636;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-primary .plan-price .plan-price-amount{color:#00d1b2}.pricing-table .pricing-plan.is-primary .plan-footer .button{background-color:#00d1b2;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-primary .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-primary .plan-footer .button:hover{background-color:#00c4a7;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-primary .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-primary .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(0,209,178,.25);box-shadow:0 0 .5em rgba(0,209,178,.25);color:#fff}.pricing-table .pricing-plan.is-primary .plan-footer .button.is-active,.pricing-table .pricing-plan.is-primary .plan-footer .button:active{background-color:#00b89c;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-primary .plan-footer .button[disabled]{background-color:#00d1b2;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-link .plan-price .plan-price-amount{color:#3273dc}.pricing-table .pricing-plan.is-link .plan-footer .button{background-color:#3273dc;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-link .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-link .plan-footer .button:hover{background-color:#276cda;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-link .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-link .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(50,115,220,.25);box-shadow:0 0 .5em rgba(50,115,220,.25);color:#fff}.pricing-table .pricing-plan.is-link .plan-footer .button.is-active,.pricing-table .pricing-plan.is-link .plan-footer .button:active{background-color:#2366d1;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-link .plan-footer .button[disabled]{background-color:#3273dc;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-info .plan-price .plan-price-amount{color:#209cee}.pricing-table .pricing-plan.is-info .plan-footer .button{background-color:#209cee;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-info .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-info .plan-footer .button:hover{background-color:#1496ed;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-info .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-info .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(32,156,238,.25);box-shadow:0 0 .5em rgba(32,156,238,.25);color:#fff}.pricing-table .pricing-plan.is-info .plan-footer .button.is-active,.pricing-table .pricing-plan.is-info .plan-footer .button:active{background-color:#118fe4;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-info .plan-footer .button[disabled]{background-color:#209cee;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-success .plan-price .plan-price-amount{color:#23d160}.pricing-table .pricing-plan.is-success .plan-footer .button{background-color:#23d160;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-success .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-success .plan-footer .button:hover{background-color:#22c65b;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-success .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-success .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(35,209,96,.25);box-shadow:0 0 .5em rgba(35,209,96,.25);color:#fff}.pricing-table .pricing-plan.is-success .plan-footer .button.is-active,.pricing-table .pricing-plan.is-success .plan-footer .button:active{background-color:#20bc56;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-success .plan-footer .button[disabled]{background-color:#23d160;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-warning .plan-price .plan-price-amount{color:#ffdd57}.pricing-table .pricing-plan.is-warning .plan-footer .button{background-color:#ffdd57;border-color:transparent;color:rgba(0,0,0,.7)}.pricing-table .pricing-plan.is-warning .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-warning .plan-footer .button:hover{background-color:#ffdb4a;border-color:transparent;color:rgba(0,0,0,.7)}.pricing-table .pricing-plan.is-warning .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-warning .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(255,221,87,.25);box-shadow:0 0 .5em rgba(255,221,87,.25);color:rgba(0,0,0,.7)}.pricing-table .pricing-plan.is-warning .plan-footer .button.is-active,.pricing-table .pricing-plan.is-warning .plan-footer .button:active{background-color:#ffd83d;border-color:transparent;color:rgba(0,0,0,.7)}.pricing-table .pricing-plan.is-warning .plan-footer .button[disabled]{background-color:#ffdd57;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-danger .plan-price .plan-price-amount{color:#ff3860}.pricing-table .pricing-plan.is-danger .plan-footer .button{background-color:#ff3860;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-danger .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-danger .plan-footer .button:hover{background-color:#ff2b56;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-danger .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-danger .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(255,56,96,.25);box-shadow:0 0 .5em rgba(255,56,96,.25);color:#fff}.pricing-table .pricing-plan.is-danger .plan-footer .button.is-active,.pricing-table .pricing-plan.is-danger .plan-footer .button:active{background-color:#ff1f4b;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-danger .plan-footer .button[disabled]{background-color:#ff3860;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}@media screen and (min-width:769px),print{.pricing-table.is-comparative{margin:.5rem}.pricing-table.is-comparative.is-features{display:none}.pricing-table.is-comparative .plan-item::before{content:attr("data-feature")}.pricing-table.is-horizontal .pricing-plan{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-preferred-size:100%;flex-basis:100%}.pricing-table.is-horizontal .pricing-plan .plan-header{width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.pricing-table.is-horizontal .pricing-plan .plan-price{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.pricing-table.is-horizontal .pricing-plan .plan-items{width:100%;background-color:#f5f5f5;columns:2;-webkit-columns:2;-moz-columns:2;-webkit-column-gap:.1rem;column-gap:.1rem}.pricing-table.is-horizontal .pricing-plan .plan-footer{width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:auto}}@media screen and (max-width:768px){.pricing-table.is-comparative .pricing-plan{margin:.5rem}.pricing-table.is-comparative .pricing-plan.is-plan-first-mobile{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.pricing-table.is-comparative .pricing-plan.is-features{display:none}.pricing-table.is-comparative .pricing-plan .plan-item::before{content:attr(data-feature);display:block;font-weight:600;font-size:.75rem;color:#b5b5b5}}
-           @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.badge{position:relative;white-space:nowrap;position:relative}.badge[data-badge]::after{position:absolute;left:100%;margin:0;background:#00d1b2;background-clip:padding-box;border-radius:1rem;-webkit-box-shadow:0 0 0 .1rem #fff;box-shadow:0 0 0 .1rem #fff;color:#fff;content:attr(data-badge);display:inline-block}.badge:not([data-badge=""])::after{padding:.3rem .5rem;text-align:center;white-space:nowrap}.badge[data-badge=""]::after{display:inline-block;vertical-align:inherit}.badge.is-badge-white:not([data-badge])::after,.badge.is-badge-white[data-badge]::after{background:#fff;color:#0a0a0a}.badge.is-badge-black:not([data-badge])::after,.badge.is-badge-black[data-badge]::after{background:#0a0a0a;color:#fff}.badge.is-badge-light:not([data-badge])::after,.badge.is-badge-light[data-badge]::after{background:#f5f5f5;color:#363636}.badge.is-badge-dark:not([data-badge])::after,.badge.is-badge-dark[data-badge]::after{background:#363636;color:#f5f5f5}.badge.is-badge-primary:not([data-badge])::after,.badge.is-badge-primary[data-badge]::after{background:#00d1b2;color:#fff}.badge.is-badge-link:not([data-badge])::after,.badge.is-badge-link[data-badge]::after{background:#3273dc;color:#fff}.badge.is-badge-info:not([data-badge])::after,.badge.is-badge-info[data-badge]::after{background:#209cee;color:#fff}.badge.is-badge-success:not([data-badge])::after,.badge.is-badge-success[data-badge]::after{background:#23d160;color:#fff}.badge.is-badge-warning:not([data-badge])::after,.badge.is-badge-warning[data-badge]::after{background:#ffdd57;color:rgba(0,0,0,.7)}.badge.is-badge-danger:not([data-badge])::after,.badge.is-badge-danger[data-badge]::after{background:#ff3860;color:#fff}.badge.is-badge-outlined[data-badge]::after{background-color:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #00d1b2;color:#00d1b2}.badge.is-badge-outlined.is-badge-white[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #fff;color:#fff}.badge.is-badge-outlined.is-badge-black[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #0a0a0a;color:#0a0a0a}.badge.is-badge-outlined.is-badge-light[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #f5f5f5;color:#f5f5f5}.badge.is-badge-outlined.is-badge-dark[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #363636;color:#363636}.badge.is-badge-outlined.is-badge-primary[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #00d1b2;color:#00d1b2}.badge.is-badge-outlined.is-badge-link[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #3273dc;color:#3273dc}.badge.is-badge-outlined.is-badge-info[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #209cee;color:#209cee}.badge.is-badge-outlined.is-badge-success[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #23d160;color:#23d160}.badge.is-badge-outlined.is-badge-warning[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #ffdd57;color:#ffdd57}.badge.is-badge-outlined.is-badge-danger[data-badge]::after{background:#fff;-webkit-box-shadow:none;box-shadow:none;border:.1rem solid #ff3860;color:#ff3860}.badge[data-badge]::after{top:calc(0px - (1rem / 2));left:calc(100% - (1rem / 2));min-height:1rem;min-width:1rem}.badge:not([data-badge=""])::after{font-size:.75rem;line-height:.5rem}.badge[data-badge=""]::after{width:1rem}.badge.is-badge-left::after{left:calc(0px - (1rem / 2))}.badge.is-badge-bottom::after{top:calc(100% - (1rem / 2))}.badge.is-badge-bottom-left::after{left:calc(0px - (1rem / 2));top:calc(100% - (1rem / 2))}.badge.is-badge-small[data-badge]::after{top:calc(0px - (.75rem / 2));left:calc(100% - (.75rem / 2));min-height:.75rem;min-width:.75rem}.badge.is-badge-small:not([data-badge=""])::after{font-size:.5625rem;line-height:.375rem}.badge.is-badge-small[data-badge=""]::after{width:.75rem}.badge.is-badge-small.is-badge-left::after{left:calc(0px - (.75rem / 2))}.badge.is-badge-small.is-badge-bottom::after{top:calc(100% - (.75rem / 2))}.badge.is-badge-small.is-badge-bottom-left::after{left:calc(0px - (.75rem / 2));top:calc(100% - (.75rem / 2))}.badge.is-badge-medium[data-badge]::after{top:calc(0px - (1.25rem / 2));left:calc(100% - (1.25rem / 2));min-height:1.25rem;min-width:1.25rem}.badge.is-badge-medium:not([data-badge=""])::after{font-size:.9375rem;line-height:.625rem}.badge.is-badge-medium[data-badge=""]::after{width:1.25rem}.badge.is-badge-medium.is-badge-left::after{left:calc(0px - (1.25rem / 2))}.badge.is-badge-medium.is-badge-bottom::after{top:calc(100% - (1.25rem / 2))}.badge.is-badge-medium.is-badge-bottom-left::after{left:calc(0px - (1.25rem / 2));top:calc(100% - (1.25rem / 2))}.badge.is-badge-large[data-badge]::after{top:calc(0px - (1.5rem / 2));left:calc(100% - (1.5rem / 2));min-height:1.5rem;min-width:1.5rem}.badge.is-badge-large:not([data-badge=""])::after{font-size:1.125rem;line-height:.75rem}.badge.is-badge-large[data-badge=""]::after{width:1.5rem}.badge.is-badge-large.is-badge-left::after{left:calc(0px - (1.5rem / 2))}.badge.is-badge-large.is-badge-bottom::after{top:calc(100% - (1.5rem / 2))}.badge.is-badge-large.is-badge-bottom-left::after{left:calc(0px - (1.5rem / 2));top:calc(100% - (1.5rem / 2))}
-           @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.pricing-table{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.pricing-table.is-comparative .pricing-plan{margin:0}.pricing-table.is-comparative .pricing-plan:not(:last-child){border-right:none}.pricing-table .pricing-plan{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;background-color:#fff;border:.1rem solid #f5f5f5;border-radius:3px;list-style-type:none;-webkit-transition:.25s;transition:.25s;margin:.5em}.pricing-table .pricing-plan .plan-header{border-top-left-radius:3px;border-top-right-radius:3px;background-color:#fff;font-size:1.25rem;font-weight:600;padding:.75em;-ms-flex-line-pack:center;align-content:center;text-align:center}.pricing-table .pricing-plan .plan-item{background:#f5f5f5;border-bottom:.1rem solid #fff;padding:.75em;-ms-flex-line-pack:center;align-content:center;text-align:center;font-size:.9em;color:#7a7a7a}.pricing-table .pricing-plan .plan-price{background-color:#fff;font-size:.75rem;font-weight:400;padding:.75em;-ms-flex-line-pack:center;align-content:center;text-align:center}.pricing-table .pricing-plan .plan-price .plan-price-amount{font-size:2.5rem;font-weight:700}.pricing-table .pricing-plan .plan-price .plan-price-amount .plan-price-currency{vertical-align:super;font-size:1rem!important;font-weight:400!important;color:#4a4a4a;margin-right:.25rem}.pricing-table .pricing-plan .plan-footer{border-bottom-left-radius:3px;border-bottom-right-radius:3px;padding:.75em;-ms-flex-line-pack:center;align-content:center;text-align:center;margin-top:auto}.pricing-table .pricing-plan.is-active{-webkit-box-shadow:0 8px 12px 0 rgba(122,122,122,.2);box-shadow:0 8px 12px 0 rgba(122,122,122,.2);-webkit-transform:scale(1.05);transform:scale(1.05)}.pricing-table .pricing-plan.is-active .plan-price .plan-price-amount{color:#00d1b2}.pricing-table .pricing-plan.is-active .plan-footer .button{background-color:#00d1b2;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-active .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-active .plan-footer .button:hover{background-color:#00c4a7;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-active .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-active .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(0,209,178,.25);box-shadow:0 0 .5em rgba(0,209,178,.25);color:#fff}.pricing-table .pricing-plan.is-active .plan-footer .button.is-active,.pricing-table .pricing-plan.is-active .plan-footer .button:active{background-color:#00b89c;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-active .plan-footer .button[disabled]{background-color:#00d1b2;border-color:transparent}.pricing-table .pricing-plan.is-white .plan-price .plan-price-amount{color:#fff}.pricing-table .pricing-plan.is-white .plan-footer .button{background-color:#fff;border-color:transparent;color:#0a0a0a}.pricing-table .pricing-plan.is-white .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-white .plan-footer .button:hover{background-color:#f9f9f9;border-color:transparent;color:#0a0a0a}.pricing-table .pricing-plan.is-white .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-white .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(255,255,255,.25);box-shadow:0 0 .5em rgba(255,255,255,.25);color:#0a0a0a}.pricing-table .pricing-plan.is-white .plan-footer .button.is-active,.pricing-table .pricing-plan.is-white .plan-footer .button:active{background-color:#f2f2f2;border-color:transparent;color:#0a0a0a}.pricing-table .pricing-plan.is-white .plan-footer .button[disabled]{background-color:#fff;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-black .plan-price .plan-price-amount{color:#0a0a0a}.pricing-table .pricing-plan.is-black .plan-footer .button{background-color:#0a0a0a;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-black .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-black .plan-footer .button:hover{background-color:#040404;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-black .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-black .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(10,10,10,.25);box-shadow:0 0 .5em rgba(10,10,10,.25);color:#fff}.pricing-table .pricing-plan.is-black .plan-footer .button.is-active,.pricing-table .pricing-plan.is-black .plan-footer .button:active{background-color:#000;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-black .plan-footer .button[disabled]{background-color:#0a0a0a;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-light .plan-price .plan-price-amount{color:#f5f5f5}.pricing-table .pricing-plan.is-light .plan-footer .button{background-color:#f5f5f5;border-color:transparent;color:#363636}.pricing-table .pricing-plan.is-light .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-light .plan-footer .button:hover{background-color:#eee;border-color:transparent;color:#363636}.pricing-table .pricing-plan.is-light .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-light .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(245,245,245,.25);box-shadow:0 0 .5em rgba(245,245,245,.25);color:#363636}.pricing-table .pricing-plan.is-light .plan-footer .button.is-active,.pricing-table .pricing-plan.is-light .plan-footer .button:active{background-color:#e8e8e8;border-color:transparent;color:#363636}.pricing-table .pricing-plan.is-light .plan-footer .button[disabled]{background-color:#f5f5f5;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-dark .plan-price .plan-price-amount{color:#363636}.pricing-table .pricing-plan.is-dark .plan-footer .button{background-color:#363636;border-color:transparent;color:#f5f5f5}.pricing-table .pricing-plan.is-dark .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-dark .plan-footer .button:hover{background-color:#2f2f2f;border-color:transparent;color:#f5f5f5}.pricing-table .pricing-plan.is-dark .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-dark .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(54,54,54,.25);box-shadow:0 0 .5em rgba(54,54,54,.25);color:#f5f5f5}.pricing-table .pricing-plan.is-dark .plan-footer .button.is-active,.pricing-table .pricing-plan.is-dark .plan-footer .button:active{background-color:#292929;border-color:transparent;color:#f5f5f5}.pricing-table .pricing-plan.is-dark .plan-footer .button[disabled]{background-color:#363636;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-primary .plan-price .plan-price-amount{color:#00d1b2}.pricing-table .pricing-plan.is-primary .plan-footer .button{background-color:#00d1b2;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-primary .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-primary .plan-footer .button:hover{background-color:#00c4a7;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-primary .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-primary .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(0,209,178,.25);box-shadow:0 0 .5em rgba(0,209,178,.25);color:#fff}.pricing-table .pricing-plan.is-primary .plan-footer .button.is-active,.pricing-table .pricing-plan.is-primary .plan-footer .button:active{background-color:#00b89c;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-primary .plan-footer .button[disabled]{background-color:#00d1b2;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-link .plan-price .plan-price-amount{color:#3273dc}.pricing-table .pricing-plan.is-link .plan-footer .button{background-color:#3273dc;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-link .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-link .plan-footer .button:hover{background-color:#276cda;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-link .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-link .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(50,115,220,.25);box-shadow:0 0 .5em rgba(50,115,220,.25);color:#fff}.pricing-table .pricing-plan.is-link .plan-footer .button.is-active,.pricing-table .pricing-plan.is-link .plan-footer .button:active{background-color:#2366d1;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-link .plan-footer .button[disabled]{background-color:#3273dc;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-info .plan-price .plan-price-amount{color:#209cee}.pricing-table .pricing-plan.is-info .plan-footer .button{background-color:#209cee;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-info .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-info .plan-footer .button:hover{background-color:#1496ed;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-info .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-info .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(32,156,238,.25);box-shadow:0 0 .5em rgba(32,156,238,.25);color:#fff}.pricing-table .pricing-plan.is-info .plan-footer .button.is-active,.pricing-table .pricing-plan.is-info .plan-footer .button:active{background-color:#118fe4;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-info .plan-footer .button[disabled]{background-color:#209cee;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-success .plan-price .plan-price-amount{color:#23d160}.pricing-table .pricing-plan.is-success .plan-footer .button{background-color:#23d160;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-success .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-success .plan-footer .button:hover{background-color:#22c65b;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-success .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-success .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(35,209,96,.25);box-shadow:0 0 .5em rgba(35,209,96,.25);color:#fff}.pricing-table .pricing-plan.is-success .plan-footer .button.is-active,.pricing-table .pricing-plan.is-success .plan-footer .button:active{background-color:#20bc56;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-success .plan-footer .button[disabled]{background-color:#23d160;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-warning .plan-price .plan-price-amount{color:#ffdd57}.pricing-table .pricing-plan.is-warning .plan-footer .button{background-color:#ffdd57;border-color:transparent;color:rgba(0,0,0,.7)}.pricing-table .pricing-plan.is-warning .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-warning .plan-footer .button:hover{background-color:#ffdb4a;border-color:transparent;color:rgba(0,0,0,.7)}.pricing-table .pricing-plan.is-warning .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-warning .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(255,221,87,.25);box-shadow:0 0 .5em rgba(255,221,87,.25);color:rgba(0,0,0,.7)}.pricing-table .pricing-plan.is-warning .plan-footer .button.is-active,.pricing-table .pricing-plan.is-warning .plan-footer .button:active{background-color:#ffd83d;border-color:transparent;color:rgba(0,0,0,.7)}.pricing-table .pricing-plan.is-warning .plan-footer .button[disabled]{background-color:#ffdd57;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}.pricing-table .pricing-plan.is-danger .plan-price .plan-price-amount{color:#ff3860}.pricing-table .pricing-plan.is-danger .plan-footer .button{background-color:#ff3860;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-danger .plan-footer .button.is-hovered,.pricing-table .pricing-plan.is-danger .plan-footer .button:hover{background-color:#ff2b56;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-danger .plan-footer .button.is-focused,.pricing-table .pricing-plan.is-danger .plan-footer .button:focus{border-color:transparent;-webkit-box-shadow:0 0 .5em rgba(255,56,96,.25);box-shadow:0 0 .5em rgba(255,56,96,.25);color:#fff}.pricing-table .pricing-plan.is-danger .plan-footer .button.is-active,.pricing-table .pricing-plan.is-danger .plan-footer .button:active{background-color:#ff1f4b;border-color:transparent;color:#fff}.pricing-table .pricing-plan.is-danger .plan-footer .button[disabled]{background-color:#ff3860;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}@media screen and (min-width:769px),print{.pricing-table.is-comparative{margin:.5rem}.pricing-table.is-comparative.is-features{display:none}.pricing-table.is-comparative .plan-item::before{content:attr("data-feature")}.pricing-table.is-horizontal .pricing-plan{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-preferred-size:100%;flex-basis:100%}.pricing-table.is-horizontal .pricing-plan .plan-header{width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.pricing-table.is-horizontal .pricing-plan .plan-price{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.pricing-table.is-horizontal .pricing-plan .plan-items{width:100%;background-color:#f5f5f5;columns:2;-webkit-columns:2;-moz-columns:2;-webkit-column-gap:.1rem;column-gap:.1rem}.pricing-table.is-horizontal .pricing-plan .plan-footer{width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:auto}}@media screen and (max-width:768px){.pricing-table.is-comparative .pricing-plan{margin:.5rem}.pricing-table.is-comparative .pricing-plan.is-plan-first-mobile{-webkit-box-ordinal-group:0;-ms-flex-order:-1;order:-1}.pricing-table.is-comparative .pricing-plan.is-features{display:none}.pricing-table.is-comparative .pricing-plan .plan-item::before{content:attr(data-feature);display:block;font-weight:600;font-size:.75rem;color:#b5b5b5}}
-           @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.steps{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;font-size:1rem;min-height:2rem}.steps:not(:last-child){margin-bottom:1.5rem}.steps .step-item{margin-top:0;position:relative;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0}.steps .step-item:not(:first-child){-ms-flex-preferred-size:1em;flex-basis:1em;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-negative:1;flex-shrink:1}.steps .step-item:not(:first-child)::before{content:" ";display:block;position:absolute}.steps .step-item::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#00d1b2));background:linear-gradient(to left,#dbdbdb 50%,#00d1b2 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item::before .step-marker{color:#fff}.steps .step-item.is-active::before{background-position:left bottom}.steps .step-item.is-active .step-marker{background-color:#fff;border-color:#00d1b2;color:#00d1b2}.steps .step-item.is-completed::before{background-position:left bottom}.steps .step-item.is-completed .step-marker{color:#fff;background-color:#00d1b2}.steps .step-item .step-marker{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;border-radius:50%;font-weight:700;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:#b5b5b5;color:#fff;border:.2em solid #fff;z-index:1}.steps .step-item .step-details{text-align:center}.steps .step-item.is-white::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#fff));background:linear-gradient(to left,#dbdbdb 50%,#fff 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-white.is-active::before{background-position:left bottom}.steps .step-item.is-white.is-active .step-marker{background-color:#fff;border-color:#fff;color:#fff}.steps .step-item.is-white.is-completed::before{background-position:left bottom}.steps .step-item.is-white.is-completed .step-marker{color:#0a0a0a;background-color:#fff}.steps .step-item.is-black::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#0a0a0a));background:linear-gradient(to left,#dbdbdb 50%,#0a0a0a 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-black.is-active::before{background-position:left bottom}.steps .step-item.is-black.is-active .step-marker{background-color:#fff;border-color:#0a0a0a;color:#0a0a0a}.steps .step-item.is-black.is-completed::before{background-position:left bottom}.steps .step-item.is-black.is-completed .step-marker{color:#fff;background-color:#0a0a0a}.steps .step-item.is-light::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#f5f5f5));background:linear-gradient(to left,#dbdbdb 50%,#f5f5f5 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-light.is-active::before{background-position:left bottom}.steps .step-item.is-light.is-active .step-marker{background-color:#fff;border-color:#f5f5f5;color:#f5f5f5}.steps .step-item.is-light.is-completed::before{background-position:left bottom}.steps .step-item.is-light.is-completed .step-marker{color:#363636;background-color:#f5f5f5}.steps .step-item.is-dark::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#363636));background:linear-gradient(to left,#dbdbdb 50%,#363636 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-dark.is-active::before{background-position:left bottom}.steps .step-item.is-dark.is-active .step-marker{background-color:#fff;border-color:#363636;color:#363636}.steps .step-item.is-dark.is-completed::before{background-position:left bottom}.steps .step-item.is-dark.is-completed .step-marker{color:#f5f5f5;background-color:#363636}.steps .step-item.is-primary::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#00d1b2));background:linear-gradient(to left,#dbdbdb 50%,#00d1b2 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-primary.is-active::before{background-position:left bottom}.steps .step-item.is-primary.is-active .step-marker{background-color:#fff;border-color:#00d1b2;color:#00d1b2}.steps .step-item.is-primary.is-completed::before{background-position:left bottom}.steps .step-item.is-primary.is-completed .step-marker{color:#fff;background-color:#00d1b2}.steps .step-item.is-link::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#3273dc));background:linear-gradient(to left,#dbdbdb 50%,#3273dc 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-link.is-active::before{background-position:left bottom}.steps .step-item.is-link.is-active .step-marker{background-color:#fff;border-color:#3273dc;color:#3273dc}.steps .step-item.is-link.is-completed::before{background-position:left bottom}.steps .step-item.is-link.is-completed .step-marker{color:#fff;background-color:#3273dc}.steps .step-item.is-info::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#209cee));background:linear-gradient(to left,#dbdbdb 50%,#209cee 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-info.is-active::before{background-position:left bottom}.steps .step-item.is-info.is-active .step-marker{background-color:#fff;border-color:#209cee;color:#209cee}.steps .step-item.is-info.is-completed::before{background-position:left bottom}.steps .step-item.is-info.is-completed .step-marker{color:#fff;background-color:#209cee}.steps .step-item.is-success::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#23d160));background:linear-gradient(to left,#dbdbdb 50%,#23d160 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-success.is-active::before{background-position:left bottom}.steps .step-item.is-success.is-active .step-marker{background-color:#fff;border-color:#23d160;color:#23d160}.steps .step-item.is-success.is-completed::before{background-position:left bottom}.steps .step-item.is-success.is-completed .step-marker{color:#fff;background-color:#23d160}.steps .step-item.is-warning::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#ffdd57));background:linear-gradient(to left,#dbdbdb 50%,#ffdd57 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-warning.is-active::before{background-position:left bottom}.steps .step-item.is-warning.is-active .step-marker{background-color:#fff;border-color:#ffdd57;color:#ffdd57}.steps .step-item.is-warning.is-completed::before{background-position:left bottom}.steps .step-item.is-warning.is-completed .step-marker{color:rgba(0,0,0,.7);background-color:#ffdd57}.steps .step-item.is-danger::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#ff3860));background:linear-gradient(to left,#dbdbdb 50%,#ff3860 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-danger.is-active::before{background-position:left bottom}.steps .step-item.is-danger.is-active .step-marker{background-color:#fff;border-color:#ff3860;color:#ff3860}.steps .step-item.is-danger.is-completed::before{background-position:left bottom}.steps .step-item.is-danger.is-completed .step-marker{color:#fff;background-color:#ff3860}.steps .steps-content{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-ms-flex-preferred-size:100%;flex-basis:100%;margin:2rem 0}.steps .steps-content .step-content{display:none}.steps .steps-content .step-content.is-active{display:block}.steps .steps-actions{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-ms-flex-preferred-size:100%;flex-basis:100%}.steps .steps-actions .steps-action{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;margin:.5rem;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.steps.is-animated .step-item::before{-webkit-transition:all 2s ease;transition:all 2s ease}.steps.is-animated .step-item .step-marker{-webkit-transition:all 0s ease;transition:all 0s ease;-webkit-transition-delay:1.5s;transition-delay:1.5s}.steps .step-item:not(:first-child)::before{height:.2em;width:100%;bottom:0;left:-50%;top:1rem}.steps .step-item .step-marker{height:2rem;width:2rem;position:absolute;left:calc(50% - 1rem)}.steps .step-item .step-marker .icon *{font-size:1rem}.steps .step-item .step-details{margin-top:2rem;margin-left:.5em;margin-right:.5em;padding-top:.2em}.steps .step-item .step-details .step-title{font-size:1.2rem;font-weight:600}.steps.is-small{font-size:.75rem;min-height:1.5rem}.steps.is-small .step-item:not(:first-child)::before{height:.2em;width:100%;bottom:0;left:-50%;top:.75rem}.steps.is-small .step-item .step-marker{height:1.5rem;width:1.5rem;position:absolute;left:calc(50% - .75rem)}.steps.is-small .step-item .step-marker .icon *{font-size:.75rem}.steps.is-small .step-item .step-details{margin-top:1.5rem;margin-left:.5em;margin-right:.5em;padding-top:.2em}.steps.is-small .step-item .step-details .step-title{font-size:.9rem;font-weight:600}.steps.is-medium{font-size:1.25rem;min-height:2.5rem}.steps.is-medium .step-item:not(:first-child)::before{height:.2em;width:100%;bottom:0;left:-50%;top:1.25rem}.steps.is-medium .step-item .step-marker{height:2.5rem;width:2.5rem;position:absolute;left:calc(50% - 1.25rem)}.steps.is-medium .step-item .step-marker .icon *{font-size:1.25rem}.steps.is-medium .step-item .step-details{margin-top:2.5rem;margin-left:.5em;margin-right:.5em;padding-top:.2em}.steps.is-medium .step-item .step-details .step-title{font-size:1.5rem;font-weight:600}.steps.is-large{font-size:1.5rem;min-height:3rem}.steps.is-large .step-item:not(:first-child)::before{height:.2em;width:100%;bottom:0;left:-50%;top:1.5rem}.steps.is-large .step-item .step-marker{height:3rem;width:3rem;position:absolute;left:calc(50% - 1.5rem)}.steps.is-large .step-item .step-marker .icon *{font-size:1.5rem}.steps.is-large .step-item .step-details{margin-top:3rem;margin-left:.5em;margin-right:.5em;padding-top:.2em}.steps.is-large .step-item .step-details .step-title{font-size:1.8rem;font-weight:600}
-           @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.carousel{position:relative;overflow:hidden}.carousel .carousel-container{width:100%;position:relative;border:none;display:-webkit-box;display:-ms-flexbox;display:flex;margin:0;padding:0;left:-100%;-webkit-transform:translateX(100%);transform:translateX(100%)}.carousel .carousel-container .carousel-item{display:block;position:relative;-webkit-box-flex:1;-ms-flex:1 0 100%;flex:1 0 100%}.carousel .carousel-container .carousel-item.has-background .is-background{-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center;height:100%;width:100%}.carousel .carousel-container .carousel-item .title{position:absolute;left:0;right:0;bottom:0;padding:1.5em;margin:0;text-align:center;background:rgba(255,255,255,.6);font-size:.75rem}.carousel .carousel-navigation{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;width:100%}.carousel .carousel-navigation .carousel-nav-left,.carousel .carousel-navigation .carousel-nav-right{padding:1em}.carousel .carousel-navigation.is-centered{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.carousel .carousel-navigation.is-overlay{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;z-index:20}.carousel .carousel-navigation.is-overlay .carousel-nav-left,.carousel .carousel-navigation.is-overlay .carousel-nav-right{height:2.2em;width:2em;background:rgba(255,255,255,.7);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#4a4a4a;z-index:99}.carousel .carousel-navigation.is-overlay .carousel-nav-left:hover,.carousel .carousel-navigation.is-overlay .carousel-nav-right:hover{cursor:pointer}.carousel .carousel-navigation.is-overlay .carousel-nav-right{left:auto;right:0}.carousel.is-reversing .carousel-container{-webkit-transform:translateX(-100%);transform:translateX(-100%)}.carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(-100% / 2));transform:translateX(calc(-100% / 2))}.carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(-100% / 3));transform:translateX(calc(-100% / 3))}.carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(-100% / 4));transform:translateX(calc(-100% / 4))}.carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(-100% / 5));transform:translateX(calc(-100% / 5))}.carousel.is-2 .carousel-container{left:calc(-100% / 2);-webkit-transform:translateX(calc(100% / 2));transform:translateX(calc(100% / 2))}.carousel.is-2 .carousel-container .carousel-item{padding:1em;-ms-flex-preferred-size:calc(100% / 2);flex-basis:calc(100% / 2)}.carousel.is-3 .carousel-container{left:calc(-100% / 3);-webkit-transform:translateX(calc(100% / 3));transform:translateX(calc(100% / 3))}.carousel.is-3 .carousel-container .carousel-item{padding:1em;-ms-flex-preferred-size:calc(100% / 3);flex-basis:calc(100% / 3)}.carousel.is-4 .carousel-container{left:calc(-100% / 4);-webkit-transform:translateX(calc(100% / 4));transform:translateX(calc(100% / 4))}.carousel.is-4 .carousel-container .carousel-item{padding:1em;-ms-flex-preferred-size:calc(100% / 4);flex-basis:calc(100% / 4)}.carousel.is-5 .carousel-container{left:calc(-100% / 5);-webkit-transform:translateX(calc(100% / 5));transform:translateX(calc(100% / 5))}.carousel.is-5 .carousel-container .carousel-item{padding:1em;-ms-flex-preferred-size:calc(100% / 5);flex-basis:calc(100% / 5)}.hero.has-carousel{position:relative}.hero.has-carousel+.hero-body,.hero.has-carousel+.hero-footer,.hero.has-carousel+.hero-head{z-index:1}.hero.has-carousel .hero-carousel{display:-webkit-box;display:-ms-flexbox;display:flex;position:absolute;top:0;left:0;bottom:0;right:0;height:auto;border:none;margin:auto;padding:0;z-index:0}.hero-carousel{position:relative;overflow:hidden}.hero-carousel .carousel-container{width:100%;position:relative;border:none;display:-webkit-box;display:-ms-flexbox;display:flex;margin:0;padding:0;left:-100%;-webkit-transform:translateX(100%);transform:translateX(100%)}.hero-carousel .carousel-container .carousel-item{display:block;position:relative;-webkit-box-flex:1;-ms-flex:1 0 100%;flex:1 0 100%}.hero-carousel .carousel-container .carousel-item.has-background .is-background{-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center;height:100%;width:100%}.hero-carousel .carousel-container .carousel-item .title{position:absolute;left:0;right:0;bottom:0;padding:1.5em;margin:0;text-align:center;background:rgba(255,255,255,.6);font-size:.75rem}.hero-carousel .carousel-navigation{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;width:100%}.hero-carousel .carousel-navigation .carousel-nav-left,.hero-carousel .carousel-navigation .carousel-nav-right{padding:1em}.hero-carousel .carousel-navigation.is-centered{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.hero-carousel .carousel-navigation.is-overlay{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;z-index:20}.hero-carousel .carousel-navigation.is-overlay .carousel-nav-left,.hero-carousel .carousel-navigation.is-overlay .carousel-nav-right{height:2.2em;width:2em;background:rgba(255,255,255,.7);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#4a4a4a;z-index:99}.hero-carousel .carousel-navigation.is-overlay .carousel-nav-left:hover,.hero-carousel .carousel-navigation.is-overlay .carousel-nav-right:hover{cursor:pointer}.hero-carousel .carousel-navigation.is-overlay .carousel-nav-right{left:auto;right:0}.hero-carousel.is-reversing .carousel-container{-webkit-transform:translateX(-100%);transform:translateX(-100%)}.hero-carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(-100% / 2));transform:translateX(calc(-100% / 2))}.hero-carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(-100% / 3));transform:translateX(calc(-100% / 3))}.hero-carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(-100% / 4));transform:translateX(calc(-100% / 4))}.hero-carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(-100% / 5));transform:translateX(calc(-100% / 5))}.carousel.carousel-animate-slide.carousel-animated .carousel-container,.hero-carousel.carousel-animate-slide.carousel-animated .carousel-container{-webkit-transform:none;transform:none;-webkit-transition:-webkit-transform .5s ease-in-out;transition:-webkit-transform .5s ease-in-out;transition:transform .5s ease-in-out;transition:transform .5s ease-in-out,-webkit-transform .5s ease-in-out}.carousel.carousel-animate-fade .carousel-item,.hero-carousel.carousel-animate-fade .carousel-item{position:absolute;width:100%;height:100%;-webkit-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out}.carousel.carousel-animate-fade .carousel-item.is-active,.hero-carousel.carousel-animate-fade .carousel-item.is-active{opacity:1}.carousel.carousel-animate-fade .carousel-item:not(.is-active),.hero-carousel.carousel-animate-fade .carousel-item:not(.is-active){opacity:0}
-           @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.is-divider,.is-divider-vertical{display:block;position:relative}.is-divider-vertical[data-content]::after,.is-divider[data-content]::after{background:#fff;color:#b5b5b5;content:attr(data-content);display:inline-block;font-size:.75rem;padding:.5rem .8rem;-webkit-transform:translateY(-1.1rem);transform:translateY(-1.1rem);text-align:center}.is-divider{border-top:.1rem solid #dbdbdb;height:.1rem;margin:2rem 0;text-align:center}.is-divider-vertical{display:block;padding:2rem;position:relative}.is-divider-vertical::before{border-left:.1rem solid #dbdbdb;bottom:1rem;content:"";display:block;left:50%;position:absolute;top:1rem;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.is-divider-vertical[data-content]::after{left:50%;padding:.4rem 0;position:relative;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
-           
-           ')
-    ),
-    tags$style(src = "bulma-pageloader.min.css"),
+    tags$link(rel = "stylesheet", type = "text/css", href = "bulma-extensions.min.css"),
     tags$script(src = "bulma-carousel.min.js"),
     tags$script(src = "bulma-steps.min.js")
   ),
@@ -57,10 +48,10 @@ ui <- bulmaNavbarPage(
         "Bulma Carousels"
       ),
       bulmaNavbarItem(
-        "Bulma Badges and Buttons"
+        "Bulma Badges, Buttons and Tags"
       ),
       bulmaNavbarItem(
-        "Bulma Tags"
+        "Others"
       )
     )
   ),
@@ -69,336 +60,513 @@ ui <- bulmaNavbarPage(
   bulmaNav(
     "Bulma Timelines",
     
-    bulmaColumns(
-      bulmaColumn(
-        width = 12,
-        shiny::column(width = 12, align = "center", 
-                      bulmaTitle("Bulma Centered Timeline")
+    bulmaContainer(
+          width = 12,
+          shiny::column(width = 12, align = "center", 
+                        bulmaTitle("Bulma Centered Timeline")
+          ),
+          
+          br(), br(),
+          
+          bulmaTimeline(
+            centered = TRUE,
+            bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
+            bulmaTimelineItem(
+              color = "primary", marker_color = "primary",
+              marker_image = FALSE, marker_icon = FALSE,
+              content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
+            ),
+            bulmaTimelineItem(
+              color = "warning", marker_color = "warning",
+              marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
+              content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
+              tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
+            ),
+            bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
+            bulmaTimelineItem(
+              color = "danger", marker_color = "danger",
+              marker_image = FALSE, marker_icon = TRUE,
+              content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
+              tags$i(class = "fa fa-flag")
+            ),
+            bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
+          ),
+      
+      bulmaDivider(),
+      
+      bulmaColumns(
+        bulmaColumn(
+          width = 6,
+          shiny::column(width = 12, align = "center", 
+                        bulmaTitle("Bulma right to left Timeline")
+          ),
+          
+          br(), br(),
+          
+          bulmaTimeline(
+            centered = FALSE, rtl = TRUE,
+            bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
+            bulmaTimelineItem(
+              color = "primary", marker_color = "primary",
+              marker_image = FALSE, marker_icon = FALSE,
+              content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
+            ),
+            bulmaTimelineItem(
+              color = "warning", marker_color = "warning",
+              marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
+              content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
+              tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
+            ),
+            bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
+            bulmaTimelineItem(
+              color = "danger", marker_color = "danger",
+              marker_image = FALSE, marker_icon = TRUE,
+              content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
+              tags$i(class = "fa fa-flag")
+            ),
+            bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
+          )
         ),
-        
-        br(), br(),
-        
-        bulmaTimeline(
-          centered = TRUE,
-          bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
-          bulmaTimelineItem(
-            color = "primary", marker_color = "primary",
-            marker_image = FALSE, marker_icon = FALSE,
-            content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
+        bulmaDivider(vertical = TRUE),
+        bulmaColumn(
+          width = 6,
+          shiny::column(width = 12, align = "center", 
+                        bulmaTitle("Bulma left to right Timeline")
           ),
-          bulmaTimelineItem(
-            color = "warning", marker_color = "warning",
-            marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
-            content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
-            tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
-          ),
-          bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
-          bulmaTimelineItem(
-            color = "danger", marker_color = "danger",
-            marker_image = FALSE, marker_icon = TRUE,
-            content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
-            tags$i(class = "fa fa-flag")
-          ),
-          bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
-        )
-      )
-    ),
-    
-    bulmaDivider(),
-    
-    bulmaColumns(
-      bulmaColumn(
-        width = 6,
-        shiny::column(width = 12, align = "center", 
-                      bulmaTitle("Bulma rigth to left Timeline")
-        ),
-        
-        br(), br(),
-        
-        bulmaTimeline(
-          centered = FALSE, rtl = TRUE,
-          bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
-          bulmaTimelineItem(
-            color = "primary", marker_color = "primary",
-            marker_image = FALSE, marker_icon = FALSE,
-            content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
-          ),
-          bulmaTimelineItem(
-            color = "warning", marker_color = "warning",
-            marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
-            content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
-            tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
-          ),
-          bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
-          bulmaTimelineItem(
-            color = "danger", marker_color = "danger",
-            marker_image = FALSE, marker_icon = TRUE,
-            content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
-            tags$i(class = "fa fa-flag")
-          ),
-          bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
+          
+          br(), br(),
+          
+          bulmaTimeline(
+            centered = FALSE,
+            bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
+            bulmaTimelineItem(
+              color = "primary", marker_color = "primary",
+              marker_image = FALSE, marker_icon = FALSE,
+              content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
+            ),
+            bulmaTimelineItem(
+              color = "warning", marker_color = "warning",
+              marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
+              content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
+              tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
+            ),
+            bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
+            bulmaTimelineItem(
+              color = "danger", marker_color = "danger",
+              marker_image = FALSE, marker_icon = TRUE,
+              content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
+              tags$i(class = "fa fa-flag")
+            ),
+            bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
+          )
         )
       ),
-      bulmaDivider(vertical = TRUE),
-      bulmaColumn(
-        width = 6,
-        shiny::column(width = 12, align = "center", 
-                      bulmaTitle("Bulma left to right Timeline")
+      
+      bulmaDivider(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Colored Timeline")
+      ),
+      
+      br(), br(),
+      
+      bulmaTimeline(
+        centered = FALSE,
+        bulmaTimelineHeader(text = "Start", size = "medium", color = "danger"),
+        bulmaTimelineItem(
+          color = "success", marker_color = "black",
+          marker_image = FALSE, marker_icon = FALSE,
+          content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
         ),
-        
-        br(), br(),
-        
-        bulmaTimeline(
-          centered = FALSE,
-          bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
-          bulmaTimelineItem(
-            color = "primary", marker_color = "primary",
-            marker_image = FALSE, marker_icon = FALSE,
-            content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
-          ),
-          bulmaTimelineItem(
-            color = "warning", marker_color = "warning",
-            marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
-            content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
-            tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
-          ),
-          bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
-          bulmaTimelineItem(
-            color = "danger", marker_color = "danger",
-            marker_image = FALSE, marker_icon = TRUE,
-            content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
-            tags$i(class = "fa fa-flag")
-          ),
-          bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
-        )
+        bulmaTimelineItem(
+          color = "warning", marker_color = "warning",
+          marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
+          content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
+          tags$img(src = "https://ericrayanderson.github.io/shinymaterial/img/shinyLogo.png")
+        ),
+        bulmaTimelineHeader(text = "2017", size = "large", color = "info"),
+        bulmaTimelineItem(
+          color = "danger", marker_color = "danger",
+          marker_image = FALSE, marker_icon = TRUE,
+          content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
+          tags$i(class = "fa fa-gears")
+        ),
+        bulmaTimelineHeader(text = "End", size = "small", color = "warning")
       )
+      
     )
   ),
   
   bulmaNav(
     "Bulma Steps",
-    shiny::column(width = 12, align = "center", 
-                  bulmaTitle("Bulma Steps")
-    ),
-    
-    br(), br(),
-    
-    bulmaSteps(
-      size = NULL,
-      bulmaStepItem(
-        color = "success", completed = TRUE, active = FALSE, 
-        bulmaStepDetail(
-          color = NULL, completed = FALSE, title = "Step 1", marker = 1,
-          "This is the first step of the process."
+    bulmaContainer(
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Steps")
+      ),
+      
+      br(), br(),
+      
+      bulmaSteps(
+        size = NULL,
+        bulmaStepItem(
+          color = "success", completed = TRUE, active = FALSE, 
+          bulmaStepDetail(
+            color = NULL, completed = FALSE, title = "Step 1", marker = 1,
+            "This is the first step of the process."
+          )
+        ),
+        bulmaStepItem(
+          color = NULL, completed = FALSE, active = FALSE, 
+          bulmaStepDetail(
+            color = NULL, completed = FALSE, title = "Step 2", marker = NULL,
+            "This is the second step. You get here once you have completed the first step."
+          )
+        ),
+        bulmaStepItem(
+          color = NULL, completed = FALSE, active = FALSE, 
+          bulmaStepDetail(
+            color = NULL, completed = FALSE, title = "Step 3", marker = 3,
+            "This is the third step. One more step before the end."
+          )
+        ),
+        bulmaStepItem(
+          color = NULL, completed = FALSE, active = TRUE, 
+          bulmaStepDetail(
+            color = NULL, completed = FALSE, title = "Step 4", marker = NULL,
+            "Final step. You have completed all the previous steps and end the process."
+          )
         )
       ),
-      bulmaStepItem(
-        color = NULL, completed = FALSE, active = FALSE, 
-        bulmaStepDetail(
-          color = NULL, completed = FALSE, title = "Step 2", marker = NULL,
-          "This is the second step. You get here once you have completed the first step."
+      
+      br(), br(),
+      
+      bulmaDivider(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Colored Steps")
+      ),
+      
+      br(), br(),
+      
+      bulmaSteps(
+        size = NULL,
+        bulmaStepItem(
+          color = "success", completed = TRUE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = TRUE, title = "Step 1", marker = 1,
+            "This is the first step of the process."
+          )
+        ),
+        bulmaStepItem(
+          color = "info", completed = TRUE, active = FALSE, 
+          bulmaStepDetail(
+            color = NULL, completed = FALSE, title = "Step 2", marker = NULL,
+            "This is the second step. You get here once you have completed the first step."
+          )
+        ),
+        bulmaStepItem(
+          color = "warning", completed = TRUE, active = FALSE, 
+          bulmaStepDetail(
+            color = NULL, completed = FALSE, title = "Step 3", marker = 3,
+            "This is the third step. One more step before the end."
+          )
+        ),
+        bulmaStepItem(
+          color = "danger", completed = FALSE, active = TRUE, 
+          bulmaStepDetail(
+            color = NULL, completed = FALSE, title = "Step 4", marker = NULL,
+            "Final step. You have completed all the previous steps and end the process."
+          )
         )
       ),
-      bulmaStepItem(
-        color = NULL, completed = FALSE, active = FALSE, 
-        bulmaStepDetail(
-          color = NULL, completed = FALSE, title = "Step 3", marker = 3,
-          "This is the third step. One more step before the end."
+      
+      br(), br(),
+      
+      bulmaDivider(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Steps Size")
+      ),
+      
+      br(), br(),
+      
+      bulmaSteps(
+        size = "small",
+        bulmaStepItem(
+          color = "primary", completed = TRUE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = TRUE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
         )
       ),
-      bulmaStepItem(
-        color = NULL, completed = FALSE, active = TRUE, 
-        bulmaStepDetail(
-          color = NULL, completed = FALSE, title = "Step 4", marker = NULL,
-          "Final step. You have completed all the previous steps and end the process."
+      
+      bulmaSteps(
+        size = "medium",
+        bulmaStepItem(
+          color = "primary", completed = TRUE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = TRUE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        )
+      ),
+      
+      bulmaSteps(
+        size = "large",
+        bulmaStepItem(
+          color = "primary", completed = TRUE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = FALSE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
+        ),
+        bulmaStepItem(
+          color = "primary", completed = FALSE, active = TRUE, 
+          bulmaStepDetail(
+            color = "primary", completed = FALSE, title = NULL, marker = 1
+          )
         )
       )
-    ),
-    
-    br(), br(),
-    
-    bulmaDivider(),
-    
-    shiny::column(width = 12, align = "center", 
-                  bulmaTitle("Bulma Colored Steps")
-    ),
-    
-    br(), br(),
-    
-    bulmaSteps(
-      size = NULL,
-      bulmaStepItem(
-        color = "success", completed = TRUE, active = FALSE, 
-        bulmaStepDetail(
-          color = "primary", completed = TRUE, title = "Step 1", marker = 1,
-          "This is the first step of the process."
-        )
-      ),
-      bulmaStepItem(
-        color = "info", completed = TRUE, active = FALSE, 
-        bulmaStepDetail(
-          color = NULL, completed = FALSE, title = "Step 2", marker = NULL,
-          "This is the second step. You get here once you have completed the first step."
-        )
-      ),
-      bulmaStepItem(
-        color = "warning", completed = TRUE, active = FALSE, 
-        bulmaStepDetail(
-          color = NULL, completed = FALSE, title = "Step 3", marker = 3,
-          "This is the third step. One more step before the end."
-        )
-      ),
-      bulmaStepItem(
-        color = "danger", completed = FALSE, active = TRUE, 
-        bulmaStepDetail(
-          color = NULL, completed = FALSE, title = "Step 4", marker = NULL,
-          "Final step. You have completed all the previous steps and end the process."
-        )
-      )
+      
     )
   ),
   
   bulmaNav(
     "Bulma Pricing Tables",
-    shiny::column(width = 12, align = "center", 
-                  bulmaTitle("Bulma Vertical Pricing Table")
-    ),
-    
-    br(), br(),
-    
-    bulmaPricingtable(
-      horizontal = FALSE,
-      bulmaPricingPlan(
-        active = FALSE, color = NULL, plan_title = "Starter",
-        plan_price = 20, plan_currency = "$",
-        plan_period = "/month", button_status = "disabled",
-        button_name = "Current plan",
-        bulmaPricingPlanItem(name = "20GB Storage"),
-        bulmaPricingPlanItem(name = "10 domains"),
-        bulmaPricingPlanItem(name = "-"),
-        bulmaPricingPlanItem(name = "-")
+    bulmaContainer(
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Vertical Pricing Table")
       ),
-      bulmaPricingPlan(
-        active = FALSE, color = "warning", plan_title = "Startups",
-        plan_price = 40, plan_currency = "$",
-        plan_period = "/month", button_status = NULL,
-        button_name = "Choose",
-        bulmaPricingPlanItem(name = "20GB Storage"),
-        bulmaPricingPlanItem(name = "25 domains"),
-        bulmaPricingPlanItem(name = "1TB Bandwidth"),
-        bulmaPricingPlanItem(name = "-")
+      
+      br(), br(),
+      
+      bulmaPricingtable(
+        horizontal = FALSE,
+        bulmaPricingPlan(
+          active = FALSE, color = NULL, plan_title = "Starter",
+          plan_price = 20, plan_currency = "$",
+          plan_period = "/month", button_status = "disabled",
+          button_name = "Current plan",
+          bulmaPricingPlanItem(name = "20GB Storage"),
+          bulmaPricingPlanItem(name = "10 domains"),
+          bulmaPricingPlanItem(name = "-"),
+          bulmaPricingPlanItem(name = "-")
+        ),
+        bulmaPricingPlan(
+          active = FALSE, color = "warning", plan_title = "Startups",
+          plan_price = 40, plan_currency = "$",
+          plan_period = "/month", button_status = NULL,
+          button_name = "Choose",
+          bulmaPricingPlanItem(name = "20GB Storage"),
+          bulmaPricingPlanItem(name = "25 domains"),
+          bulmaPricingPlanItem(name = "1TB Bandwidth"),
+          bulmaPricingPlanItem(name = "-")
+        ),
+        bulmaPricingPlan(
+          active = TRUE, color = NULL, plan_title = "Growing Team",
+          plan_price = 60, plan_currency = "$",
+          plan_period = "/month", button_status = NULL,
+          button_name = "Choose",
+          bulmaPricingPlanItem(name = "200GB Storage"),
+          bulmaPricingPlanItem(name = "50 domains"),
+          bulmaPricingPlanItem(name = "1TB Bandwidth"),
+          bulmaPricingPlanItem(name = "100 Email Boxes")
+        ),
+        bulmaPricingPlan(
+          active = FALSE, color = "danger", plan_title = "Enterprise",
+          plan_price = 100, plan_currency = "$",
+          plan_period = "/month", button_status = NULL,
+          button_name = "Choose",
+          bulmaPricingPlanItem(name = "200GB Storage"),
+          bulmaPricingPlanItem(name = "50 domains"),
+          bulmaPricingPlanItem(name = "1TB Bandwidth"),
+          bulmaPricingPlanItem(name = "1000 Email Boxes")
+        )
       ),
-      bulmaPricingPlan(
-        active = TRUE, color = NULL, plan_title = "Growing Team",
-        plan_price = 60, plan_currency = "$",
-        plan_period = "/month", button_status = NULL,
-        button_name = "Choose",
-        bulmaPricingPlanItem(name = "200GB Storage"),
-        bulmaPricingPlanItem(name = "50 domains"),
-        bulmaPricingPlanItem(name = "1TB Bandwidth"),
-        bulmaPricingPlanItem(name = "100 Email Boxes")
+      
+      br(), br(),
+      
+      bulmaDivider(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Horizontal Pricing Table")
       ),
-      bulmaPricingPlan(
-        active = FALSE, color = "danger", plan_title = "Enterprise",
-        plan_price = 100, plan_currency = "$",
-        plan_period = "/month", button_status = NULL,
-        button_name = "Choose",
-        bulmaPricingPlanItem(name = "200GB Storage"),
-        bulmaPricingPlanItem(name = "50 domains"),
-        bulmaPricingPlanItem(name = "1TB Bandwidth"),
-        bulmaPricingPlanItem(name = "1000 Email Boxes")
-      )
-    ),
-    
-    br(), br(),
-    
-    bulmaDivider(),
-    
-    shiny::column(width = 12, align = "center", 
-                  bulmaTitle("Bulma Horizontal Pricing Table")
-    ),
-    
-    br(), br(),
-    
-    bulmaPricingtable(
-      horizontal = TRUE,
-      bulmaPricingPlan(
-        active = FALSE, color = NULL, plan_title = "Starter",
-        plan_price = 20, plan_currency = "$",
-        plan_period = "/month", button_status = "disabled",
-        button_name = "Current plan",
-        bulmaPricingPlanItem(name = "20GB Storage"),
-        bulmaPricingPlanItem(name = "10 domains"),
-        bulmaPricingPlanItem(name = "-"),
-        bulmaPricingPlanItem(name = "-")
-      ),
-      bulmaPricingPlan(
-        active = FALSE, color = "warning", plan_title = "Startups",
-        plan_price = 40, plan_currency = "$",
-        plan_period = "/month", button_status = NULL,
-        button_name = "Choose",
-        bulmaPricingPlanItem(name = "20GB Storage"),
-        bulmaPricingPlanItem(name = "25 domains"),
-        bulmaPricingPlanItem(name = "1TB Bandwidth"),
-        bulmaPricingPlanItem(name = "-")
-      ),
-      bulmaPricingPlan(
-        active = TRUE, color = NULL, plan_title = "Growing Team",
-        plan_price = 60, plan_currency = "$",
-        plan_period = "/month", button_status = NULL,
-        button_name = "Choose",
-        bulmaPricingPlanItem(name = "200GB Storage"),
-        bulmaPricingPlanItem(name = "50 domains"),
-        bulmaPricingPlanItem(name = "1TB Bandwidth"),
-        bulmaPricingPlanItem(name = "100 Email Boxes")
-      ),
-      bulmaPricingPlan(
-        active = FALSE, color = "danger", plan_title = "Enterprise",
-        plan_price = 100, plan_currency = "$",
-        plan_period = "/month", button_status = NULL,
-        button_name = "Choose",
-        bulmaPricingPlanItem(name = "200GB Storage"),
-        bulmaPricingPlanItem(name = "50 domains"),
-        bulmaPricingPlanItem(name = "1TB Bandwidth"),
-        bulmaPricingPlanItem(name = "1000 Email Boxes")
+      
+      br(), br(),
+      
+      bulmaPricingtable(
+        horizontal = TRUE,
+        bulmaPricingPlan(
+          active = FALSE, color = NULL, plan_title = "Starter",
+          plan_price = 20, plan_currency = "$",
+          plan_period = "/month", button_status = "disabled",
+          button_name = "Current plan",
+          bulmaPricingPlanItem(name = "20GB Storage"),
+          bulmaPricingPlanItem(name = "10 domains"),
+          bulmaPricingPlanItem(name = "-"),
+          bulmaPricingPlanItem(name = "-")
+        ),
+        bulmaPricingPlan(
+          active = FALSE, color = "warning", plan_title = "Startups",
+          plan_price = 40, plan_currency = "$",
+          plan_period = "/month", button_status = NULL,
+          button_name = "Choose",
+          bulmaPricingPlanItem(name = "20GB Storage"),
+          bulmaPricingPlanItem(name = "25 domains"),
+          bulmaPricingPlanItem(name = "1TB Bandwidth"),
+          bulmaPricingPlanItem(name = "-")
+        ),
+        bulmaPricingPlan(
+          active = TRUE, color = NULL, plan_title = "Growing Team",
+          plan_price = 60, plan_currency = "$",
+          plan_period = "/month", button_status = NULL,
+          button_name = "Choose",
+          bulmaPricingPlanItem(name = "200GB Storage"),
+          bulmaPricingPlanItem(name = "50 domains"),
+          bulmaPricingPlanItem(name = "1TB Bandwidth"),
+          bulmaPricingPlanItem(name = "100 Email Boxes")
+        ),
+        bulmaPricingPlan(
+          active = FALSE, color = "danger", plan_title = "Enterprise",
+          plan_price = 100, plan_currency = "$",
+          plan_period = "/month", button_status = NULL,
+          button_name = "Choose",
+          bulmaPricingPlanItem(name = "200GB Storage"),
+          bulmaPricingPlanItem(name = "50 domains"),
+          bulmaPricingPlanItem(name = "1TB Bandwidth"),
+          bulmaPricingPlanItem(name = "1000 Email Boxes")
+        )
       )
     )
   ),
   
   bulmaNav(
     "Bulma Carousels",
-    shiny::column(width = 12, align = "center", 
-                  bulmaTitle("Bulma carousel")
-    ),
-    
-    br(), br(),
-    
-    bulmaColumns(
-      bulmaColumn(
-        width = 6,
-        bulmaCarousel(
-          autoplay = TRUE, navigation = "overlay",
+    bulmaContainer(
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma carousel")
+      ),
+      
+      br(), br(),
+      
+      bulmaColumns(
+        bulmaColumn(
+          width = 6,
           
-          bulmaCarouselItem(
-            background = TRUE, active = TRUE, 
-            src = "https://wikiki.github.io/images/merry-christmas.jpg",
-            title = "Merry Christmas", url = NULL, url_text = NULL
+          shiny::column(width = 12, align = "center", 
+                        bulmaSubtitle("Bulma Autoplay Overlayed carousel")
           ),
-          bulmaCarouselItem(
-            background = TRUE, active = FALSE, 
-            src = "https://wikiki.github.io/images/singer.jpg",
-            title = "Original Gift: Offer a song with", 
-            url = "https://lasongbox.com", url_text = "La Song Box"
+          
+          br(), br(),
+          
+          bulmaCarousel(
+            autoplay = TRUE, navigation = "overlay",
+            
+            bulmaCarouselItem(
+              background = TRUE, active = TRUE, 
+              src = "https://wikiki.github.io/images/merry-christmas.jpg",
+              title = "Merry Christmas", url = NULL, url_text = NULL
+            ),
+            bulmaCarouselItem(
+              background = TRUE, active = FALSE, 
+              src = "https://wikiki.github.io/images/singer.jpg",
+              title = "Original Gift: Offer a song with", 
+              url = "https://lasongbox.com", url_text = "La Song Box"
+            ),
+            bulmaCarouselItem(
+              background = TRUE, active = FALSE, 
+              src = "https://wikiki.github.io/images/sushi.jpg",
+              title = "Sushi time", url = NULL, url_text = NULL
+            ),
+            bulmaCarouselItem(
+              background = TRUE, active = FALSE, 
+              src = "https://wikiki.github.io/images/life.jpg",
+              title = "Life", url = NULL, url_text = NULL
+            )
+          )
+        ),
+        
+        bulmaDivider(vertical = TRUE),
+        
+        bulmaColumn(
+          width = 6,
+          
+          shiny::column(width = 12, align = "center", 
+                        bulmaSubtitle("Bulma Centered carousel")
           ),
-          bulmaCarouselItem(
-            background = TRUE, active = FALSE, 
-            src = "https://wikiki.github.io/images/sushi.jpg",
-            title = "Sushi time", url = NULL, url_text = NULL
-          ),
-          bulmaCarouselItem(
-            background = TRUE, active = FALSE, 
-            src = "https://wikiki.github.io/images/life.jpg",
-            title = "Life", url = NULL, url_text = NULL
+          
+          br(), br(),
+          
+          bulmaCarousel(
+            autoplay = FALSE, navigation = "centered",
+            
+            bulmaCarouselItem(
+              background = TRUE, active = TRUE, 
+              src = "https://wikiki.github.io/images/merry-christmas.jpg",
+              title = "Merry Christmas", url = NULL, url_text = NULL
+            ),
+            bulmaCarouselItem(
+              background = TRUE, active = FALSE, 
+              src = "https://wikiki.github.io/images/singer.jpg",
+              title = "Original Gift: Offer a song with", 
+              url = "https://lasongbox.com", url_text = "La Song Box"
+            ),
+            bulmaCarouselItem(
+              background = TRUE, active = FALSE, 
+              src = "https://wikiki.github.io/images/sushi.jpg",
+              title = "Sushi time", url = NULL, url_text = NULL
+            ),
+            bulmaCarouselItem(
+              background = TRUE, active = FALSE, 
+              src = "https://wikiki.github.io/images/life.jpg",
+              title = "Life", url = NULL, url_text = NULL
+            )
           )
         )
       )
@@ -406,252 +574,417 @@ ui <- bulmaNavbarPage(
   ),
   
   bulmaNav(
-    "Bulma Badges and Buttons",
-    shiny::column(width = 12, align = "center", 
-                  bulmaTitle("Bulma Badges and BadgedButtons")
-    ),
-    
-    br(), br(),
-    
-    bulmaColumns(
-      bulmaColumn(
-        width = 2,
-        bulmaBadge(
-          "test",
-          position = "",
-          size = NULL,
-          style = NULL,
-          color = NULL,
-          badge_text = 3
-        ),
-        
-        br(), br(),
-        
-        bulmaBadge(
-          "test",
-          position = "bottom",
-          size = NULL,
-          style = NULL,
-          color = NULL,
-          badge_text = 3
-        ),
-        
-        br(), br(),
-        
-        bulmaBadge(
-          "test",
-          position = "bottom-left",
-          size = NULL,
-          style = NULL,
-          color = NULL,
-          badge_text = 3
-        )
+    "Bulma Badges, Buttons and Tags",
+    bulmaContainer(
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Badges and BadgedButtons")
       ),
-      bulmaColumn(
-        width = 2,
-        bulmaBadge(
-          "test",
-          position = NULL,
-          size = "small",
-          style = NULL,
-          color = NULL,
-          badge_text = 3
-        ),
-        
-        br(), br(),
-        
-        bulmaBadge(
-          "test",
-          position = NULL,
-          size = "medium",
-          style = NULL,
-          color = NULL,
-          badge_text = 3
-        ),
-        
-        br(), br(),
-        
-        bulmaBadge(
-          "test",
-          position = NULL,
-          size = "large",
-          style = NULL,
-          color = NULL,
-          badge_text = 3
-        )
-      ),
-      bulmaColumn(
-        width = 2,
-        bulmaBadge(
-          "test",
-          position = NULL,
-          size = NULL,
-          style = "outlined",
-          color = "info",
-          badge_text = 3
-        ),
-        
-        br(), br(),
-        
-        bulmaBadge(
-          "test",
-          position = NULL,
-          size = NULL,
-          style = NULL,
-          color = "warning",
-          badge_text = 3
-        ),
-        
-        br(), br(),
-        
-        bulmaBadge(
-          "test",
-          position = NULL,
-          size = NULL,
-          style = NULL,
-          color = "danger",
-          badge_text = 3
-        ),
-        
-        br(), br(),
-        
-        bulmaBadge(
-          "test",
-          position = NULL,
-          size = NULL,
-          style = NULL,
-          color = "success",
-          badge_text = 3
-        )
-      ),
-      bulmaDivider(vertical = TRUE),
-      bulmaColumn(
-        width = 2,
-        bulmaButtonBadge(
-          url = "http://google.com", color = "danger", style = NULL, loading = FALSE,
-          size = NULL, badge_color = "warning", badge_style = NULL,
-          badge_size = NULL, badge_position = NULL, badge_text = 1,
-          "test"
-        ),
-        br(), br(),
-        
-        bulmaButtonBadge(
-          url = NULL, color = "warning", style = "outlined", loading = FALSE,
-          size = "small", badge_color = "info", badge_style = NULL,
-          badge_size = NULL, badge_position = NULL, badge_text = 2,
-          "test"
-        ),
-        br(), br(),
-        
-        bulmaButtonBadge(
-          url = NULL, color = "success", style = NULL, loading = FALSE,
-          size = "medium", badge_color = "danger", badge_style = NULL,
-          badge_size = NULL, badge_position = NULL, badge_text = 3,
-          "test"
-        )
-      ),
-      bulmaColumn(
-        bulmaButtonBadge(
+      
+      br(), br(),
+      
+      bulmaColumns(
+        bulmaColumn(
           width = 2,
-          url = NULL, color = "black", style = "outlined", loading = FALSE,
-          size = "large", badge_color = NULL, badge_style = NULL,
-          badge_size = NULL, badge_position = NULL, badge_text = 4,
-          "test"
+          bulmaBadge(
+            "test",
+            position = "",
+            size = NULL,
+            style = NULL,
+            color = NULL,
+            badge_text = 3
+          ),
+          
+          br(), br(),
+          
+          bulmaBadge(
+            "test",
+            position = "bottom",
+            size = NULL,
+            style = NULL,
+            color = NULL,
+            badge_text = 3
+          ),
+          
+          br(), br(),
+          
+          bulmaBadge(
+            "test",
+            position = "bottom-left",
+            size = NULL,
+            style = NULL,
+            color = NULL,
+            badge_text = 3
+          )
         ),
-        br(), br(),
-        
-        bulmaButtonBadge(
-          url = NULL, color = "info", style = NULL, loading = FALSE,
-          size = NULL, badge_color = "success", badge_style = NULL,
-          badge_size = "small", badge_position = NULL, badge_text = 5,
-          "test"
+        bulmaColumn(
+          width = 2,
+          bulmaBadge(
+            "test",
+            position = NULL,
+            size = "small",
+            style = NULL,
+            color = NULL,
+            badge_text = 3
+          ),
+          
+          br(), br(),
+          
+          bulmaBadge(
+            "test",
+            position = NULL,
+            size = "medium",
+            style = NULL,
+            color = NULL,
+            badge_text = 3
+          ),
+          
+          br(), br(),
+          
+          bulmaBadge(
+            "test",
+            position = NULL,
+            size = "large",
+            style = NULL,
+            color = NULL,
+            badge_text = 3
+          )
         ),
-        br(), br(),
-        
-        bulmaButtonBadge(
-          url = NULL, color = NULL, style = "outlined", loading = FALSE,
-          size = NULL, badge_color = "warning", badge_style = NULL,
-          badge_size = "medium", badge_position = "left", badge_text = 6,
-          "test"
+        bulmaColumn(
+          width = 2,
+          bulmaBadge(
+            "test",
+            position = NULL,
+            size = NULL,
+            style = "outlined",
+            color = "info",
+            badge_text = 3
+          ),
+          
+          br(), br(),
+          
+          bulmaBadge(
+            "test",
+            position = NULL,
+            size = NULL,
+            style = NULL,
+            color = "warning",
+            badge_text = 3
+          ),
+          
+          br(), br(),
+          
+          bulmaBadge(
+            "test",
+            position = NULL,
+            size = NULL,
+            style = NULL,
+            color = "danger",
+            badge_text = 3
+          ),
+          
+          br(), br(),
+          
+          bulmaBadge(
+            "test",
+            position = NULL,
+            size = NULL,
+            style = NULL,
+            color = "success",
+            badge_text = 3
+          )
+        ),
+        bulmaDivider(vertical = TRUE),
+        bulmaColumn(
+          width = 2,
+          bulmaButtonBadge(
+            url = "http://google.com", color = "danger", style = NULL, loading = FALSE,
+            size = NULL, badge_color = "warning", badge_style = NULL,
+            badge_size = NULL, badge_position = NULL, badge_text = 1,
+            "test"
+          ),
+          br(), br(),
+          
+          bulmaButtonBadge(
+            url = NULL, color = "warning", style = "outlined", loading = FALSE,
+            size = "small", badge_color = "info", badge_style = NULL,
+            badge_size = NULL, badge_position = NULL, badge_text = 2,
+            "test"
+          ),
+          br(), br(),
+          
+          bulmaButtonBadge(
+            url = NULL, color = "success", style = NULL, loading = FALSE,
+            size = "medium", badge_color = "danger", badge_style = NULL,
+            badge_size = NULL, badge_position = NULL, badge_text = 3,
+            "test"
+          )
+        ),
+        bulmaColumn(
+          bulmaButtonBadge(
+            width = 2,
+            url = NULL, color = "black", style = "outlined", loading = FALSE,
+            size = "large", badge_color = NULL, badge_style = NULL,
+            badge_size = NULL, badge_position = NULL, badge_text = 4,
+            "test"
+          ),
+          br(), br(),
+          
+          bulmaButtonBadge(
+            url = NULL, color = "info", style = NULL, loading = FALSE,
+            size = NULL, badge_color = "success", badge_style = NULL,
+            badge_size = "small", badge_position = NULL, badge_text = 5,
+            "test"
+          ),
+          br(), br(),
+          
+          bulmaButtonBadge(
+            url = NULL, color = NULL, style = "outlined", loading = FALSE,
+            size = NULL, badge_color = "warning", badge_style = NULL,
+            badge_size = "medium", badge_position = "left", badge_text = 6,
+            "test"
+          )
+        ),
+        bulmaColumn(
+          width = 2,
+          bulmaButtonBadge(
+            url = NULL, color = NULL, style = "primary", loading = TRUE,
+            size = NULL, badge_color = NULL, badge_style = "outlined",
+            badge_size = "large", badge_position = "botton", badge_text = NULL,
+            "test"
+          )
         )
       ),
-      bulmaColumn(
-        width = 2,
-        bulmaButtonBadge(
-          url = NULL, color = NULL, style = "primary", loading = TRUE,
-          size = NULL, badge_color = NULL, badge_style = "outlined",
-          badge_size = "large", badge_position = "botton", badge_text = NULL,
-          "test"
-        )
-      )
-    )
-  ),
-  
-  bulmaNav(
-    "Bulma Tags",
-    shiny::column(width = 12, align = "center", 
-                  bulmaTitle("Bulma Tags")
-    ),
-    
-    br(), br(),
-    
-    bulmaColumns(
-      bulmaColumn(
-        width = 3,
-        bulmaTag(label = "tag", color = "info", size = NULL, style = NULL),
-        br(), br(),
-        bulmaTag(label = "tag", color = "warning", size = NULL, style = NULL),
-        br(), br(),
-        bulmaTag(label = "tag", color = "success", size = "large", style = "rounded")
+      
+      br(), br(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Tags")
       ),
-      bulmaColumn(
-        width = 3,
-        bulmaTagList(
-          bulmaTag(label = "tag", color = "danger", size = "small", style = NULL),
-          bulmaTag(label = "tag", color = "warning", size = "medium", style = NULL),
+      
+      br(), br(),
+      
+      bulmaColumns(
+        bulmaColumn(
+          width = 3,
+          bulmaTag(label = "tag", color = "info", size = NULL, style = NULL),
+          br(), br(),
+          bulmaTag(label = "tag", color = "warning", size = NULL, style = NULL),
+          br(), br(),
           bulmaTag(label = "tag", color = "success", size = "large", style = "rounded")
-        )
-      ),
-      bulmaDivider(vertical = TRUE),
-      bulmaColumn(
-        width = 2,
-        bulmaTagAddon(
-          bulmaTag(label = "build", color = "dark", size = "small", style = NULL),
-          bulmaTag(label = "passing", color = "success", size = "small", style = NULL)
         ),
-        bulmaTagAddon(
-          bulmaTag(label = "npm", color = "dark", size = "small", style = NULL),
-          bulmaTag(label = "0.5.0", color = "info", size = "small", style = NULL)
+        bulmaColumn(
+          width = 3,
+          bulmaTagList(
+            bulmaTag(label = "tag", color = "danger", size = "small", style = NULL),
+            bulmaTag(label = "tag", color = "warning", size = "medium", style = NULL),
+            bulmaTag(label = "tag", color = "success", size = "large", style = "rounded")
+          )
         ),
-        bulmaTagAddon(
-          bulmaTag(label = "chat", color = "dark", size = "small", style = NULL),
-          bulmaTag(label = "on gitter", color = "primary", size = "small", style = NULL)
-        )
-      ),
-      bulmaColumn(
-        width = 4,
-        bulmaTagAddonList(
-          bulmaTagAddons(
-            bulmaTagAddon(
-              bulmaTag(label = "build", color = "dark", size = "small", style = NULL),
-              bulmaTag(label = "passing", color = "success", size = "small", style = NULL)
-            )
+        bulmaDivider(vertical = TRUE),
+        bulmaColumn(
+          width = 2,
+          bulmaTagAddon(
+            bulmaTag(label = "build", color = "dark", size = "small", style = NULL),
+            bulmaTag(label = "passing", color = "success", size = "small", style = NULL)
           ),
-          bulmaTagAddons(
-            bulmaTagAddon(
-              bulmaTag(label = "npm", color = "dark", size = "small", style = NULL),
-              bulmaTag(label = "0.5.0", color = "info", size = "small", style = NULL)
-            )
+          bulmaTagAddon(
+            bulmaTag(label = "npm", color = "dark", size = "small", style = NULL),
+            bulmaTag(label = "0.5.0", color = "info", size = "small", style = NULL)
           ),
-          bulmaTagAddons(
-            bulmaTagAddon(
-              bulmaTag(label = "chat", color = "dark", size = "small", style = NULL),
-              bulmaTag(label = "on gitter", color = "primary", size = "small", style = NULL)
+          bulmaTagAddon(
+            bulmaTag(label = "chat", color = "dark", size = "small", style = NULL),
+            bulmaTag(label = "on gitter", color = "primary", size = "small", style = NULL)
+          )
+        ),
+        bulmaColumn(
+          width = 4,
+          bulmaTagAddonList(
+            bulmaTagAddons(
+              bulmaTagAddon(
+                bulmaTag(label = "build", color = "dark", size = "small", style = NULL),
+                bulmaTag(label = "passing", color = "success", size = "small", style = NULL)
+              )
+            ),
+            bulmaTagAddons(
+              bulmaTagAddon(
+                bulmaTag(label = "npm", color = "dark", size = "small", style = NULL),
+                bulmaTag(label = "0.5.0", color = "info", size = "small", style = NULL)
+              )
+            ),
+            bulmaTagAddons(
+              bulmaTagAddon(
+                bulmaTag(label = "chat", color = "dark", size = "small", style = NULL),
+                bulmaTag(label = "on gitter", color = "primary", size = "small", style = NULL)
+              )
             )
           )
         )
       )
+      
     )
+  ),
+  
+  bulmaNav(
+    "Others",
+    bulmaContainer(
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Dividers")
+      ),
+      
+      br(), br(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaSubtitle("Bulma Horizontal Dividers")
+      ),
+      bulmaDivider(content = "***", vertical = FALSE),
+      bulmaDivider(content = "#", vertical = FALSE),
+      bulmaDivider(content = "---", vertical = FALSE),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaSubtitle("Bulma Vertical Dividers")
+      ),
+      
+      br(), br(),
+      
+      bulmaColumns(
+        bulmaColumn(
+          width = 6, 
+          bulmaCard(
+            bulmaCardHeader(
+              bulmaCardHeaderTitle(
+                "Card title"
+              )
+            ),
+            bulmaCardContent(
+              "Content of the card."
+            ),
+            bulmaCardFooter(
+              bulmaCardFooterItem(
+                "Item 1"
+              ),
+              bulmaCardFooterItem(
+                "Item 2"
+              )
+            )
+          )
+        ),
+        bulmaDivider(content = "*", vertical = TRUE),
+        bulmaColumn(
+          width = 6,
+          bulmaCard(
+            bulmaCardHeader(
+              bulmaCardHeaderTitle(
+                "Card title"
+              )
+            ),
+            bulmaCardContent(
+              "Content of the card."
+            ),
+            bulmaCardFooter(
+              bulmaCardFooterItem(
+                "Item 1"
+              ),
+              bulmaCardFooterItem(
+                "Item 2"
+              )
+            )
+          )
+        )
+      ),
+      
+      br(), br(),
+      
+      bulmaDivider(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Box")
+      ),
+      
+      br(), br(),
+      
+      bulmaColumns(
+        bulmaColumn(
+          width = 6,
+          bulmaBox(
+            bulmaBoxMedia(
+              src = "https://bulma.io/images/placeholders/128x128.png",
+              "test"
+            )
+          )
+        ),
+        bulmaDivider(vertical = TRUE),
+        bulmaColumn(
+          width = 6,
+          bulmaBox(
+            "test"
+          )
+        )
+      ),
+      
+      
+      br(), br(),
+      
+      bulmaDivider(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Notifications")
+      ),
+      
+      br(), br(),
+      
+      bulmaColumns(
+        bulmaColumn(
+          width = 3,
+          bulmaNotification(
+            color = "info", 
+            "Lorem ipsum dolor sit amet, consectetur adipiscing 
+          elit lorem ipsum dolor. Pellentesque risus mi, tempus 
+          quis placerat ut, porta nec nulla. Vestibulum rhoncus 
+          ac ex sit amet fringilla. Nullam gravida purus diam, 
+          et dictum felis venenatis efficitur. Sit amet, 
+          consectetur adipiscing elit"
+          )
+        ),
+        bulmaColumn(
+          width = 3,
+          bulmaNotification(
+            color = "warning", 
+            "Lorem ipsum dolor sit amet, consectetur adipiscing 
+          elit lorem ipsum dolor. Pellentesque risus mi, tempus 
+          quis placerat ut, porta nec nulla. Vestibulum rhoncus 
+          ac ex sit amet fringilla. Nullam gravida purus diam, 
+          et dictum felis venenatis efficitur. Sit amet, 
+          consectetur adipiscing elit"
+          )
+        ),
+        bulmaColumn(
+          width = 3,
+          bulmaNotification(
+            color = "danger", 
+            "Lorem ipsum dolor sit amet, consectetur adipiscing 
+          elit lorem ipsum dolor. Pellentesque risus mi, tempus 
+          quis placerat ut, porta nec nulla. Vestibulum rhoncus 
+          ac ex sit amet fringilla. Nullam gravida purus diam, 
+          et dictum felis venenatis efficitur. Sit amet, 
+          consectetur adipiscing elit"
+          )
+        ),
+        bulmaColumn(
+          width = 3,
+          bulmaNotification(
+            color = "primary", 
+            "Lorem ipsum dolor sit amet, consectetur adipiscing 
+          elit lorem ipsum dolor. Pellentesque risus mi, tempus 
+          quis placerat ut, porta nec nulla. Vestibulum rhoncus 
+          ac ex sit amet fringilla. Nullam gravida purus diam, 
+          et dictum felis venenatis efficitur. Sit amet, 
+          consectetur adipiscing elit"
+          )
+        )
+      )
+      
+    )
+    
   )
   
 )
