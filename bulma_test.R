@@ -7,6 +7,8 @@ source("bulmaBadge.R")
 source("bulmaSteps.R")
 source("bulmaTimeline.R")
 source("bulmaCarousel.R")
+source("bulmaPricingtable.R")
+source("bulmaButtonBadge.R")
 
 ui <- bulmaPage(
   
@@ -115,7 +117,7 @@ ui <- bulmaPage(
       color = "warning", marker_color = "warning",
       marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
       content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
-      tags$img(src="http://bulma.io/images/placeholders/32x32.png")
+      tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
     ),
     bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
     bulmaTimelineItem(
@@ -131,127 +133,223 @@ ui <- bulmaPage(
   
   bulmaDivider(content = "***", vertical = FALSE),
   
-  HTML(
-    paste0('
-           <div class="columns">
-           <div class="column">
-           <span class="badge" data-badge="">
-           Notifications
-           </span>
-           </div>
-           <div class="column">
-           <span class="badge is-badge-success" data-badge="">
-           Notifications
-           </span>
-           </div>
-           <div class="column">
-           <span class="badge is-badge-warning" data-badge="">
-           Notifications
-           </span>
-           </div>
-           <div class="column">
-           <span class="badge is-badge-danger" data-badge="">
-           Notifications
-           </span>
-           </div>
-           </div>
-           
-           <div class="columns">
-           <div class="column">
-           <span class="badge" data-badge="8">
-           Notifications
-           </span>
-           </div>
-           <div class="column">
-           <span class="badge is-badge-success" data-badge="88">
-           Notifications
-           </span>
-           </div>
-           <div class="column">
-           <span class="badge is-badge-danger" data-badge="888">
-           Notifications
-           </span>
-           </div>
-           </div>
-           
-           <div class="block">
-           <button class="button badge" data-badge="">Button</button>
-           <button class="button badge" data-badge="8">Button</button>
-           </div>
-           
-           <div class="block">
-           <button class="button is-primary badge" data-badge="">Button</button>
-           <button class="button is-info badge" data-badge="8">Button</button>
-           </div>
-           ')
-    
-    
+  bulmaColumns(
+    bulmaColumn(
+      width = 2,
+      bulmaBadge(
+        "test",
+        position = "",
+        size = NULL,
+        style = NULL,
+        color = NULL,
+        badge_text = 3
+      ),
+      
+      br(), br(),
+      
+      bulmaBadge(
+        "test",
+        position = "bottom",
+        size = NULL,
+        style = NULL,
+        color = NULL,
+        badge_text = 3
+      ),
+      
+      br(), br(),
+      
+      bulmaBadge(
+        "test",
+        position = "bottom-left",
+        size = NULL,
+        style = NULL,
+        color = NULL,
+        badge_text = 3
+      )
+    ),
+    bulmaColumn(
+      width = 2,
+      bulmaBadge(
+        "test",
+        position = NULL,
+        size = "small",
+        style = NULL,
+        color = NULL,
+        badge_text = 3
+      ),
+      
+      br(), br(),
+      
+      bulmaBadge(
+        "test",
+        position = NULL,
+        size = "medium",
+        style = NULL,
+        color = NULL,
+        badge_text = 3
+      ),
+      
+      br(), br(),
+      
+      bulmaBadge(
+        "test",
+        position = NULL,
+        size = "large",
+        style = NULL,
+        color = NULL,
+        badge_text = 3
+      )
+    ),
+    bulmaColumn(
+      width = 2,
+      bulmaBadge(
+        "test",
+        position = NULL,
+        size = NULL,
+        style = "outlined",
+        color = "info",
+        badge_text = 3
+      ),
+      
+      br(), br(),
+      
+      bulmaBadge(
+        "test",
+        position = NULL,
+        size = NULL,
+        style = NULL,
+        color = "warning",
+        badge_text = 3
+      ),
+      
+      br(), br(),
+      
+      bulmaBadge(
+        "test",
+        position = NULL,
+        size = NULL,
+        style = NULL,
+        color = "danger",
+        badge_text = 3
+      ),
+      
+      br(), br(),
+      
+      bulmaBadge(
+        "test",
+        position = NULL,
+        size = NULL,
+        style = NULL,
+        color = "success",
+        badge_text = 3
+      )
+    ),
+    bulmaDivider(vertical = TRUE),
+    bulmaColumn(
+      width = 2,
+      bulmaButtonBadge(
+        url = "http:/google.com", color = "danger", style = NULL, loading = FALSE,
+        size = NULL, badge_color = "warning", badge_style = NULL,
+        badge_size = NULL, badge_position = NULL, badge_text = 1,
+        "test"
+      ),
+      br(), br(),
+      
+      bulmaButtonBadge(
+        url = NULL, color = "warning", style = "outlined", loading = FALSE,
+        size = "small", badge_color = "info", badge_style = NULL,
+        badge_size = NULL, badge_position = NULL, badge_text = 2,
+        "test"
+      ),
+      br(), br(),
+      
+      bulmaButtonBadge(
+        url = NULL, color = "success", style = NULL, loading = FALSE,
+        size = "medium", badge_color = "danger", badge_style = NULL,
+        badge_size = NULL, badge_position = NULL, badge_text = 3,
+        "test"
+      )
+    ),
+    bulmaColumn(
+      bulmaButtonBadge(
+      width = 2,
+      url = NULL, color = "black", style = "outlined", loading = FALSE,
+      size = "large", badge_color = NULL, badge_style = NULL,
+      badge_size = NULL, badge_position = NULL, badge_text = 4,
+        "test"
+      ),
+      br(), br(),
+      
+      bulmaButtonBadge(
+        url = NULL, color = "info", style = NULL, loading = FALSE,
+        size = NULL, badge_color = "success", badge_style = NULL,
+        badge_size = "small", badge_position = NULL, badge_text = 5,
+        "test"
+      ),
+      br(), br(),
+      
+      bulmaButtonBadge(
+        url = NULL, color = NULL, style = "outlined", loading = FALSE,
+        size = NULL, badge_color = "warning", badge_style = NULL,
+        badge_size = "medium", badge_position = "left", badge_text = 6,
+        "test"
+      )
+    ),
+    bulmaColumn(
+      width = 2,
+      bulmaButtonBadge(
+        url = NULL, color = NULL, style = "primary", loading = TRUE,
+        size = NULL, badge_color = NULL, badge_style = "outlined",
+        badge_size = "large", badge_position = "botton", badge_text = NULL,
+        "test"
+      )
+    )
   ),
   
   bulmaDivider(content = "***", vertical = FALSE),
   
-  HTML(
-    paste0('
-           <div class="pricing-table">
-           <div class="pricing-plan">
-           <div class="plan-header">Starter</div>
-           <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>20</span>/month</div>
-           <div class="plan-items">
-           <div class="plan-item">20GB Storage</div>
-           <div class="plan-item">100 Domains</div>
-           <div class="plan-item">-</div>
-           <div class="plan-item">-</div>
-           </div>
-           <div class="plan-footer">
-           <button class="button is-fullwidth" disabled="disabled">Current plan</button>
-           </div>
-           </div>
-           
-           <div class="pricing-plan is-warning">
-           <div class="plan-header">Startups</div>
-           <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>40</span>/month</div>
-           <div class="plan-items">
-           <div class="plan-item">20GB Storage</div>
-           <div class="plan-item">25 Domains</div>
-           <div class="plan-item">1TB Bandwidth</div>
-           <div class="plan-item">-</div>
-           </div>
-           <div class="plan-footer">
-           <button class="button is-fullwidth">Choose</button>
-           </div>
-           </div>
-           
-           <div class="pricing-plan is-active">
-           <div class="plan-header">Growing Team</div>
-           <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>60</span>/month</div>
-           <div class="plan-items">
-           <div class="plan-item">200GB Storage</div>
-           <div class="plan-item">50 Domains</div>
-           <div class="plan-item">1TB Bandwidth</div>
-           <div class="plan-item">100 Email Boxes</div>
-           </div>
-           <div class="plan-footer">
-           <button class="button is-fullwidth">Choose</button>
-           </div>
-           </div>
-           
-           <div class="pricing-plan is-danger">
-           <div class="plan-header">Enterprise</div>
-           <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">$</span>100</span>/month</div>
-           <div class="plan-items">
-           <div class="plan-item">2TB Storage</div>
-           <div class="plan-item">100 Domains</div>
-           <div class="plan-item">1TB Bandwidth</div>
-           <div class="plan-item">1000 Email Boxes</div>
-           </div>
-           <div class="plan-footer">
-           <button class="button is-fullwidth">Choose</button>
-           </div>
-           </div>
-           </div>
-           ')
-    
-    
+  bulmaPricingtable(
+    horizontal = FALSE,
+    bulmaPricingPlan(
+      active = FALSE, color = NULL, plan_title = "Starter",
+      plan_price = 20, plan_currency = "$",
+      plan_period = "/month", button_status = "disabled",
+      button_name = "Current plan",
+      bulmaPricingPlanItem(name = "20GB Storage"),
+      bulmaPricingPlanItem(name = "10 domains"),
+      bulmaPricingPlanItem(name = "-"),
+      bulmaPricingPlanItem(name = "-")
+    ),
+    bulmaPricingPlan(
+      active = FALSE, color = "warning", plan_title = "Startups",
+      plan_price = 40, plan_currency = "$",
+      plan_period = "/month", button_status = NULL,
+      button_name = "Choose",
+      bulmaPricingPlanItem(name = "20GB Storage"),
+      bulmaPricingPlanItem(name = "25 domains"),
+      bulmaPricingPlanItem(name = "1TB Bandwidth"),
+      bulmaPricingPlanItem(name = "-")
+    ),
+    bulmaPricingPlan(
+      active = TRUE, color = NULL, plan_title = "Growing Team",
+      plan_price = 60, plan_currency = "$",
+      plan_period = "/month", button_status = NULL,
+      button_name = "Choose",
+      bulmaPricingPlanItem(name = "200GB Storage"),
+      bulmaPricingPlanItem(name = "50 domains"),
+      bulmaPricingPlanItem(name = "1TB Bandwidth"),
+      bulmaPricingPlanItem(name = "100 Email Boxes")
+    ),
+    bulmaPricingPlan(
+      active = FALSE, color = "danger", plan_title = "Enterprise",
+      plan_price = 100, plan_currency = "$",
+      plan_period = "/month", button_status = NULL,
+      button_name = "Choose",
+      bulmaPricingPlanItem(name = "200GB Storage"),
+      bulmaPricingPlanItem(name = "50 domains"),
+      bulmaPricingPlanItem(name = "1TB Bandwidth"),
+      bulmaPricingPlanItem(name = "1000 Email Boxes")
+    )
   ),
   
   bulmaDivider(content = "***", vertical = FALSE),
@@ -316,50 +414,8 @@ ui <- bulmaPage(
     
   ),
   
-  # HTML(
-  #   paste0('<div class="carousel carousel-animated carousel-animate-slide">
-  #           <div class="carousel-container">
-  #          <div class="carousel-item has-background is-active">
-  #          <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" width="640" height="310" />
-  #          <div class="title">Merry Christmas</div>
-  #          </div>
-  #          <div class="carousel-item has-background">
-  #          <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" width="640" height="310" />
-  #          <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La Song Box</a></div>
-  #          </div>
-  #          <div class="carousel-item has-background">
-  #          <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" width="640" height="310" />
-  #          <div class="title">Sushi time</div>
-  #          </div>
-  #          <div class="carousel-item has-background">
-  #          <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" width="640" height="310" />
-  #          <div class="title">Life</div>
-  #          </div>
-  #          </div>
-  #          <div class="carousel-navigation is-overlay">
-  #          <div class="carousel-nav-left">
-  #          <i class="fa fa-chevron-left" aria-hidden="true"></i>
-  #          </div>
-  #          <div class="carousel-nav-right">
-  #          <i class="fa fa-chevron-right" aria-hidden="true"></i>
-  #          </div>
-  #          </div>
-  #          </div>
-  #          ')
-  # ),
   
-  bulmaDivider(content = "***", vertical = FALSE),
-  
-  br(),
-  
-  bulmaBadge(
-    "test",
-    position = "",
-    size = "small",
-    style = "outlined",
-    color = "danger",
-    badge_text = "23"
-  ),
+  bulmaFooter("Built by David Granjon, 2018", container = TRUE, centered = TRUE),
   
   
   bulmaNav(

@@ -13,7 +13,7 @@ bulmaBadge <- function(..., color = NULL, badge_text = NULL,
   if (!is.null(position)) cl <- paste0(cl, " is-badge-", position)
   
   shiny::tags$span(
-    class = cl, `data-badge` = ifelse(!is.null(badge_text), paste0(badge_text), ""),
+    class = cl, `data-badge` = if (!is.null(badge_text))  paste0(badge_text) ,
     ...
   )
 }
