@@ -9,6 +9,8 @@ source("bulmaTimeline.R")
 source("bulmaCarousel.R")
 source("bulmaPricingtable.R")
 source("bulmaButtonBadge.R")
+source("bulmaPageLoader.R")
+source("bulmaTags.R")
 
 ui <- bulmaPage(
   
@@ -21,9 +23,10 @@ ui <- bulmaPage(
            @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.steps{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;font-size:1rem;min-height:2rem}.steps:not(:last-child){margin-bottom:1.5rem}.steps .step-item{margin-top:0;position:relative;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-preferred-size:0;flex-basis:0}.steps .step-item:not(:first-child){-ms-flex-preferred-size:1em;flex-basis:1em;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-ms-flex-negative:1;flex-shrink:1}.steps .step-item:not(:first-child)::before{content:" ";display:block;position:absolute}.steps .step-item::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#00d1b2));background:linear-gradient(to left,#dbdbdb 50%,#00d1b2 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item::before .step-marker{color:#fff}.steps .step-item.is-active::before{background-position:left bottom}.steps .step-item.is-active .step-marker{background-color:#fff;border-color:#00d1b2;color:#00d1b2}.steps .step-item.is-completed::before{background-position:left bottom}.steps .step-item.is-completed .step-marker{color:#fff;background-color:#00d1b2}.steps .step-item .step-marker{-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;border-radius:50%;font-weight:700;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:#b5b5b5;color:#fff;border:.2em solid #fff;z-index:1}.steps .step-item .step-details{text-align:center}.steps .step-item.is-white::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#fff));background:linear-gradient(to left,#dbdbdb 50%,#fff 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-white.is-active::before{background-position:left bottom}.steps .step-item.is-white.is-active .step-marker{background-color:#fff;border-color:#fff;color:#fff}.steps .step-item.is-white.is-completed::before{background-position:left bottom}.steps .step-item.is-white.is-completed .step-marker{color:#0a0a0a;background-color:#fff}.steps .step-item.is-black::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#0a0a0a));background:linear-gradient(to left,#dbdbdb 50%,#0a0a0a 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-black.is-active::before{background-position:left bottom}.steps .step-item.is-black.is-active .step-marker{background-color:#fff;border-color:#0a0a0a;color:#0a0a0a}.steps .step-item.is-black.is-completed::before{background-position:left bottom}.steps .step-item.is-black.is-completed .step-marker{color:#fff;background-color:#0a0a0a}.steps .step-item.is-light::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#f5f5f5));background:linear-gradient(to left,#dbdbdb 50%,#f5f5f5 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-light.is-active::before{background-position:left bottom}.steps .step-item.is-light.is-active .step-marker{background-color:#fff;border-color:#f5f5f5;color:#f5f5f5}.steps .step-item.is-light.is-completed::before{background-position:left bottom}.steps .step-item.is-light.is-completed .step-marker{color:#363636;background-color:#f5f5f5}.steps .step-item.is-dark::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#363636));background:linear-gradient(to left,#dbdbdb 50%,#363636 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-dark.is-active::before{background-position:left bottom}.steps .step-item.is-dark.is-active .step-marker{background-color:#fff;border-color:#363636;color:#363636}.steps .step-item.is-dark.is-completed::before{background-position:left bottom}.steps .step-item.is-dark.is-completed .step-marker{color:#f5f5f5;background-color:#363636}.steps .step-item.is-primary::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#00d1b2));background:linear-gradient(to left,#dbdbdb 50%,#00d1b2 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-primary.is-active::before{background-position:left bottom}.steps .step-item.is-primary.is-active .step-marker{background-color:#fff;border-color:#00d1b2;color:#00d1b2}.steps .step-item.is-primary.is-completed::before{background-position:left bottom}.steps .step-item.is-primary.is-completed .step-marker{color:#fff;background-color:#00d1b2}.steps .step-item.is-link::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#3273dc));background:linear-gradient(to left,#dbdbdb 50%,#3273dc 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-link.is-active::before{background-position:left bottom}.steps .step-item.is-link.is-active .step-marker{background-color:#fff;border-color:#3273dc;color:#3273dc}.steps .step-item.is-link.is-completed::before{background-position:left bottom}.steps .step-item.is-link.is-completed .step-marker{color:#fff;background-color:#3273dc}.steps .step-item.is-info::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#209cee));background:linear-gradient(to left,#dbdbdb 50%,#209cee 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-info.is-active::before{background-position:left bottom}.steps .step-item.is-info.is-active .step-marker{background-color:#fff;border-color:#209cee;color:#209cee}.steps .step-item.is-info.is-completed::before{background-position:left bottom}.steps .step-item.is-info.is-completed .step-marker{color:#fff;background-color:#209cee}.steps .step-item.is-success::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#23d160));background:linear-gradient(to left,#dbdbdb 50%,#23d160 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-success.is-active::before{background-position:left bottom}.steps .step-item.is-success.is-active .step-marker{background-color:#fff;border-color:#23d160;color:#23d160}.steps .step-item.is-success.is-completed::before{background-position:left bottom}.steps .step-item.is-success.is-completed .step-marker{color:#fff;background-color:#23d160}.steps .step-item.is-warning::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#ffdd57));background:linear-gradient(to left,#dbdbdb 50%,#ffdd57 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-warning.is-active::before{background-position:left bottom}.steps .step-item.is-warning.is-active .step-marker{background-color:#fff;border-color:#ffdd57;color:#ffdd57}.steps .step-item.is-warning.is-completed::before{background-position:left bottom}.steps .step-item.is-warning.is-completed .step-marker{color:rgba(0,0,0,.7);background-color:#ffdd57}.steps .step-item.is-danger::before{background:-webkit-gradient(linear,right top,left top,color-stop(50%,#dbdbdb),color-stop(50%,#ff3860));background:linear-gradient(to left,#dbdbdb 50%,#ff3860 50%);background-size:200% 100%;background-position:right bottom}.steps .step-item.is-danger.is-active::before{background-position:left bottom}.steps .step-item.is-danger.is-active .step-marker{background-color:#fff;border-color:#ff3860;color:#ff3860}.steps .step-item.is-danger.is-completed::before{background-position:left bottom}.steps .step-item.is-danger.is-completed .step-marker{color:#fff;background-color:#ff3860}.steps .steps-content{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-ms-flex-preferred-size:100%;flex-basis:100%;margin:2rem 0}.steps .steps-content .step-content{display:none}.steps .steps-content .step-content.is-active{display:block}.steps .steps-actions{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-ms-flex-preferred-size:100%;flex-basis:100%}.steps .steps-actions .steps-action{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;margin:.5rem;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.steps.is-animated .step-item::before{-webkit-transition:all 2s ease;transition:all 2s ease}.steps.is-animated .step-item .step-marker{-webkit-transition:all 0s ease;transition:all 0s ease;-webkit-transition-delay:1.5s;transition-delay:1.5s}.steps .step-item:not(:first-child)::before{height:.2em;width:100%;bottom:0;left:-50%;top:1rem}.steps .step-item .step-marker{height:2rem;width:2rem;position:absolute;left:calc(50% - 1rem)}.steps .step-item .step-marker .icon *{font-size:1rem}.steps .step-item .step-details{margin-top:2rem;margin-left:.5em;margin-right:.5em;padding-top:.2em}.steps .step-item .step-details .step-title{font-size:1.2rem;font-weight:600}.steps.is-small{font-size:.75rem;min-height:1.5rem}.steps.is-small .step-item:not(:first-child)::before{height:.2em;width:100%;bottom:0;left:-50%;top:.75rem}.steps.is-small .step-item .step-marker{height:1.5rem;width:1.5rem;position:absolute;left:calc(50% - .75rem)}.steps.is-small .step-item .step-marker .icon *{font-size:.75rem}.steps.is-small .step-item .step-details{margin-top:1.5rem;margin-left:.5em;margin-right:.5em;padding-top:.2em}.steps.is-small .step-item .step-details .step-title{font-size:.9rem;font-weight:600}.steps.is-medium{font-size:1.25rem;min-height:2.5rem}.steps.is-medium .step-item:not(:first-child)::before{height:.2em;width:100%;bottom:0;left:-50%;top:1.25rem}.steps.is-medium .step-item .step-marker{height:2.5rem;width:2.5rem;position:absolute;left:calc(50% - 1.25rem)}.steps.is-medium .step-item .step-marker .icon *{font-size:1.25rem}.steps.is-medium .step-item .step-details{margin-top:2.5rem;margin-left:.5em;margin-right:.5em;padding-top:.2em}.steps.is-medium .step-item .step-details .step-title{font-size:1.5rem;font-weight:600}.steps.is-large{font-size:1.5rem;min-height:3rem}.steps.is-large .step-item:not(:first-child)::before{height:.2em;width:100%;bottom:0;left:-50%;top:1.5rem}.steps.is-large .step-item .step-marker{height:3rem;width:3rem;position:absolute;left:calc(50% - 1.5rem)}.steps.is-large .step-item .step-marker .icon *{font-size:1.5rem}.steps.is-large .step-item .step-details{margin-top:3rem;margin-left:.5em;margin-right:.5em;padding-top:.2em}.steps.is-large .step-item .step-details .step-title{font-size:1.8rem;font-weight:600}
            @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.carousel{position:relative;overflow:hidden}.carousel .carousel-container{width:100%;position:relative;border:none;display:-webkit-box;display:-ms-flexbox;display:flex;margin:0;padding:0;left:-100%;-webkit-transform:translateX(100%);transform:translateX(100%)}.carousel .carousel-container .carousel-item{display:block;position:relative;-webkit-box-flex:1;-ms-flex:1 0 100%;flex:1 0 100%}.carousel .carousel-container .carousel-item.has-background .is-background{-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center;height:100%;width:100%}.carousel .carousel-container .carousel-item .title{position:absolute;left:0;right:0;bottom:0;padding:1.5em;margin:0;text-align:center;background:rgba(255,255,255,.6);font-size:.75rem}.carousel .carousel-navigation{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;width:100%}.carousel .carousel-navigation .carousel-nav-left,.carousel .carousel-navigation .carousel-nav-right{padding:1em}.carousel .carousel-navigation.is-centered{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.carousel .carousel-navigation.is-overlay{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;z-index:20}.carousel .carousel-navigation.is-overlay .carousel-nav-left,.carousel .carousel-navigation.is-overlay .carousel-nav-right{height:2.2em;width:2em;background:rgba(255,255,255,.7);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#4a4a4a;z-index:99}.carousel .carousel-navigation.is-overlay .carousel-nav-left:hover,.carousel .carousel-navigation.is-overlay .carousel-nav-right:hover{cursor:pointer}.carousel .carousel-navigation.is-overlay .carousel-nav-right{left:auto;right:0}.carousel.is-reversing .carousel-container{-webkit-transform:translateX(-100%);transform:translateX(-100%)}.carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(-100% / 2));transform:translateX(calc(-100% / 2))}.carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(-100% / 3));transform:translateX(calc(-100% / 3))}.carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(-100% / 4));transform:translateX(calc(-100% / 4))}.carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(-100% / 5));transform:translateX(calc(-100% / 5))}.carousel.is-2 .carousel-container{left:calc(-100% / 2);-webkit-transform:translateX(calc(100% / 2));transform:translateX(calc(100% / 2))}.carousel.is-2 .carousel-container .carousel-item{padding:1em;-ms-flex-preferred-size:calc(100% / 2);flex-basis:calc(100% / 2)}.carousel.is-3 .carousel-container{left:calc(-100% / 3);-webkit-transform:translateX(calc(100% / 3));transform:translateX(calc(100% / 3))}.carousel.is-3 .carousel-container .carousel-item{padding:1em;-ms-flex-preferred-size:calc(100% / 3);flex-basis:calc(100% / 3)}.carousel.is-4 .carousel-container{left:calc(-100% / 4);-webkit-transform:translateX(calc(100% / 4));transform:translateX(calc(100% / 4))}.carousel.is-4 .carousel-container .carousel-item{padding:1em;-ms-flex-preferred-size:calc(100% / 4);flex-basis:calc(100% / 4)}.carousel.is-5 .carousel-container{left:calc(-100% / 5);-webkit-transform:translateX(calc(100% / 5));transform:translateX(calc(100% / 5))}.carousel.is-5 .carousel-container .carousel-item{padding:1em;-ms-flex-preferred-size:calc(100% / 5);flex-basis:calc(100% / 5)}.hero.has-carousel{position:relative}.hero.has-carousel+.hero-body,.hero.has-carousel+.hero-footer,.hero.has-carousel+.hero-head{z-index:1}.hero.has-carousel .hero-carousel{display:-webkit-box;display:-ms-flexbox;display:flex;position:absolute;top:0;left:0;bottom:0;right:0;height:auto;border:none;margin:auto;padding:0;z-index:0}.hero-carousel{position:relative;overflow:hidden}.hero-carousel .carousel-container{width:100%;position:relative;border:none;display:-webkit-box;display:-ms-flexbox;display:flex;margin:0;padding:0;left:-100%;-webkit-transform:translateX(100%);transform:translateX(100%)}.hero-carousel .carousel-container .carousel-item{display:block;position:relative;-webkit-box-flex:1;-ms-flex:1 0 100%;flex:1 0 100%}.hero-carousel .carousel-container .carousel-item.has-background .is-background{-o-object-fit:cover;object-fit:cover;-o-object-position:center center;object-position:center center;height:100%;width:100%}.hero-carousel .carousel-container .carousel-item .title{position:absolute;left:0;right:0;bottom:0;padding:1.5em;margin:0;text-align:center;background:rgba(255,255,255,.6);font-size:.75rem}.hero-carousel .carousel-navigation{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;width:100%}.hero-carousel .carousel-navigation .carousel-nav-left,.hero-carousel .carousel-navigation .carousel-nav-right{padding:1em}.hero-carousel .carousel-navigation.is-centered{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.hero-carousel .carousel-navigation.is-overlay{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;z-index:20}.hero-carousel .carousel-navigation.is-overlay .carousel-nav-left,.hero-carousel .carousel-navigation.is-overlay .carousel-nav-right{height:2.2em;width:2em;background:rgba(255,255,255,.7);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#4a4a4a;z-index:99}.hero-carousel .carousel-navigation.is-overlay .carousel-nav-left:hover,.hero-carousel .carousel-navigation.is-overlay .carousel-nav-right:hover{cursor:pointer}.hero-carousel .carousel-navigation.is-overlay .carousel-nav-right{left:auto;right:0}.hero-carousel.is-reversing .carousel-container{-webkit-transform:translateX(-100%);transform:translateX(-100%)}.hero-carousel.is-reversing.is-2 .carousel-container{-webkit-transform:translateX(calc(-100% / 2));transform:translateX(calc(-100% / 2))}.hero-carousel.is-reversing.is-3 .carousel-container{-webkit-transform:translateX(calc(-100% / 3));transform:translateX(calc(-100% / 3))}.hero-carousel.is-reversing.is-4 .carousel-container{-webkit-transform:translateX(calc(-100% / 4));transform:translateX(calc(-100% / 4))}.hero-carousel.is-reversing.is-5 .carousel-container{-webkit-transform:translateX(calc(-100% / 5));transform:translateX(calc(-100% / 5))}.carousel.carousel-animate-slide.carousel-animated .carousel-container,.hero-carousel.carousel-animate-slide.carousel-animated .carousel-container{-webkit-transform:none;transform:none;-webkit-transition:-webkit-transform .5s ease-in-out;transition:-webkit-transform .5s ease-in-out;transition:transform .5s ease-in-out;transition:transform .5s ease-in-out,-webkit-transform .5s ease-in-out}.carousel.carousel-animate-fade .carousel-item,.hero-carousel.carousel-animate-fade .carousel-item{position:absolute;width:100%;height:100%;-webkit-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out}.carousel.carousel-animate-fade .carousel-item.is-active,.hero-carousel.carousel-animate-fade .carousel-item.is-active{opacity:1}.carousel.carousel-animate-fade .carousel-item:not(.is-active),.hero-carousel.carousel-animate-fade .carousel-item:not(.is-active){opacity:0}
            @-webkit-keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spinAround{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.is-divider,.is-divider-vertical{display:block;position:relative}.is-divider-vertical[data-content]::after,.is-divider[data-content]::after{background:#fff;color:#b5b5b5;content:attr(data-content);display:inline-block;font-size:.75rem;padding:.5rem .8rem;-webkit-transform:translateY(-1.1rem);transform:translateY(-1.1rem);text-align:center}.is-divider{border-top:.1rem solid #dbdbdb;height:.1rem;margin:2rem 0;text-align:center}.is-divider-vertical{display:block;padding:2rem;position:relative}.is-divider-vertical::before{border-left:.1rem solid #dbdbdb;bottom:1rem;content:"";display:block;left:50%;position:absolute;top:1rem;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.is-divider-vertical[data-content]::after{left:50%;padding:.4rem 0;position:relative;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
-
+           
            ')
     ),
+    tags$style(src = "bulma-pageloader.min.css"),
     tags$script(src = "bulma-carousel.min.js"),
     tags$script(src = "bulma-steps.min.js")
   ),
@@ -58,7 +61,6 @@ ui <- bulmaPage(
       )
     )
   ),
-  
   
   bulmaColumns(
     bulmaColumn(
@@ -107,26 +109,26 @@ ui <- bulmaPage(
   ), 
   
   bulmaTimeline(centered = TRUE,
-    bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
-    bulmaTimelineItem(
-      color = "primary", marker_color = "primary",
-      marker_image = FALSE, marker_icon = FALSE,
-      content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
-    ),
-    bulmaTimelineItem(
-      color = "warning", marker_color = "warning",
-      marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
-      content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
-      tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
-    ),
-    bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
-    bulmaTimelineItem(
-      color = "danger", marker_color = "danger",
-      marker_image = FALSE, marker_icon = TRUE,
-      content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
-      tags$i(class = "fa fa-flag")
-    ),
-    bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
+                bulmaTimelineHeader(text = "Start", size = "medium", color = "primary"),
+                bulmaTimelineItem(
+                  color = "primary", marker_color = "primary",
+                  marker_image = FALSE, marker_icon = FALSE,
+                  content_header = "January 2016", content_body = "Timeline content - Can include any HTML element"
+                ),
+                bulmaTimelineItem(
+                  color = "warning", marker_color = "warning",
+                  marker_image = TRUE, marker_image_size = "32x32", marker_icon = FALSE,
+                  content_header = "February 2016", content_body = "Timeline content - Can include any HTML element",
+                  tags$img(src = "http://bulma.io/images/placeholders/32x32.png")
+                ),
+                bulmaTimelineHeader(text = "2017", size = NULL, color = "primary"),
+                bulmaTimelineItem(
+                  color = "danger", marker_color = "danger",
+                  marker_image = FALSE, marker_icon = TRUE,
+                  content_header = "March 2016", content_body = "Timeline content - Can include any HTML element",
+                  tags$i(class = "fa fa-flag")
+                ),
+                bulmaTimelineHeader(text = "End", size = "medium", color = "primary")
   ),
   
   br(),
@@ -248,7 +250,7 @@ ui <- bulmaPage(
     bulmaColumn(
       width = 2,
       bulmaButtonBadge(
-        url = "http:/google.com", color = "danger", style = NULL, loading = FALSE,
+        url = "http://google.com", color = "danger", style = NULL, loading = FALSE,
         size = NULL, badge_color = "warning", badge_style = NULL,
         badge_size = NULL, badge_position = NULL, badge_text = 1,
         "test"
@@ -272,10 +274,10 @@ ui <- bulmaPage(
     ),
     bulmaColumn(
       bulmaButtonBadge(
-      width = 2,
-      url = NULL, color = "black", style = "outlined", loading = FALSE,
-      size = "large", badge_color = NULL, badge_style = NULL,
-      badge_size = NULL, badge_position = NULL, badge_text = 4,
+        width = 2,
+        url = NULL, color = "black", style = "outlined", loading = FALSE,
+        size = "large", badge_color = NULL, badge_style = NULL,
+        badge_size = NULL, badge_position = NULL, badge_text = 4,
         "test"
       ),
       br(), br(),
@@ -302,6 +304,66 @@ ui <- bulmaPage(
         size = NULL, badge_color = NULL, badge_style = "outlined",
         badge_size = "large", badge_position = "botton", badge_text = NULL,
         "test"
+      )
+    )
+  ),
+  
+  bulmaDivider(content = "***", vertical = FALSE),
+  
+  bulmaColumns(
+    bulmaColumn(
+      width = 3,
+      bulmaTag(label = "tag", color = "info", size = NULL, style = NULL),
+      br(), br(),
+      bulmaTag(label = "tag", color = "warning", size = NULL, style = NULL),
+      br(), br(),
+      bulmaTag(label = "tag", color = "success", size = "large", style = "rounded")
+    ),
+    bulmaColumn(
+      width = 3,
+      bulmaTagList(
+        bulmaTag(label = "tag", color = "danger", size = "small", style = NULL),
+        bulmaTag(label = "tag", color = "warning", size = "medium", style = NULL),
+        bulmaTag(label = "tag", color = "success", size = "large", style = "rounded")
+      )
+    ),
+    bulmaDivider(vertical = TRUE),
+    bulmaColumn(
+      width = 2,
+      bulmaTagAddon(
+        bulmaTag(label = "build", color = "dark", size = "small", style = NULL),
+        bulmaTag(label = "passing", color = "success", size = "small", style = NULL)
+      ),
+      bulmaTagAddon(
+        bulmaTag(label = "npm", color = "dark", size = "small", style = NULL),
+        bulmaTag(label = "0.5.0", color = "info", size = "small", style = NULL)
+      ),
+      bulmaTagAddon(
+        bulmaTag(label = "chat", color = "dark", size = "small", style = NULL),
+        bulmaTag(label = "on gitter", color = "primary", size = "small", style = NULL)
+      )
+    ),
+    bulmaColumn(
+      width = 4,
+      bulmaTagAddonList(
+        bulmaTagAddons(
+          bulmaTagAddon(
+            bulmaTag(label = "build", color = "dark", size = "small", style = NULL),
+            bulmaTag(label = "passing", color = "success", size = "small", style = NULL)
+          )
+        ),
+        bulmaTagAddons(
+          bulmaTagAddon(
+            bulmaTag(label = "npm", color = "dark", size = "small", style = NULL),
+            bulmaTag(label = "0.5.0", color = "info", size = "small", style = NULL)
+          )
+        ),
+        bulmaTagAddons(
+          bulmaTagAddon(
+            bulmaTag(label = "chat", color = "dark", size = "small", style = NULL),
+            bulmaTag(label = "on gitter", color = "primary", size = "small", style = NULL)
+          )
+        )
       )
     )
   ),
@@ -355,34 +417,34 @@ ui <- bulmaPage(
   bulmaDivider(content = "***", vertical = FALSE),
   
   bulmaSteps(size = NULL,
-    bulmaStepItem(
-      color = "success", completed = TRUE, active = FALSE, 
-      bulmaStepDetail(
-        color = "primary", completed = TRUE, title = "Step 1", marker = 1,
-        "This is the first step of the process."
-      )
-    ),
-    bulmaStepItem(
-      color = "info", completed = TRUE, active = FALSE, 
-      bulmaStepDetail(
-        color = NULL, completed = FALSE, title = "Step 2", marker = NULL,
-        "This is the second step. You get here once you have completed the first step."
-      )
-    ),
-    bulmaStepItem(
-      color = "warning", completed = TRUE, active = FALSE, 
-      bulmaStepDetail(
-        color = NULL, completed = FALSE, title = "Step 3", marker = 3,
-        "This is the third step. One more step before the end."
-      )
-    ),
-    bulmaStepItem(
-      color = "danger", completed = FALSE, active = TRUE, 
-      bulmaStepDetail(
-        color = NULL, completed = FALSE, title = "Step 4", marker = NULL,
-        "Final step. You have completed all the previous steps and end the process."
-      )
-    )
+             bulmaStepItem(
+               color = "success", completed = TRUE, active = FALSE, 
+               bulmaStepDetail(
+                 color = "primary", completed = TRUE, title = "Step 1", marker = 1,
+                 "This is the first step of the process."
+               )
+             ),
+             bulmaStepItem(
+               color = "info", completed = TRUE, active = FALSE, 
+               bulmaStepDetail(
+                 color = NULL, completed = FALSE, title = "Step 2", marker = NULL,
+                 "This is the second step. You get here once you have completed the first step."
+               )
+             ),
+             bulmaStepItem(
+               color = "warning", completed = TRUE, active = FALSE, 
+               bulmaStepDetail(
+                 color = NULL, completed = FALSE, title = "Step 3", marker = 3,
+                 "This is the third step. One more step before the end."
+               )
+             ),
+             bulmaStepItem(
+               color = "danger", completed = FALSE, active = TRUE, 
+               bulmaStepDetail(
+                 color = NULL, completed = FALSE, title = "Step 4", marker = NULL,
+                 "Final step. You have completed all the previous steps and end the process."
+               )
+             )
   ),
   
   bulmaDivider(content = "***", vertical = FALSE),
