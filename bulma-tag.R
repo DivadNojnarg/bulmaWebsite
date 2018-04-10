@@ -1,4 +1,6 @@
 #' @title bulma Tags.
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a tag \url{https://bulma.io/documentation/elements/tag/}.
 #'

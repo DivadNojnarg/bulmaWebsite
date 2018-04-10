@@ -1,4 +1,6 @@
 #' @title bulma Box.
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a simple box with or without media \url{https://bulma.io/documentation/elements/box/}.
 #'

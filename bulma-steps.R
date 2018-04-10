@@ -1,4 +1,6 @@
 #' @title bulma Step.
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a step element \url{https://wikiki.github.io/components/steps/}.
 #'

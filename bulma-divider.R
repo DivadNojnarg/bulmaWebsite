@@ -1,5 +1,7 @@
 #' @title bulma Divider.
 #'
+#' @author David Granjon, \email{dgranjon@@ymail.com}
+#'
 #' @description Create a vertical or horizontal divider \url{https://wikiki.github.io/layout/divider/}.
 #'
 #' @param content content to display (In mathematical textbooks we usually find ***).

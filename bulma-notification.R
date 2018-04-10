@@ -1,4 +1,6 @@
 #' @title bulma Notification.
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a notification box \url{https://bulma.io/documentation/elements/notification/}.
 #'

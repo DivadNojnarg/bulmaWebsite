@@ -1,4 +1,6 @@
 #' @title bulma Badge components
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a badge to enhance existing bulma buttons or text \url{https://wikiki.github.io/elements/badge/}.
 #'

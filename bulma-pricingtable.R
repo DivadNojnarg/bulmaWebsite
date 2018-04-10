@@ -1,4 +1,6 @@
 #' @title bulma Pricing Table.
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create an horizontal or vertical pricing table \url{https://wikiki.github.io/components/pricingtable/}.
 #'

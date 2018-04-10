@@ -1,4 +1,6 @@
 #' @title bulma pageLoader.
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a pageLoader for 3 seconds \url{https://wikiki.github.io/elements/pageloader/}.
 #'

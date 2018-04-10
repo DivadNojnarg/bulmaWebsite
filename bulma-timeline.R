@@ -1,4 +1,6 @@
 #' @title bulma Timeline.
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a timeline container \url{https://wikiki.github.io/components/timeline/}.
 #'

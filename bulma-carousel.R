@@ -1,4 +1,6 @@
 #' @title bulma carousel.
+#' 
+#' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a carousel \url{https://wikiki.github.io/components/carousel/}.
 #'
