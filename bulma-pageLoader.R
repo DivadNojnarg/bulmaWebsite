@@ -14,7 +14,7 @@
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'   
+#'    bulmaPageLoader(content = "loading ...", from = "right-to-left")
 #'   )
 #'  )
 #'

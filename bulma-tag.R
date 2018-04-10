@@ -17,7 +17,63 @@
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'   
+#'    bulmaColumns(
+#'     bulmaColumn(
+#'       width = 3,
+#'       bulmaTag(label = "tag", color = "info", size = NULL, style = NULL),
+#'       br(), br(),
+#'       bulmaTag(label = "tag", color = "warning", size = NULL, style = NULL),
+#'       br(), br(),
+#'       bulmaTag(label = "tag", color = "success", size = "large", style = "rounded")
+#'     ),
+#'     bulmaColumn(
+#'       width = 3,
+#'       bulmaTagList(
+#'         bulmaTag(label = "tag", color = "danger", size = "small", style = NULL),
+#'         bulmaTag(label = "tag", color = "warning", size = "medium", style = NULL),
+#'         bulmaTag(label = "tag", color = "success", size = "large", style = "rounded")
+#'       )
+#'     ),
+#'     bulmaDivider(vertical = TRUE),
+#'     bulmaColumn(
+#'       width = 2,
+#'       bulmaTagAddon(
+#'         bulmaTag(label = "build", color = "dark", size = "small", style = NULL),
+#'         bulmaTag(label = "passing", color = "success", size = "small", style = NULL)
+#'       ),
+#'       bulmaTagAddon(
+#'         bulmaTag(label = "npm", color = "dark", size = "small", style = NULL),
+#'         bulmaTag(label = "0.5.0", color = "info", size = "small", style = NULL)
+#'       ),
+#'       bulmaTagAddon(
+#'         bulmaTag(label = "chat", color = "dark", size = "small", style = NULL),
+#'         bulmaTag(label = "on gitter", color = "primary", size = "small", style = NULL)
+#'       )
+#'     ),
+#'     bulmaColumn(
+#'       width = 4,
+#'       bulmaTagAddonList(
+#'         bulmaTagAddons(
+#'           bulmaTagAddon(
+#'             bulmaTag(label = "build", color = "dark", size = "small", style = NULL),
+#'             bulmaTag(label = "passing", color = "success", size = "small", style = NULL)
+#'           )
+#'         ),
+#'         bulmaTagAddons(
+#'           bulmaTagAddon(
+#'             bulmaTag(label = "npm", color = "dark", size = "small", style = NULL),
+#'             bulmaTag(label = "0.5.0", color = "info", size = "small", style = NULL)
+#'           )
+#'         ),
+#'         bulmaTagAddons(
+#'           bulmaTagAddon(
+#'             bulmaTag(label = "chat", color = "dark", size = "small", style = NULL),
+#'             bulmaTag(label = "on gitter", color = "primary", size = "small", style = NULL)
+#'           )
+#'         )
+#'       )
+#'     )
+#'     )
 #'   )
 #'  )
 #'

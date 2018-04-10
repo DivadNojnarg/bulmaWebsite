@@ -14,7 +14,25 @@
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'   
+#'    # horizontal divider
+#'    bulmaDivider(),
+#'    # vertical divider need to be wrapped in columns!
+#'    bulmaColumns(
+#'     bulmaColumn(
+#'       width = 6,
+#'       bulmaBox(
+#'          "test"
+#'        )
+#'       )
+#'     ),
+#'     bulmaDivider(vertical = TRUE),
+#'     bulmaColumn(
+#'       width = 6,
+#'       bulmaBox(
+#'         "test"
+#'       )
+#'     )
+#'     )
 #'   )
 #'  )
 #'

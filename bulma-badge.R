@@ -17,6 +17,7 @@
 #'
 #'  ui <- bulmaPage(
 #'  bulmaContainer(
+#'  bulmaColumns(
 #'   bulmaColumn(
 #'  width = 2,
 #'  bulmaBadge(
@@ -125,6 +126,7 @@
 #'      style = NULL,
 #'      color = "success",
 #'      badge_text = 3
+#'    )
 #'    )
 #'  )
 #'  )

@@ -13,7 +13,24 @@
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'   
+#'    bulmaColumns(
+#'     bulmaColumn(
+#'       width = 6,
+#'       bulmaBox(
+#'         bulmaBoxMedia(
+#'           src = "https://bulma.io/images/placeholders/128x128.png",
+#'           "test"
+#'         )
+#'       )
+#'     ),
+#'     bulmaDivider(vertical = TRUE),
+#'     bulmaColumn(
+#'       width = 6,
+#'       bulmaBox(
+#'         "test"
+#'       )
+#'     )
+#'     )
 #'   )
 #'  )
 #'

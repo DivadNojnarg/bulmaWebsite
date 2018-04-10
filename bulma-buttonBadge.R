@@ -24,7 +24,60 @@
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'   
+#'    bulmqColumns(
+#'    bulmaColumn(
+#'     width = 2,
+#'     bulmaButtonBadge(label = "test",
+#'                      url = "http://google.com", color = "danger", style = NULL, loading = FALSE,
+#'                      size = NULL, badge_color = "warning", badge_style = NULL,
+#'                      badge_size = NULL, badge_position = NULL, badge_text = 1
+#'     ),
+#'     br(), br(),
+#'     
+#'     bulmaButtonBadge(label = "test",
+#'                      url = NULL, color = "warning", style = "outlined", loading = FALSE,
+#'                      size = "small", badge_color = "info", badge_style = NULL,
+#'                      badge_size = NULL, badge_position = NULL, badge_text = 2
+#'     ),
+#'     br(), br(),
+#'     
+#'     bulmaButtonBadge(label = "test",
+#'                      url = NULL, color = "success", style = NULL, loading = FALSE,
+#'                      size = "medium", badge_color = "danger", badge_style = NULL,
+#'                      badge_size = NULL, badge_position = NULL, badge_text = 3
+#'     )
+#'     ),
+#'     bulmaColumn(
+#'       width = 2,
+#'       bulmaButtonBadge(label = "test",
+#'                        url = NULL, color = "black", style = "outlined", loading = FALSE,
+#'                        size = "large", badge_color = NULL, badge_style = NULL,
+#'                        badge_size = NULL, badge_position = NULL, badge_text = 4
+#'       ),
+#'       br(), br(),
+#'       
+#'       bulmaButtonBadge(label = "test",
+#'                        url = NULL, color = "info", style = NULL, loading = FALSE,
+#'                        size = NULL, badge_color = "success", badge_style = NULL,
+#'                        badge_size = "small", badge_position = NULL, badge_text = 5
+#'       ),
+#'       br(), br(),
+#'       
+#'       bulmaButtonBadge(label = "test",
+#'                        url = NULL, color = NULL, style = "outlined", loading = FALSE,
+#'                        size = NULL, badge_color = "warning", badge_style = NULL,
+#'                        badge_size = "medium", badge_position = "left", badge_text = 6
+#'       )
+#'     ),
+#'     bulmaColumn(
+#'       width = 2,
+#'       bulmaButtonBadge(label = "test",
+#'                        url = NULL, color = NULL, style = "primary", loading = TRUE,
+#'                        size = NULL, badge_color = NULL, badge_style = "outlined",
+#'                        badge_size = "large", badge_position = "botton", badge_text = NULL
+#'       )
+#'     )
+#'    )
 #'   )
 #'  )
 #'

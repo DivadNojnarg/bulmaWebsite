@@ -14,7 +14,37 @@
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'   
+#'    bulmaSteps(
+#'     size = NULL,
+#'     bulmaStepItem(
+#'       color = "success", completed = TRUE, active = FALSE, 
+#'       bulmaStepDetail(
+#'         color = NULL, completed = FALSE, title = "Step 1", marker = 1,
+#'         "This is the first step of the process."
+#'       )
+#'     ),
+#'     bulmaStepItem(
+#'       color = NULL, completed = FALSE, active = FALSE, 
+#'       bulmaStepDetail(
+#'         color = NULL, completed = FALSE, title = "Step 2", marker = NULL,
+#'         "This is the second step. You get here once you have completed the first step."
+#'       )
+#'     ),
+#'     bulmaStepItem(
+#'       color = NULL, completed = FALSE, active = FALSE, 
+#'       bulmaStepDetail(
+#'         color = NULL, completed = FALSE, title = "Step 3", marker = 3,
+#'         "This is the third step. One more step before the end."
+#'       )
+#'     ),
+#'     bulmaStepItem(
+#'       color = NULL, completed = FALSE, active = TRUE, 
+#'       bulmaStepDetail(
+#'         color = NULL, completed = FALSE, title = "Step 4", marker = NULL,
+#'         "Final step. You have completed all the previous steps and end the process."
+#'       )
+#'     )
+#'     )
 #'   )
 #'  )
 #'

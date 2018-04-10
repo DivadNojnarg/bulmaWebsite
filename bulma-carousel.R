@@ -16,7 +16,31 @@
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'   
+#'     bulmaCarousel(
+#'      autoplay = TRUE, navigation = "overlay",
+#'      
+#'      bulmaCarouselItem(
+#'        background = TRUE, active = TRUE, 
+#'        src = "https://wikiki.github.io/images/merry-christmas.jpg",
+#'        title = "Merry Christmas", url = NULL, url_text = NULL
+#'      ),
+#'      bulmaCarouselItem(
+#'        background = TRUE, active = FALSE, 
+#'        src = "https://wikiki.github.io/images/singer.jpg",
+#'        title = "Original Gift: Offer a song with", 
+#'        url = "https://lasongbox.com", url_text = "La Song Box"
+#'      ),
+#'      bulmaCarouselItem(
+#'        background = TRUE, active = FALSE, 
+#'        src = "https://wikiki.github.io/images/sushi.jpg",
+#'        title = "Sushi time", url = NULL, url_text = NULL
+#'      ),
+#'      bulmaCarouselItem(
+#'        background = TRUE, active = FALSE, 
+#'        src = "https://wikiki.github.io/images/life.jpg",
+#'        title = "Life", url = NULL, url_text = NULL
+#'      )
+#'    )
 #'   )
 #'  )
 #'

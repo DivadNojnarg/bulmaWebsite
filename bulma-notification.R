@@ -14,7 +14,56 @@
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'   
+#'    bulmaColumns(
+#'    bulmaColumn(
+#'      width = 3,
+#'      bulmaNotification(
+#'        color = "info", 
+#'        "Lorem ipsum dolor sit amet, consectetur adipiscing 
+#'        elit lorem ipsum dolor. Pellentesque risus mi, tempus 
+#'        quis placerat ut, porta nec nulla. Vestibulum rhoncus 
+#'        ac ex sit amet fringilla. Nullam gravida purus diam, 
+#'        et dictum felis venenatis efficitur. Sit amet, 
+#'        consectetur adipiscing elit"
+#'      )
+#'      ),
+#'    bulmaColumn(
+#'      width = 3,
+#'      bulmaNotification(
+#'        color = "warning", 
+#'        "Lorem ipsum dolor sit amet, consectetur adipiscing 
+#'        elit lorem ipsum dolor. Pellentesque risus mi, tempus 
+#'        quis placerat ut, porta nec nulla. Vestibulum rhoncus 
+#'        ac ex sit amet fringilla. Nullam gravida purus diam, 
+#'        et dictum felis venenatis efficitur. Sit amet, 
+#'        consectetur adipiscing elit"
+#'      )
+#'      ),
+#'    bulmaColumn(
+#'      width = 3,
+#'      bulmaNotification(
+#'        color = "danger", 
+#'        "Lorem ipsum dolor sit amet, consectetur adipiscing 
+#'        elit lorem ipsum dolor. Pellentesque risus mi, tempus 
+#'        quis placerat ut, porta nec nulla. Vestibulum rhoncus 
+#'        ac ex sit amet fringilla. Nullam gravida purus diam, 
+#'        et dictum felis venenatis efficitur. Sit amet, 
+#'        consectetur adipiscing elit"
+#'      )
+#'      ),
+#'    bulmaColumn(
+#'      width = 3,
+#'      bulmaNotification(
+#'        color = "primary", 
+#'        "Lorem ipsum dolor sit amet, consectetur adipiscing 
+#'        elit lorem ipsum dolor. Pellentesque risus mi, tempus 
+#'        quis placerat ut, porta nec nulla. Vestibulum rhoncus 
+#'        ac ex sit amet fringilla. Nullam gravida purus diam, 
+#'        et dictum felis venenatis efficitur. Sit amet, 
+#'        consectetur adipiscing elit"
+#'      )
+#'      )
+#'      )
 #'   )
 #'  )
 #'
