@@ -1,0 +1,184 @@
+#' @title bulma Timeline.
+#'
+#' @description Create a timeline container \url{https://wikiki.github.io/components/timeline/}.
+#'
+#' @param ... slot for bulmaTimelineHeader and bulmaTimelineItem.
+#' @param centered FALSE by default. Wether to center the timeline or not.
+#' @param rtl FALSE by default. If rtl is TRUE, the timeline is displayed 
+#' right to left. If FALSE and if centered is FALSE, the timeline is displayed
+#' left to right (by default).
+#'
+#' @note know problem: when centered is true, lines cannot be colored.
+#'
+#' @rdname timeline
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'
+#'  ui <- bulmaPage(
+#'   bulmaContainer(
+#'   
+#'   )
+#'  )
+#'
+#'  server <- function(input, output, session) {
+#'
+#'  }
+#'
+#'  shinyApp(ui = ui, server = server)
+#'
+#' }
+#' }
+
+bulmaTimeline <- function(..., centered = FALSE, rtl = FALSE) {
+  
+  cl <- "timeline"
+  
+  if (centered == TRUE) cl <- paste0(cl, " is-centered")
+  if (rtl == TRUE) cl <- paste0(cl, " is-rtl")
+  
+  shiny::tags$div(
+    class = cl,
+    ...
+  )
+}
+
+
+#' @title bulma Timeline Header.
+#'
+#' @description Create a timeline header \url{https://wikiki.github.io/components/timeline/}.
+#'
+#' @param text header name.
+#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
+#' @param size Size of the badge : \code{small},\code{medium} and \code{large}. 
+#' 
+#' @note you can insert any number of headers.
+#'
+#' @rdname timeline
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'
+#'  ui <- bulmaPage(
+#'   bulmaContainer(
+#'   
+#'   )
+#'  )
+#'
+#'  server <- function(input, output, session) {
+#'
+#'  }
+#'
+#'  shinyApp(ui = ui, server = server)
+#'
+#' }
+#' }
+
+bulmaTimelineHeader <- function(text = NULL, size = NULL, color = NULL) {
+  
+  cl <- "tag"
+  
+  if (!is.null(color)) cl <- paste0(cl, " is-", color)
+  if (!is.null(size)) cl <- paste0(cl, " is-", size)
+  
+  
+  shiny::tags$header(
+    class = "timeline-header",
+    shiny::tags$span(
+      class = cl,
+      paste0(text)
+    )
+  )
+}
+
+
+
+#' @title bulma Timeline item.
+#'
+#' @description Create a timeline item \url{https://wikiki.github.io/components/timeline/}.
+#'
+#' @param ... insert icon or image here (if they are enabled via marker_image and
+#' marker_icon, respectively) : \code{tags$i(class = "fa fa-flag")} or
+#' \code{tags$img(src = "http://bulma.io/images/placeholders/32x32.png")}
+#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
+#' @param marker_color item marker color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
+#' @param marker_image TRUE or FALSE. FALSE by default. Wether to insert an image
+#' in the marker.
+#' @param marker_image_size image size. 
+#' @param marker_icon TRUE or FALSE. FALSE by default. Wether to insert an icon
+#' in the marker.
+#' @param content_header the content header.
+#' @param content_body item description.
+#' 
+#' 
+#' 
+#' @details
+#' Valid \code{size}:
+#' \itemize{
+#'   \item{16 - 16x16}
+#'   \item{24 - 24x24}
+#'   \item{32 - 32x32}
+#'   \item{48 - 48x48}
+#'   \item{54 - 54x54}
+#'   \item{96 - 96x96}
+#'   \item{128 - 128x128}
+#' }
+#'
+#' @rdname timeline
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'
+#'  ui <- bulmaPage(
+#'   bulmaContainer(
+#'   
+#'   )
+#'  )
+#'
+#'  server <- function(input, output, session) {
+#'
+#'  }
+#'
+#'  shinyApp(ui = ui, server = server)
+#'
+#' }
+#' }
+
+bulmaTimelineItem <- function(..., color = NULL, marker_color = NULL,
+                              marker_image = FALSE, marker_image_size = NULL, 
+                              marker_icon = FALSE, content_header = NULL, 
+                              content_body = NULL) {
+  
+  cl <- "timeline-item"
+  
+  if (!is.null(color)) cl <- paste0(cl, " is-", color)
+  
+  cl_marker <- "timeline-marker"
+  
+  if (!is.null(marker_color)) cl_marker <- paste0(cl_marker, " is-", marker_color)
+  if (marker_image == TRUE) cl_marker <- paste0(cl_marker, " is-image")
+  if (!is.null(marker_image_size)) cl_marker <- paste0(cl_marker, " is-", marker_image_size)
+  if (marker_icon == TRUE) cl_marker <- paste0(cl_marker, " is-icon")
+  
+  shiny::tags$div(
+    class = cl,
+    shiny::tags$div(
+      class = cl_marker,
+      ...
+    ),
+    shiny::tags$div(
+      class = "timeline-content",
+      if (!is.null(content_header)) shiny::tags$p(class = "heading", content_header),
+      if (!is.null(content_body)) shiny::tags$p(class = "heading", content_body)
+    )
+  )
+}

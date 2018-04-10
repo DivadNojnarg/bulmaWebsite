@@ -1,3 +1,35 @@
+#' @title bulma carousel.
+#'
+#' @description Create a carousel \url{https://wikiki.github.io/components/carousel/}.
+#'
+#' @param ... slot for bulmaCarouselItem.
+#' @param autoplay FALSE by default. If the carousel automatically change its content.
+#' @param navigation Where to display the navigations arrow : \code{centered} or \code{overlay}.
+#' If NULL, arrows are at the bottom and more spaced.
+#'
+#' @rdname carousel
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'
+#'  ui <- bulmaPage(
+#'   bulmaContainer(
+#'   
+#'   )
+#'  )
+#'
+#'  server <- function(input, output, session) {
+#'
+#'  }
+#'
+#'  shinyApp(ui = ui, server = server)
+#'
+#' }
+#' }
+
+
 # navigation: centered, overlay
 # autoplay: TRUE or FALSE
 bulmaCarousel <- function(..., autoplay = FALSE, navigation = NULL) {
@@ -33,8 +65,40 @@ bulmaCarousel <- function(..., autoplay = FALSE, navigation = NULL) {
 }
 
 
-# items to put inside the ... of the bulmaCarousel
-# only the first carouselItem can be active!
+#' @title bulma carousel item.
+#'
+#' @description Create a carousel item \url{https://wikiki.github.io/components/carousel/}.
+#'
+#' @param background by default TRUE. The item background.
+#' @param active TRUE of FALSE. The item which will be displayed first has to
+#' be TRUE. All others will be FALSE.
+#' @param src the link to the image.
+#' @param title item title.
+#' @param url an external link if any.
+#' @param url_text the external link text.
+#'
+#' @rdname carousel
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'
+#'  ui <- bulmaPage(
+#'   bulmaContainer(
+#'   
+#'   )
+#'  )
+#'
+#'  server <- function(input, output, session) {
+#'
+#'  }
+#'
+#'  shinyApp(ui = ui, server = server)
+#'
+#' }
+#' }
+
 bulmaCarouselItem <- function(background = TRUE, active = FALSE, src = NULL,
                               title = NULL, url = NULL, url_text = NULL) {
   cl <- "carousel-item"
@@ -53,5 +117,4 @@ bulmaCarouselItem <- function(background = TRUE, active = FALSE, src = NULL,
       if (!is.null(url)) shiny::tags$a(href = url, target = "_blank", paste0(url_text))
     )
   )
-  
 }

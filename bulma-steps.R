@@ -1,0 +1,145 @@
+#' @title bulma Step.
+#'
+#' @description Create a step element \url{https://wikiki.github.io/components/steps/}.
+#'
+#' @param ... slot for bulmaStepItem.
+#' @param size the global size : \code{small},\code{medium} and \code{large}.
+#'
+#' @rdname steps
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'
+#'  ui <- bulmaPage(
+#'   bulmaContainer(
+#'   
+#'   )
+#'  )
+#'
+#'  server <- function(input, output, session) {
+#'
+#'  }
+#'
+#'  shinyApp(ui = ui, server = server)
+#'
+#' }
+#' }
+
+bulmaSteps <- function(..., size = NULL) {
+  
+  cl <- "steps"
+  
+  if (!is.null(size)) cl <- paste0(cl, " is-", size)
+  
+  shiny::tags$ul(
+    class = cl,
+    ...
+  )
+}
+
+
+#' @title bulma Step item.
+#'
+#' @description Create a step item to insert in bulmaSteps \url{https://wikiki.github.io/components/steps/}.
+#'
+#' @param ... slot for bulmaStepDetail. 
+#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
+#' @param completed TRUE or FALSE. Is the current step completed or not?
+#' @param active TRUE or FALSE. Is the current step active or not?
+#'
+#' @rdname steps
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'
+#'  ui <- bulmaPage(
+#'   bulmaContainer(
+#'   
+#'   )
+#'  )
+#'
+#'  server <- function(input, output, session) {
+#'
+#'  }
+#'
+#'  shinyApp(ui = ui, server = server)
+#'
+#' }
+#' }
+
+bulmaStepItem <- function(..., color = NULL, completed = FALSE, active = FALSE) {
+  
+  cl <- "step-item"
+  
+  if (!is.null(color)) cl <- paste0(cl, " is-", color)
+  if (completed == TRUE) cl <- paste0(cl, " is-completed")
+  if (active == TRUE) cl <- paste0(cl, " is-active")
+  
+  shiny::tags$li(
+    class = cl, 
+    ...
+  )
+}
+
+
+#' @title bulma Step detail.
+#'
+#' @description Create a step detail to insert in a bulmaStepItem \url{https://wikiki.github.io/components/steps/}.
+#'
+#' @param ... description of the step.
+#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
+#' @param completed TRUE or FALSE. Is the current step completed or not?
+#' @param title step title.
+#' @param marker wether to put a marker in the round circle.
+#'
+#' @rdname steps
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (interactive()) {
+#'
+#'  ui <- bulmaPage(
+#'   bulmaContainer(
+#'   
+#'   )
+#'  )
+#'
+#'  server <- function(input, output, session) {
+#'
+#'  }
+#'
+#'  shinyApp(ui = ui, server = server)
+#'
+#' }
+#' }
+
+bulmaStepDetail <- function(..., color = NULL, completed = FALSE, 
+                            title = NULL, marker = NULL) {
+  
+  cl <- "step-details"
+  
+  if (!is.null(color)) cl <- paste0(cl, " is-", color)
+  if (completed == TRUE) cl <- paste0(cl, " is-completed")
+  
+  tagList(
+    shiny::tags$div(
+      class = "step-marker",
+      if (!is.null(marker)) paste0(marker)
+    ),
+    
+    shiny::tags$div(
+      class = cl, 
+      if (!is.null(title)) shiny::tags$p(class = "step-title", paste0(title)),
+      shiny::tags$p(
+        ...
+      )
+    )
+  )
+}
