@@ -83,25 +83,6 @@ bulmaSteps <- function(..., size = NULL) {
 #' @rdname steps
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
-
 bulmaStepItem <- function(..., color = NULL, completed = FALSE, active = FALSE) {
   
   cl <- "step-item"
@@ -131,24 +112,6 @@ bulmaStepItem <- function(..., color = NULL, completed = FALSE, active = FALSE) 
 #' @rdname steps
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
 bulmaStepDetail <- function(..., color = NULL, completed = FALSE, 
                             title = NULL, marker = NULL) {

@@ -110,26 +110,7 @@ bulmaTag <- function(label = NULL, color = NULL, size = NULL, style = NULL) {
 #' @rdname tags
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
-# insert multiple tags inside
 bulmaTagList <- function(...) {
   shiny::tags$div(
     class = "tags",
@@ -150,26 +131,7 @@ bulmaTagList <- function(...) {
 #' @rdname tags
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
-# insert 2 tags to be merged here
 bulmaTagAddon <- function(...) {
   shiny::tags$div(
     class = "tags has-addons",
@@ -187,24 +149,6 @@ bulmaTagAddon <- function(...) {
 #' @rdname tags
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
 bulmaTagAddons <- function(...) {
   shiny::tags$div(
@@ -223,24 +167,6 @@ bulmaTagAddons <- function(...) {
 #' @rdname tags
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
 bulmaTagAddonList <- function(...) {
   shiny::tags$div(

@@ -103,25 +103,7 @@ bulmaCarousel <- function(..., autoplay = FALSE, navigation = NULL) {
 #'
 #' @rdname carousel
 #' @export
-#'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
+#' 
 
 bulmaCarouselItem <- function(background = TRUE, active = FALSE, src = NULL,
                               title = NULL, url = NULL, url_text = NULL) {

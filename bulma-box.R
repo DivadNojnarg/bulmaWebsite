@@ -81,24 +81,6 @@ bulmaBox <- function(...) {
 #' @rdname box
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
 
 bulmaBoxMedia <- function(..., src = NULL, size = "64x64") {

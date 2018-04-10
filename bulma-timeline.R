@@ -83,24 +83,6 @@ bulmaTimeline <- function(..., centered = FALSE, rtl = FALSE) {
 #' @rdname timeline
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
 bulmaTimelineHeader <- function(text = NULL, size = NULL, color = NULL) {
   
@@ -157,24 +139,6 @@ bulmaTimelineHeader <- function(text = NULL, size = NULL, color = NULL) {
 #' @rdname timeline
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
 bulmaTimelineItem <- function(..., color = NULL, marker_color = NULL,
                               marker_image = FALSE, marker_image_size = NULL, 

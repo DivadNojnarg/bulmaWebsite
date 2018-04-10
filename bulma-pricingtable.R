@@ -159,24 +159,6 @@ bulmaPricingtable <- function(..., horizontal = FALSE) {
 #' @rdname pricingtable
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
 bulmaPricingPlan <- function(..., active = FALSE, color = NULL, plan_title = NULL,
                              plan_price = NULL, plan_currency = NULL,
@@ -231,26 +213,7 @@ bulmaPricingPlan <- function(..., active = FALSE, color = NULL, plan_title = NUL
 #' @rdname pricingtable
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' if (interactive()) {
-#'
-#'  ui <- bulmaPage(
-#'   bulmaContainer(
-#'   
-#'   )
-#'  )
-#'
-#'  server <- function(input, output, session) {
-#'
-#'  }
-#'
-#'  shinyApp(ui = ui, server = server)
-#'
-#' }
-#' }
 
-# bulma item to insert in a bulmaPricingPlan container
 bulmaPricingPlanItem <- function(name = NULL) {
   shiny::tags$div(class = "plan-item", name)
 }
