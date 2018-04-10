@@ -1,10 +1,10 @@
-#' @title bulma carousel.
+#' @title bulma carousel
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a carousel \url{https://wikiki.github.io/components/carousel/}.
 #'
-#' @param ... slot for bulmaCarouselItem.
+#' @param ... Slot for bulmaCarouselItem.
 #' @param autoplay FALSE by default. If TRUE, the carousel automatically change its content.
 #' @param navigation Where to display the navigations arrow : \code{centered} or \code{overlay}.
 #' If NULL, arrows are at the bottom and more spaced.
@@ -91,17 +91,17 @@ bulmaCarousel <- function(..., autoplay = FALSE, navigation = NULL) {
 }
 
 
-#' @title bulma carousel item.
+#' @title bulma carousel item
 #'
 #' @description Create a carousel item \url{https://wikiki.github.io/components/carousel/}.
 #'
 #' @param background by default TRUE. The item background.
 #' @param active TRUE of FALSE. The item which will be displayed first has to
 #' be TRUE. All others will be FALSE.
-#' @param src the link to the image.
-#' @param title item title.
-#' @param url an external link if any.
-#' @param url_text the external link text.
+#' @param src Image path.
+#' @param title Item title.
+#' @param url External link, if any.
+#' @param url_text External link text, if any.
 #'
 #' @export
 #'

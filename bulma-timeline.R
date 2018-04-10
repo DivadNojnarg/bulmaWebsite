@@ -1,16 +1,16 @@
-#' @title bulma Timeline.
+#' @title bulma timeline
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a timeline container \url{https://wikiki.github.io/components/timeline/}.
 #'
-#' @param ... slot for bulmaTimelineHeader and bulmaTimelineItem.
-#' @param centered FALSE by default. Wether to center the timeline or not.
+#' @param ... Slot for bulmaTimelineHeader and bulmaTimelineItem.
+#' @param centered FALSE by default. Whether to center the timeline.
 #' @param rtl FALSE by default. If rtl is TRUE, the timeline is displayed
-#' right to left. If FALSE and if centered is FALSE, the timeline is displayed
+#' right to left. If FALSE (and if centered is FALSE), the timeline is displayed
 #' left to right (by default).
 #'
-#' @note know problem: when centered is true, lines cannot be colored.
+#' @note known problem: when centered is TRUE, lines cannot be colored.
 #'
 #' @export
 #'
@@ -71,14 +71,14 @@ bulmaTimeline <- function(..., centered = FALSE, rtl = FALSE) {
 }
 
 
-#' @title bulma Timeline Header.
+#' @title bulma timeline header
 #'
 #' @description Create a timeline header \url{https://wikiki.github.io/components/timeline/}.
 #'
-#' @param text header name.
-#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#' @param text Header name.
+#' @param color Header color : \code{link}, \code{info}, \code{primary}, \code{warning},
 #'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
-#' @param size Size of the badge : \code{small},\code{medium} and \code{large}.
+#' @param size Header size : \code{small},\code{medium} and \code{large}.
 #'
 #' @note you can insert any number of headers.
 #'
@@ -104,24 +104,24 @@ bulmaTimelineHeader <- function(text = NULL, size = NULL, color = NULL) {
 
 
 
-#' @title bulma Timeline item.
+#' @title bulma timeline item
 #'
 #' @description Create a timeline item \url{https://wikiki.github.io/components/timeline/}.
 #'
-#' @param ... insert icon or image here (if they are enabled via marker_image and
+#' @param ... Insert an icon or image here (if they are enabled via marker_image and
 #' marker_icon, respectively) : \code{tags$i(class = "fa fa-flag")} or
 #' \code{tags$img(src = "http://bulma.io/images/placeholders/32x32.png")}
-#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#' @param color Plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
 #'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
-#' @param marker_color item marker color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#' @param marker_color Item marker color : \code{link}, \code{info}, \code{primary}, \code{warning},
 #'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
-#' @param marker_image TRUE or FALSE. FALSE by default. Wether to insert an image
+#' @param marker_image TRUE or FALSE, FALSE by default. Whether to insert an image
 #' in the marker.
 #' @param marker_image_size image size.
-#' @param marker_icon TRUE or FALSE. FALSE by default. Wether to insert an icon
+#' @param marker_icon TRUE or FALSE, FALSE by default. Whether to insert an icon
 #' in the marker.
-#' @param content_header the content header.
-#' @param content_body item description.
+#' @param content_header Content header.
+#' @param content_body Item description.
 #'
 #'
 #'

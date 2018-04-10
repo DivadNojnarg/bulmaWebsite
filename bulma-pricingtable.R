@@ -1,11 +1,11 @@
-#' @title bulma Pricing Table.
+#' @title bulma pricing table
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create an horizontal or vertical pricing table \url{https://wikiki.github.io/components/pricingtable/}.
 #'
-#' @param ... slot for bulmaPricingPlan.
-#' @param horizontal FALSE by default. Wether to display the table vertically
+#' @param ... Slot for bulmaPricingPlan.
+#' @param horizontal FALSE by default. Whether to display the table vertically
 #' or horizontally.
 #'
 #' @export
@@ -142,21 +142,23 @@ bulmaPricingtable <- function(..., horizontal = FALSE) {
   )
 }
 
-#' @title bulma Pricing Table Plan .
+#' @title bulma pricing table plan
 #'
 #' @description Create a pricing table plan to insert in a bulmaPricingTable \url{https://wikiki.github.io/components/pricingtable/}.
 #'
-#' @param ... slot for bulmaPricingPlanItem.
-#' @param active FALSE by default. If true, the corresponding pricing plan
+#' @param ... Slot for bulmaPricingPlanItem.
+#' @param active FALSE by default. If TRUE, the corresponding pricing plan
 #' is highlighted.
-#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#' @param color Plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
 #'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
-#' @param plan_title the plan title.
-#' @param plan_price the plan price.
-#' @param plan_currency the plan currency.
-#' @param plan_period the payment periodicity.
-#' @param button_status NULL or \code{"disabled"}.
-#' @param button_name the button label.
+#' @param plan_title Plan title.
+#' @param plan_price Plan price.
+#' @param plan_currency Plan currency.
+#' @param plan_period Payment periodicity.
+#' @param button_status Button status. NULL or \code{"disabled"}.
+#' @param button_name Button label.
+#'
+#' @note the status "disabled" does not work at the moment.
 #'
 #' @export
 #'
@@ -205,11 +207,11 @@ bulmaPricingPlan <- function(..., active = FALSE, color = NULL, plan_title = NUL
 
 
 
-#' @title bulma Pricing Plan Item.
+#' @title bulma pricing plan item
 #'
 #' @description bulma item to insert in a bulmaPricingPlan container \url{https://wikiki.github.io/components/pricingtable/}.
 #'
-#' @param name item name.
+#' @param name Item name.
 #'
 #' @export
 #'

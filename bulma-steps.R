@@ -1,11 +1,11 @@
-#' @title bulma Step.
+#' @title bulma steps
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a step element \url{https://wikiki.github.io/components/steps/}.
 #'
-#' @param ... slot for bulmaStepItem.
-#' @param size the global size : \code{small},\code{medium} and \code{large}.
+#' @param ... Slot for bulmaStepItem.
+#' @param size Global size : \code{small},\code{medium} and \code{large}.
 #'
 #' @export
 #'
@@ -72,12 +72,12 @@ bulmaSteps <- function(..., size = NULL) {
 }
 
 
-#' @title bulma Step item.
+#' @title bulma Step item
 #'
 #' @description Create a step item to insert in bulmaSteps \url{https://wikiki.github.io/components/steps/}.
 #'
-#' @param ... slot for bulmaStepDetail.
-#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#' @param ... Slot for bulmaStepDetail.
+#' @param color Plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
 #'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
 #' @param completed TRUE or FALSE. Is the current step completed or not?
 #' @param active TRUE or FALSE. Is the current step active or not?
@@ -99,16 +99,16 @@ bulmaStepItem <- function(..., color = NULL, completed = FALSE, active = FALSE) 
 }
 
 
-#' @title bulma Step detail.
+#' @title bulma step detail
 #'
 #' @description Create a step detail to insert in a bulmaStepItem \url{https://wikiki.github.io/components/steps/}.
 #'
-#' @param ... description of the step.
-#' @param color the plan color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#' @param ... Description of the step.
+#' @param color Step color : \code{link}, \code{info}, \code{primary}, \code{warning},
 #'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
 #' @param completed TRUE or FALSE. Is the current step completed or not?
-#' @param title step title.
-#' @param marker wether to put a marker in the round circle.
+#' @param title Step title.
+#' @param marker Whether to put a marker in the round circle.
 #'
 #' @export
 #'

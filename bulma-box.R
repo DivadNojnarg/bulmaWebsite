@@ -1,10 +1,12 @@
-#' @title bulma Box.
+#' @title bulma Box
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a simple box with or without media \url{https://bulma.io/documentation/elements/box/}.
 #'
-#' @param ... any element.
+#' @param ... Any element.
+#'
+#' @note It is lighter than a bulmaCard element.
 #'
 #' @export
 #'

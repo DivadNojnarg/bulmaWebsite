@@ -1,12 +1,13 @@
-#' @title bulma Divider.
+#' @title bulma divider
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a vertical or horizontal divider \url{https://wikiki.github.io/layout/divider/}.
 #'
-#' @param content content to display (In mathematical textbooks we usually find ***).
-#' @param vertical TRUE or FALSE. Wether to use the divider on a vertical or
-#' horizontal mode.
+#' @param content Content to display (In mathematical textbooks we usually find ***).
+#' @param vertical TRUE or FALSE. Whether to use a vertical or horizontal divider.
+#'
+#' @note If vertical is TRUE, you need to wrap the divider in a bulmaColumns() configuration. See example below.
 #'
 #' @export
 #'

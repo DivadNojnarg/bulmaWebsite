@@ -1,11 +1,11 @@
-#' @title bulma pageLoader.
+#' @title bulma pageLoader
 #' 
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a pageLoader for 3 seconds \url{https://wikiki.github.io/elements/pageloader/}.
 #'
-#' @param content content to display when loading.
-#' @param from NULL default. Where the pageLoader comes from (animation) :
+#' @param content Content to display when loading.
+#' @param from NULL by default. Where the pageLoader comes from (animation) :
 #' \code{right-to-left} or \code{left-to-right}.
 #'
 #' @export

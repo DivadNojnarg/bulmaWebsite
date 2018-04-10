@@ -1,14 +1,14 @@
-#' @title bulma Tags.
+#' @title bulma tags
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a tag \url{https://bulma.io/documentation/elements/tag/}.
 #'
-#' @param label tag label.
-#' @param color Color of the tag : \code{link}, \code{info}, \code{primary}, \code{warning},
+#' @param label Tag label.
+#' @param color Tag color : \code{link}, \code{info}, \code{primary}, \code{warning},
 #'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
-#' @param size Size of the tag : \code{small},\code{medium} and \code{large}.
-#' @param style Style of the tag :  \code{rounded} or \code{delete}. NULL by default.
+#' @param size Tag size : \code{small},\code{medium} and \code{large}.
+#' @param style Tag style :  \code{rounded} or \code{delete}. NULL by default.
 #'
 #' @export
 #'
@@ -103,11 +103,11 @@ bulmaTag <- function(label = NULL, color = NULL, size = NULL, style = NULL) {
 
 
 
-#' @title bulma Tag List.
+#' @title bulma tag list
 #'
-#' @description Create a tag list or bulmaTags \url{https://bulma.io/documentation/elements/tag/}.
+#' @description Create a tag list of bulmaTag objects \url{https://bulma.io/documentation/elements/tag/}.
 #'
-#' @param ... slot for bulmaTag.
+#' @param ... Slot for bulmaTag.
 #'
 #' @export
 #'
@@ -123,11 +123,11 @@ bulmaTagList <- function(...) {
 
 
 
-#' @title bulma Tag Addon.
+#' @title bulma tag addon
 #'
 #' @description Merge two tags together \url{https://bulma.io/documentation/elements/tag/}.
 #'
-#' @param ... slot for 2 bulmaTag.
+#' @param ... Slot for 2 bulmaTag.
 #'
 #' @export
 #'
@@ -140,11 +140,11 @@ bulmaTagAddon <- function(...) {
 }
 
 
-#' @title bulma Tag Addon vertical List.
+#' @title bulma tag addon vertical list
 #'
-#' @description Create a vertical list of tagAddons \url{https://bulma.io/documentation/elements/tag/}.
+#' @description Create a vertical list of bulmaTagAddon objects \url{https://bulma.io/documentation/elements/tag/}.
 #'
-#' @param ... slot for bulmaTagAddon.
+#' @param ... Slot for bulmaTagAddon.
 #'
 #' @export
 #'
@@ -157,11 +157,11 @@ bulmaTagAddons <- function(...) {
 }
 
 
-#' @title bulma Tag Addon horizontal List.
+#' @title bulma tag addon horizontal list.
 #'
-#' @description Create a vertical list of tagAddons \url{https://bulma.io/documentation/elements/tag/}.
+#' @description Create an horizontal list of bulmaTagAddons objects \url{https://bulma.io/documentation/elements/tag/}.
 #'
-#' @param ... slot for bulmaTagAddons.
+#' @param ... Slot for bulmaTagAddons.
 #'
 #' @export
 #'

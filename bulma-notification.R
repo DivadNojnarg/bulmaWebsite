@@ -1,11 +1,11 @@
-#' @title bulma Notification.
+#' @title bulma notification
 #'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a notification box \url{https://bulma.io/documentation/elements/notification/}.
 #'
-#' @param ... any element.
-#' @param color the background color : \code{link}, \code{info}, \code{primary}, \code{warning},
+#' @param ... Any element.
+#' @param color The background color : \code{link}, \code{info}, \code{primary}, \code{warning},
 #'  \code{danger}, \code{success}, \code{black}, \code{dark} and \code{ligth}.
 #'
 #' @export
