@@ -1,5 +1,5 @@
 #' @title bulma Tags.
-#' 
+#'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a tag \url{https://bulma.io/documentation/elements/tag/}.
@@ -10,12 +10,12 @@
 #' @param size Size of the tag : \code{small},\code{medium} and \code{large}.
 #' @param style Style of the tag :  \code{rounded} or \code{delete}. NULL by default.
 #'
-#' @rdname tags
 #' @export
 #'
 #' @examples
 #' \dontrun{
 #' if (interactive()) {
+#'  library(shiny)
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
@@ -74,7 +74,7 @@
 #'           )
 #'         )
 #'       )
-#'     )
+#'      )
 #'     )
 #'   )
 #'  )
@@ -93,12 +93,12 @@ bulmaTag <- function(label = NULL, color = NULL, size = NULL, style = NULL) {
   if (!is.null(color)) cl <- paste0(cl, " is-", color)
   if (!is.null(size)) cl <- paste0(cl, " is-", size)
   if (!is.null(style)) cl <- paste0(cl, " is-", style)
-  
+
   shiny::tags$span(
-    class = cl, 
+    class = cl,
     label
   )
-  
+
 }
 
 
@@ -109,7 +109,6 @@ bulmaTag <- function(label = NULL, color = NULL, size = NULL, style = NULL) {
 #'
 #' @param ... slot for bulmaTag.
 #'
-#' @rdname tags
 #' @export
 #'
 
@@ -130,7 +129,6 @@ bulmaTagList <- function(...) {
 #'
 #' @param ... slot for 2 bulmaTag.
 #'
-#' @rdname tags
 #' @export
 #'
 
@@ -148,7 +146,6 @@ bulmaTagAddon <- function(...) {
 #'
 #' @param ... slot for bulmaTagAddon.
 #'
-#' @rdname tags
 #' @export
 #'
 
@@ -166,7 +163,6 @@ bulmaTagAddons <- function(...) {
 #'
 #' @param ... slot for bulmaTagAddons.
 #'
-#' @rdname tags
 #' @export
 #'
 

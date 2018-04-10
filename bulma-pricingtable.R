@@ -1,5 +1,5 @@
 #' @title bulma Pricing Table.
-#' 
+#'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create an horizontal or vertical pricing table \url{https://wikiki.github.io/components/pricingtable/}.
@@ -8,21 +8,21 @@
 #' @param horizontal FALSE by default. Wether to display the table vertically
 #' or horizontally.
 #'
-#' @rdname pricingtable
 #' @export
 #'
 #' @examples
 #' \dontrun{
 #' if (interactive()) {
+#'  library(shiny)
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
-#'    shiny::column(width = 12, align = "center", 
+#'    shiny::column(width = 12, align = "center",
 #'     bulmaTitle("Bulma Vertical Pricing Table")
 #'     ),
-#'     
+#'
 #'     br(), br(),
-#'     
+#'
 #'     bulmaPricingtable(
 #'       horizontal = FALSE,
 #'       bulmaPricingPlan(
@@ -66,17 +66,17 @@
 #'         bulmaPricingPlanItem(name = "1000 Email Boxes")
 #'       )
 #'     ),
-#'     
+#'
 #'     br(), br(),
-#'     
+#'
 #'     bulmaDivider(),
-#'     
-#'     shiny::column(width = 12, align = "center", 
+#'
+#'     shiny::column(width = 12, align = "center",
 #'                   bulmaTitle("Bulma Horizontal Pricing Table")
 #'     ),
-#'     
+#'
 #'     br(), br(),
-#'     
+#'
 #'     bulmaPricingtable(
 #'       horizontal = TRUE,
 #'       bulmaPricingPlan(
@@ -133,7 +133,7 @@
 #' }
 
 bulmaPricingtable <- function(..., horizontal = FALSE) {
-  
+
   cl <- "pricing-table"
   if (horizontal == TRUE) cl <- paste0(cl, " is-horizontal")
   shiny::tags$div(
@@ -158,7 +158,6 @@ bulmaPricingtable <- function(..., horizontal = FALSE) {
 #' @param button_status NULL or \code{"disabled"}.
 #' @param button_name the button label.
 #'
-#' @rdname pricingtable
 #' @export
 #'
 
@@ -166,19 +165,19 @@ bulmaPricingPlan <- function(..., active = FALSE, color = NULL, plan_title = NUL
                              plan_price = NULL, plan_currency = NULL,
                              plan_period = NULL, button_status = NULL,
                              button_name = NULL) {
-  
+
   cl <- "pricing-plan"
   if (!is.null(color)) cl <- paste0(cl, " is-", color)
   if (active == TRUE) cl <- paste0(cl, " is-active")
-  
-  
+
+
   shiny::tags$div(
     class = cl,
     # header
     shiny::tags$div(class = "plan-header", plan_title),
-    # price 
+    # price
     shiny::tags$div(
-      class = "plan-price", 
+      class = "plan-price",
       shiny::tags$span(
         class = "plan-price-amount",
         shiny::tags$span(class = "plan-price-currency", plan_currency),
@@ -186,7 +185,7 @@ bulmaPricingPlan <- function(..., active = FALSE, color = NULL, plan_title = NUL
       ),
       plan_period
     ),
-    # items 
+    # items
     shiny::tags$div(
       class = "plan-items",
       # items
@@ -196,7 +195,7 @@ bulmaPricingPlan <- function(..., active = FALSE, color = NULL, plan_title = NUL
     shiny::tags$div(
       class = "plan-footer",
       shiny::tags$button(
-        class = "button is-fullwidth", 
+        class = "button is-fullwidth",
         if (!is.null(button_status)) disabled = button_status,
         button_name
       )
@@ -212,7 +211,6 @@ bulmaPricingPlan <- function(..., active = FALSE, color = NULL, plan_title = NUL
 #'
 #' @param name item name.
 #'
-#' @rdname pricingtable
 #' @export
 #'
 

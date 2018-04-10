@@ -1,44 +1,44 @@
 #' @title bulma carousel.
-#' 
+#'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a carousel \url{https://wikiki.github.io/components/carousel/}.
 #'
 #' @param ... slot for bulmaCarouselItem.
-#' @param autoplay FALSE by default. If the carousel automatically change its content.
+#' @param autoplay FALSE by default. If TRUE, the carousel automatically change its content.
 #' @param navigation Where to display the navigations arrow : \code{centered} or \code{overlay}.
 #' If NULL, arrows are at the bottom and more spaced.
 #'
-#' @rdname carousel
 #' @export
 #'
 #' @examples
 #' \dontrun{
 #' if (interactive()) {
+#'  library(shiny)
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
 #'     bulmaCarousel(
 #'      autoplay = TRUE, navigation = "overlay",
-#'      
+#'
 #'      bulmaCarouselItem(
-#'        background = TRUE, active = TRUE, 
+#'        background = TRUE, active = TRUE,
 #'        src = "https://wikiki.github.io/images/merry-christmas.jpg",
 #'        title = "Merry Christmas", url = NULL, url_text = NULL
 #'      ),
 #'      bulmaCarouselItem(
-#'        background = TRUE, active = FALSE, 
+#'        background = TRUE, active = FALSE,
 #'        src = "https://wikiki.github.io/images/singer.jpg",
-#'        title = "Original Gift: Offer a song with", 
+#'        title = "Original Gift: Offer a song with",
 #'        url = "https://lasongbox.com", url_text = "La Song Box"
 #'      ),
 #'      bulmaCarouselItem(
-#'        background = TRUE, active = FALSE, 
+#'        background = TRUE, active = FALSE,
 #'        src = "https://wikiki.github.io/images/sushi.jpg",
 #'        title = "Sushi time", url = NULL, url_text = NULL
 #'      ),
 #'      bulmaCarouselItem(
-#'        background = TRUE, active = FALSE, 
+#'        background = TRUE, active = FALSE,
 #'        src = "https://wikiki.github.io/images/life.jpg",
 #'        title = "Life", url = NULL, url_text = NULL
 #'      )
@@ -59,18 +59,18 @@
 # navigation: centered, overlay
 # autoplay: TRUE or FALSE
 bulmaCarousel <- function(..., autoplay = FALSE, navigation = NULL) {
-  
+
   cl_nav <- "carousel-navigation"
   if (!is.null(navigation)) cl_nav <- paste0(cl_nav, " is-", navigation)
-  
+
   # translate TRUE into true for javascript
   if (autoplay == TRUE)
     autoplay <- "true"
-  
+
   # main panel
   shiny::tags$div(
-    class = "carousel carousel-animated carousel-animate-slide", 
-    `data-autoplay` = autoplay, 
+    class = "carousel carousel-animated carousel-animate-slide",
+    `data-autoplay` = autoplay,
     shiny::tags$div(
       class = "carousel-container",
       ...
@@ -103,17 +103,16 @@ bulmaCarousel <- function(..., autoplay = FALSE, navigation = NULL) {
 #' @param url an external link if any.
 #' @param url_text the external link text.
 #'
-#' @rdname carousel
 #' @export
-#' 
+#'
 
 bulmaCarouselItem <- function(background = TRUE, active = FALSE, src = NULL,
                               title = NULL, url = NULL, url_text = NULL) {
   cl <- "carousel-item"
-  
+
   if (background == TRUE) cl <- paste0(cl, " has-background")
   if (active == TRUE) cl <- paste0(cl, " is-active")
-  
+
   shiny::tags$div(
     class = cl,
     shiny::tags$img(

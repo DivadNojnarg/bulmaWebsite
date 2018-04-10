@@ -1,5 +1,5 @@
 #' @title bulma Notification.
-#' 
+#'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a notification box \url{https://bulma.io/documentation/elements/notification/}.
@@ -13,59 +13,60 @@
 #' @examples
 #' \dontrun{
 #' if (interactive()) {
+#'  library(shiny)
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
 #'    bulmaColumns(
-#'    bulmaColumn(
-#'      width = 3,
-#'      bulmaNotification(
-#'        color = "info", 
-#'        "Lorem ipsum dolor sit amet, consectetur adipiscing 
-#'        elit lorem ipsum dolor. Pellentesque risus mi, tempus 
-#'        quis placerat ut, porta nec nulla. Vestibulum rhoncus 
-#'        ac ex sit amet fringilla. Nullam gravida purus diam, 
-#'        et dictum felis venenatis efficitur. Sit amet, 
-#'        consectetur adipiscing elit"
-#'      )
-#'      ),
-#'    bulmaColumn(
-#'      width = 3,
-#'      bulmaNotification(
-#'        color = "warning", 
-#'        "Lorem ipsum dolor sit amet, consectetur adipiscing 
-#'        elit lorem ipsum dolor. Pellentesque risus mi, tempus 
-#'        quis placerat ut, porta nec nulla. Vestibulum rhoncus 
-#'        ac ex sit amet fringilla. Nullam gravida purus diam, 
-#'        et dictum felis venenatis efficitur. Sit amet, 
-#'        consectetur adipiscing elit"
-#'      )
-#'      ),
-#'    bulmaColumn(
-#'      width = 3,
-#'      bulmaNotification(
-#'        color = "danger", 
-#'        "Lorem ipsum dolor sit amet, consectetur adipiscing 
-#'        elit lorem ipsum dolor. Pellentesque risus mi, tempus 
-#'        quis placerat ut, porta nec nulla. Vestibulum rhoncus 
-#'        ac ex sit amet fringilla. Nullam gravida purus diam, 
-#'        et dictum felis venenatis efficitur. Sit amet, 
-#'        consectetur adipiscing elit"
-#'      )
-#'      ),
-#'    bulmaColumn(
-#'      width = 3,
-#'      bulmaNotification(
-#'        color = "primary", 
-#'        "Lorem ipsum dolor sit amet, consectetur adipiscing 
-#'        elit lorem ipsum dolor. Pellentesque risus mi, tempus 
-#'        quis placerat ut, porta nec nulla. Vestibulum rhoncus 
-#'        ac ex sit amet fringilla. Nullam gravida purus diam, 
-#'        et dictum felis venenatis efficitur. Sit amet, 
-#'        consectetur adipiscing elit"
-#'      )
-#'      )
-#'      )
+#'     bulmaColumn(
+#'       width = 3,
+#'       bulmaNotification(
+#'         color = "info",
+#'         "Lorem ipsum dolor sit amet, consectetur adipiscing
+#'         elit lorem ipsum dolor. Pellentesque risus mi, tempus
+#'         quis placerat ut, porta nec nulla. Vestibulum rhoncus
+#'         ac ex sit amet fringilla. Nullam gravida purus diam,
+#'         et dictum felis venenatis efficitur. Sit amet,
+#'         consectetur adipiscing elit"
+#'       )
+#'     ),
+#'     bulmaColumn(
+#'       width = 3,
+#'       bulmaNotification(
+#'         color = "warning",
+#'         "Lorem ipsum dolor sit amet, consectetur adipiscing
+#'         elit lorem ipsum dolor. Pellentesque risus mi, tempus
+#'         quis placerat ut, porta nec nulla. Vestibulum rhoncus
+#'         ac ex sit amet fringilla. Nullam gravida purus diam,
+#'         et dictum felis venenatis efficitur. Sit amet,
+#'         consectetur adipiscing elit"
+#'       )
+#'     ),
+#'     bulmaColumn(
+#'       width = 3,
+#'       bulmaNotification(
+#'         color = "danger",
+#'         "Lorem ipsum dolor sit amet, consectetur adipiscing
+#'         elit lorem ipsum dolor. Pellentesque risus mi, tempus
+#'         quis placerat ut, porta nec nulla. Vestibulum rhoncus
+#'         ac ex sit amet fringilla. Nullam gravida purus diam,
+#'         et dictum felis venenatis efficitur. Sit amet,
+#'         consectetur adipiscing elit"
+#'       )
+#'     ),
+#'     bulmaColumn(
+#'       width = 3,
+#'       bulmaNotification(
+#'         color = "primary",
+#'         "Lorem ipsum dolor sit amet, consectetur adipiscing
+#'         elit lorem ipsum dolor. Pellentesque risus mi, tempus
+#'         quis placerat ut, porta nec nulla. Vestibulum rhoncus
+#'         ac ex sit amet fringilla. Nullam gravida purus diam,
+#'         et dictum felis venenatis efficitur. Sit amet,
+#'         consectetur adipiscing elit"
+#'       )
+#'     )
+#'    )
 #'   )
 #'  )
 #'
@@ -79,12 +80,12 @@
 #' }
 
 bulmaNotification <- function(..., color = NULL) {
-  
+
   cl <- "notification"
   if (!is.null(color)) cl <- paste0(cl, " is-", color)
-  
+
   shiny::tags$div(
     class = cl,
-    ... 
+    ...
   )
 }

@@ -1,5 +1,5 @@
 #' @title bulma Badge components
-#' 
+#'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a badge to enhance existing bulma buttons or text \url{https://wikiki.github.io/elements/badge/}.
@@ -16,6 +16,7 @@
 #' @examples
 #' \dontrun{
 #' if (interactive()) {
+#'  library(shiny)
 #'
 #'  ui <- bulmaPage(
 #'  bulmaContainer(
@@ -30,9 +31,9 @@
 #'    color = NULL,
 #'    badge_text = 3
 #'  ),
-#'  
+#'
 #'  br(), br(),
-#'  
+#'
 #'  bulmaBadge(
 #'    "test",
 #'    position = "bottom",
@@ -41,9 +42,9 @@
 #'    color = NULL,
 #'    badge_text = 3
 #'  ),
-#'  
+#'
 #'  br(), br(),
-#'  
+#'
 #'  bulmaBadge(
 #'    "test",
 #'    position = "bottom-left",
@@ -63,9 +64,9 @@
 #'      color = NULL,
 #'      badge_text = 3
 #'    ),
-#'    
+#'
 #'    br(), br(),
-#'    
+#'
 #'    bulmaBadge(
 #'      "test",
 #'      position = NULL,
@@ -74,9 +75,9 @@
 #'      color = NULL,
 #'      badge_text = 3
 #'    ),
-#'    
+#'
 #'    br(), br(),
-#'    
+#'
 #'    bulmaBadge(
 #'      "test",
 #'      position = NULL,
@@ -96,9 +97,9 @@
 #'      color = "info",
 #'      badge_text = 3
 #'    ),
-#'    
+#'
 #'    br(), br(),
-#'    
+#'
 #'    bulmaBadge(
 #'      "test",
 #'      position = NULL,
@@ -107,9 +108,9 @@
 #'      color = "warning",
 #'      badge_text = 3
 #'    ),
-#'    
+#'
 #'    br(), br(),
-#'    
+#'
 #'    bulmaBadge(
 #'      "test",
 #'      position = NULL,
@@ -118,9 +119,9 @@
 #'      color = "danger",
 #'      badge_text = 3
 #'    ),
-#'    
+#'
 #'    br(), br(),
-#'    
+#'
 #'    bulmaBadge(
 #'      "test",
 #'      position = NULL,
@@ -144,16 +145,16 @@
 #' }
 
 
-bulmaBadge <- function(..., color = NULL, size = NULL, style = NULL, 
+bulmaBadge <- function(..., color = NULL, size = NULL, style = NULL,
                        position = NULL, badge_text = NULL){
-  
+
   cl <- "badge"
-  
+
   if (!is.null(color)) cl <- paste0(cl, " is-badge-", color)
   if (!is.null(size)) cl <- paste0(cl, " is-badge-", size)
   if (!is.null(style)) cl <- paste0(cl, " is-badge-", style)
   if (!is.null(position)) cl <- paste0(cl, " is-badge-", position)
-  
+
   shiny::tags$span(
     class = cl, `data-badge` = if (!is.null(badge_text))  paste0(badge_text) ,
     ...

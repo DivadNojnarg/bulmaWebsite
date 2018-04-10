@@ -13,6 +13,7 @@
 #' @examples
 #' \dontrun{
 #' if (interactive()) {
+#'  library(shiny)
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
@@ -24,7 +25,6 @@
 #'       width = 6,
 #'       bulmaBox(
 #'          "test"
-#'        )
 #'       )
 #'     ),
 #'     bulmaDivider(vertical = TRUE),
@@ -34,7 +34,7 @@
 #'         "test"
 #'       )
 #'     )
-#'     )
+#'    )
 #'   )
 #'  )
 #'

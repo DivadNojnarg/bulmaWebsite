@@ -1,17 +1,17 @@
 #' @title bulma Box.
-#' 
+#'
 #' @author David Granjon, \email{dgranjon@@ymail.com}
 #'
 #' @description Create a simple box with or without media \url{https://bulma.io/documentation/elements/box/}.
 #'
 #' @param ... any element.
 #'
-#' @rdname box
 #' @export
 #'
 #' @examples
 #' \dontrun{
 #' if (interactive()) {
+#'  library(shiny)
 #'
 #'  ui <- bulmaPage(
 #'   bulmaContainer(
@@ -31,7 +31,7 @@
 #'       bulmaBox(
 #'         "test"
 #'       )
-#'     )
+#'      )
 #'     )
 #'   )
 #'  )
@@ -65,9 +65,7 @@ bulmaBox <- function(...) {
 #' @param ... any element.
 #' @param src link to the media.
 #' @param size Media size.
-#' 
-#' @rdname box
-#' 
+#'
 #' @details
 #' Valid \code{size}:
 #' \itemize{
@@ -87,7 +85,7 @@ bulmaBox <- function(...) {
 
 bulmaBoxMedia <- function(..., src = NULL, size = "64x64") {
   tagList(
-    # media left 
+    # media left
     shiny::tags$div(
       class = "media-left",
       bulmaFigure(src = src, size = size)
