@@ -1,2 +1,2 @@
 # bulmaWebsite
-a test website created with bulma.io
+the bulma extension demo page

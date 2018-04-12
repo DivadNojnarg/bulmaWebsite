@@ -11,7 +11,6 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' if (interactive()) {
 #'
 #'  ui <- bulmaPage(
@@ -26,7 +25,6 @@
 #'
 #'  shinyApp(ui = ui, server = server)
 #'
-#' }
 #' }
 
 bulmaPageLoader <- function(content = "Loading...", from = NULL) {
