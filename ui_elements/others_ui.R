@@ -156,7 +156,72 @@ others_ui <- function() {
             consectetur adipiscing elit"
           )
         )
+      ),
+      
+      
+      br(), br(),
+      
+      bulmaDivider(),
+      
+      shiny::column(width = 12, align = "center", 
+                    bulmaTitle("Bulma Menus")
+      ),
+      
+      br(), br(),
+      
+      bulmaColumns(
+        bulmaColumn(
+          width = 4,
+          bulmaMenu(
+            
+            # section 1
+            bulmaMenuLabel(menu_label = "Title 1", target = "title1"),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 1"),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 2"),
+            
+            # section 2
+            bulmaMenuLabel(menu_label = "Title 2", target = "title5"),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 1"),
+            bulmaMenuItem(
+              active = TRUE, 
+              item_label = "Subtitle 2",
+              bulmaMenuSubItem(subitem_label = "Subsubtitle 1"),
+              bulmaMenuSubItem(subitem_label = "Subsubtitle 2"),
+              bulmaMenuSubItem(subitem_label = "Subsubtitle 3")
+            ),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 3"),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 4"),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 5"),
+            
+            # section 3
+            bulmaMenuLabel(menu_label = "Title 3", target = "title5"),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 6"),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 7"),
+            bulmaMenuItem(active = FALSE, item_label = "Subtitle 8")
+            
+          )
+        ),
+        bulmaColumn(
+          width = 8,
+          
+          bulmaSubtitle("Only title 1, title 2 and title 3 have html anchors."),
+          
+          bulmaRadioInput(
+            "select", 
+            c("Miles per galon" = "mpg", "Rear axle ratio" = "drat"),
+            selected = "mpg"
+          ),
+          
+          lapply(1:5, FUN = function(i) {
+            list(
+              bulmaTitle(paste0("Title", i), id = paste0("title", i)),
+              plotOutput(paste0("plotmenu", i))
+            )
+          })
+          
+        )
       )
+      
     )
   )
 }

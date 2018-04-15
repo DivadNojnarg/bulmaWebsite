@@ -4,11 +4,6 @@ inputs_ui <- function() {
     
     br(), br(),
     
-    div(style = "text-align: center;",
-        bulmaTitle("The plot only displays if switch 1 is TRUE.")),
-    
-    hr(),
-    
     bulmaContainer(
       bulmaColumns(
         bulmaColumn(
@@ -63,11 +58,60 @@ inputs_ui <- function() {
         
         bulmaColumn(
           width = 6,
-          bulmaSubtitle("Outputs"),
+          bulmaSubtitle("Outputs (the plot only displays if switch 1 is TRUE)"),
           plotOutput("plot1"),
           uiOutput("switches")
         )
+      ),
+      
+      bulmaDivider(),
+      
+      bulmaContainer(
+        br(),
+        bulmaColumns(
+          bulmaColumn(
+            width = 6,
+            bulmaSubtitle("Inputs"),
+            bulmaSliderInput(
+              inputId = "slider", 
+              value = 10, 
+              min = 3, 
+              max = 150, 
+              class = "is-warning"
+            ),
+            bulmaSliderInput(
+              inputId = "slider2", 
+              size = "small",
+              value = 10, 
+              min = 3, 
+              max = 150, 
+              class = "is-danger"
+            ),
+            bulmaSliderInput(
+              inputId = "slider3", 
+              size = "large",
+              value = 10, 
+              min = 3, 
+              max = 150, 
+              class = "is-info is-circle"
+            ),
+            bulmaSliderInput(
+              inputId = "slider4", 
+              size = "medium",
+              value = 10, 
+              min = 3, 
+              max = 150, 
+              class = "is-success is-circle"
+            )
+          ),
+          bulmaColumn(
+            width = 6,
+            bulmaSubtitle("Outputs (only the first slider is linked to this plot)"),
+            plotOutput("plot")
+          )
+        )
       )
+      
     )
   )
 }
