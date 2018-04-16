@@ -9,6 +9,7 @@ ui <- bulmaNavbarPage(
   # load content
   navbar_ui(),
   inputs_ui(),
+  sidebar_ui(),
   timelines_ui(),
   steps_ui(),
   pricingtables_ui(),

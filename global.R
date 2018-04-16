@@ -3,6 +3,7 @@ library(shinybulma)
 
 source("ui_elements/navbar_ui.R")
 source("ui_elements/inputs_ui.R")
+source("ui_elements/sidebar_ui.R")
 source("ui_elements/timelines_ui.R")
 source("ui_elements/steps_ui.R")
 source("ui_elements/pricingtables_ui.R")

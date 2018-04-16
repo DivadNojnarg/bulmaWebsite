@@ -24,4 +24,14 @@ server <- function(input, output){
     )
   })
   
+  databis <- reactive({
+    rnorm(input$sliderbis, 20, 4)
+  })
+  
+  output$plotbis <- renderPlot({
+    hist(databis())
+  })
+  
+  observe(print(input$sliderbis))
+  
 }

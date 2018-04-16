@@ -17,6 +17,9 @@ navbar_ui <- function() {
         "New Inputs"
       ),
       bulmaNavbarItem(
+        "Right sidebar"
+      ),
+      bulmaNavbarItem(
         "Bulma Timelines"
       ),
       bulmaNavbarItem(
